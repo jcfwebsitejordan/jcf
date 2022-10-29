@@ -36,7 +36,7 @@ collections: # A list of collections the CMS should be able to edit
               {label: "Header", name: "header", widget: "text"},
               {label: "Image", name: "image", widget: "image"},
               {label: "Title", name: "title", widget: "text"}
-              {label: "Data", name: "data", widget: "text"}
+              {label: "Data", name: "data", widget: "text"},
               {label: "Icon", name: "icon", widget: "image"}]}
           
           # - {label: Image, name: image, widget: image}
