@@ -1,0 +1,221 @@
+/* ABOUT STYLE */
+.stat_counter {
+    justify-content: flex-end;
+    display: flex;
+    position: relative;
+
+    &::before {
+        content: "";
+        background: linear-gradient(-45deg, lighten($color: $rdn-primary-color, $amount: 25) 1%, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 0) 49%, lighten($color: $rdn-primary-color, $amount: 25) 49%, lighten($color: $rdn-primary-color, $amount: 25) 51%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 99%, lighten($color: $rdn-primary-color, $amount: 25) 99%);
+        background-size: 7px 7px;
+        background-position: 50px 50px;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        z-index: -1;
+        left: 20px;
+        top: -52px;
+        border-radius: 50%;
+    }
+
+    &::after {
+        content: "";
+        background: lighten($color: $rdn-primary-color, $amount: 37);
+        width: 70%;
+        height: 80%;
+        position: absolute;
+        z-index: -1;
+        right: -30px;
+        bottom: -30px;
+        border-radius: 15px;
+    }
+
+
+    .stat_img_main {
+        border-radius: 15px;
+        width: calc(100% - 80px);
+        margin-left: 80px;
+        height: 750px;
+        object-fit: cover;
+    }
+
+    .stat_box {
+        position: absolute;
+        left: 0;
+        bottom: 30px;
+        flex-grow: 0;
+        display: flex;
+        align-items: center;
+        background-color: #fafafa;
+        border-radius: 100px;
+        @include box-shadow;
+
+        i {
+            background-color: $rdn-primary-color;
+            color: #fff;
+            height: 80px;
+            width: 80px;
+            flex-grow: 1;
+            display: flex;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            border-radius: 100px;
+        }
+
+
+        .stat_content {
+
+            padding: 20px 40px 20px 20px;
+            border-radius: 0 100px 100px 0;
+
+            h3 {
+                font-family: $rdn-title-font;
+                color: $rdn-heading-color;
+                font-size: 27px;
+                margin: 0;
+                line-height: 1;
+            }
+
+            span {
+                line-height: 1;
+                font-size: 14px;
+                display: block;
+                color: $rdn-primary-color;
+            }
+        }
+
+    }
+
+}
+
+.rdn_accordian {
+    .accordion-item {
+        margin-bottom: 15px;
+        border: none;
+    }
+
+    .accordion-header {
+        border-radius: 15px;
+        display: block;
+        border-bottom: none;
+        @include box-shadow-light;
+    }
+
+    .accordion-button {
+
+        &:after {
+            font-family: "Font Awesome 5 Free";
+            content: "\f078";
+            font-weight: 900;
+            background: none;
+        }
+    }
+
+    .accordion-button.collapsed,
+    .accordion-item:last-of-type .accordion-button.collapsed {
+        background: #fafafa;
+        border-radius: 15px;
+        padding: 30px;
+        color: $rdn-heading-color;
+
+
+    }
+
+    .accordion-button:not(.collapsed) {
+        position: relative;
+        border-radius: 15px;
+        box-shadow: none;
+        padding: 30px;
+        color: $rdn-primary-color;
+        background: lighten($color: $rdn-primary-color, $amount: 37);
+
+        &:after {
+            background: none;
+        }
+    }
+
+    .accordion-body {
+        padding: 30px;
+        background: #fff;
+        margin: 15px 0;
+        border-radius: 15px;
+        @include box-shadow-light;
+    }
+}
+
+.crop_box {
+    img {
+        border-radius: 10px;
+    }
+
+    .img_high {
+        position: relative;
+    }
+
+    .img_wide {
+        position: relative;
+    }
+}
+
+.about_head{
+    padding:30px;
+    border-radius: 15px;
+    @include box-shadow;
+    margin-top:-200px;
+    position: relative;
+    z-index: 3;
+
+    img{
+        border-radius: 15px;
+        object-fit: cover;
+    }
+    .ah_content{
+        padding: 30px;
+    }
+    .popup_video{
+        position: absolute;
+        left: 50%;
+        top:50%;
+        margin-left: -40px;
+        margin-top: -40px;
+    }
+}
+.ab_img_page{
+    border-radius: 10px;
+    @include box-shadow;
+    z-index: 1;
+    position: relative;
+    height: 500px;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+.about-top {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    position: relative;
+    background-image: url('../img/background/about.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+
+    .about_inner {
+        z-index: 2;
+        position: relative;
+    }
+
+    .hero_title {
+        font-size: 60px;
+        margin-bottom: 30px;
+        color: #fff;
+    }
+
+    p {
+        color: #fff;
+        margin: 0;
+    }
+
+}

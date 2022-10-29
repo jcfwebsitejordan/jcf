@@ -1,0 +1,41 @@
+/* SECETION WITH BACKGROUND STYLES */
+
+.bg-circle {
+    background-image: url('../img/background/bg2.jpg');
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+.bg-blob {
+    background-image: url('../img/background/bg3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-fixed {
+    background-attachment: fixed;
+}
+
+
+.bg-blob-white {
+    background-image: url('../img/background/bg4.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-yellow {
+    background-image: url('../img/background/smile2.jpg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+    min-height: 90vh;
+}
+
+.hero-blob {
+    background-image: url('../img/background/bg5.jpg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+}

@@ -1,0 +1,331 @@
+/* Testimonial Styles */
+
+
+.testi_inner {
+    .testi_slider {
+        overflow: hidden;
+
+
+        .testi_item {
+            display: flex;
+            margin-bottom: 30px;
+
+            p {
+                align-self: center;
+                margin: 0 30px 0 0;
+            }
+
+            i {
+                align-self: center;
+                text-align: center;
+                background-color: $rdn-primary-color;
+                color: #fff;
+                width: 80px;
+                height: 80px;
+                line-height: 80px;
+                border-radius: 80px;
+                flex-shrink: 0;
+                font-size: 30px;
+            }
+        }
+
+        .testi_box {
+            display: flex;
+            align-content: center;
+            position: relative;
+            width: max-content;
+            overflow: hidden;
+            border-radius: 100px;
+
+
+            img {
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+                border-radius: 100px;
+                border: 5px solid #fff;
+                flex-grow: 0;
+            }
+
+            .testi_box_content {
+                align-self: center;
+                padding: 15px 40px 15px 60px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                background: #fff;
+                border-radius: 0 100px 100px 0;
+                margin-left: -40px;
+                height: 80px;
+                z-index: -1;
+
+                h3 {
+                    margin: 0;
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 14px;
+                    color: rgba($color: #333, $alpha: 0.5);
+                }
+            }
+
+
+        }
+
+        /* TESTIMONIAL SLIDER STYLE */
+        .swiper-slide {
+            .testi_item {
+                opacity: 0;
+                transition: 0.5s;
+
+                i {
+                    transform: scale(0.1);
+                    opacity: 0;
+                    transition: 0.6s;
+                }
+            }
+
+            .testi_box {
+                opacity: 0;
+                transition: 0.5s;
+                transform: translateY(-10px);
+            }
+
+
+            .testi_box_content {
+                opacity: 0;
+                transition: 0.6s;
+                transform: translateX(-300px);
+            }
+
+            &-active {
+                .testi_item {
+                    opacity: 1;
+                    transition-delay: 0.2s;
+
+                    i {
+                        transform: scale(1);
+                        opacity: 1;
+                        transition-delay: 0.5s;
+                    }
+                }
+
+                .testi_box {
+                    opacity: 1;
+                    transition-delay: 1s;
+                    transform: translateY(0);
+                }
+
+                .testi_box_content {
+                    opacity: 1;
+                    transform: translateX(0);
+                    transition-delay: 1.2s;
+                }
+
+            }
+        }
+    }
+}
+
+
+
+.testi_right {
+    position: relative;
+    align-self: flex-end;
+    overflow: hidden;
+
+    .white_box {
+        background: radial-gradient(circle, #fff 10%, transparent 10%), radial-gradient(circle, #fff 10%, transparent 10%);
+        background-size: 20px 20px;
+        background-position: 0 0, 100px 100px;
+        width: 30%;
+        height: 80%;
+        position: absolute;
+        bottom: 0;
+        left: 50px;
+        z-index: 0;
+    }
+
+    img {
+        z-index: 1;
+        position: relative;
+    }
+}
+
+.team_info_box {
+    position: absolute;
+    display: flex;
+    background: #fff;
+    max-width: max-content;
+    bottom: 100px;
+    right: 0;
+    @include box-shadow;
+    align-items: center;
+    border-radius: 100px;
+    z-index: 3;
+
+    img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border: 5px solid #fff;
+        border-radius: 100px;
+    }
+
+    &_content {
+        padding: 10px 30px;
+
+        h3 {
+            margin: 0;
+            line-height: 1;
+            font-size: 25px;
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 14px;
+        }
+    }
+
+
+}
+
+.team_info_boxleft {
+    right: auto;
+    left: 0;
+    bottom: 50px;
+}
+
+.testimonial_box {
+    .testi_outer {
+        position: relative;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+}
+
+.swiper_testi_btn {
+    display: flex;
+    position: absolute;
+    z-index: 33;
+    right: 15px;
+    bottom: 20px;
+
+    i {
+        font-size: 14px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        background-color: rgba($color: $rdn-primary-color, $alpha: 0.1);
+        margin-left: 2px;
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 100px;
+
+        &:hover {
+            background-color: $rdn-primary-color;
+        }
+    }
+}
+
+.testi2_slider {
+    z-index: 3;
+    position: relative;
+
+    .swiper-slide {
+        transform: scale(0.8);
+        transition: 0.3s;
+        opacity: 0;
+        overflow: unset;
+
+        .testi2_box {
+            justify-content: center;
+            display: flex;
+
+            .testi2_inner {
+                background-color: #fafafa;
+                padding: 70px 60px 60px 60px;
+                margin-top: 40px;
+            }
+
+            img {
+                position: absolute;
+                object-fit: cover;
+                width: 80px;
+                height: 80px;
+                border-radius: 10px;
+                border: 5px solid #fff;
+            }
+
+            i {
+                color: $rdn-primary-color;
+                font-size: 30px;
+
+            }
+        }
+    }
+
+    .swiper-slide-prev {
+        transform-origin: right center;
+        opacity: 1;
+
+        p {
+            opacity: 0.7;
+        }
+
+        ;
+
+        img,
+        i {
+            filter: grayscale(100%);
+        }
+
+    }
+
+    .swiper-slide-next {
+        transform-origin: left center;
+        opacity: 1;
+
+        img,
+        i {
+            filter: grayscale(100%);
+        }
+
+        p {
+            opacity: 0.7;
+        }
+
+        ;
+    }
+
+    .swiper-slide-active {
+        transform: scale(1);
+        opacity: 1;
+        position: relative;
+        z-index: 3;
+
+        p {
+            opacity: 1
+        }
+
+        ;
+
+        .testi2_inner {
+            @include box-shadow;
+            border-radius: 10px;
+        }
+    }
+}
+
+.testi_two {
+    overflow: hidden;
+    position: relative;
+
+    .row {
+        position: relative;
+        z-index: 1;
+    }
+}

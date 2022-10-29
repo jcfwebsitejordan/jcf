@@ -1,0 +1,67 @@
+/* CLIENT STYLE */
+.client_box {
+    h3 {
+        font-size: 25px;
+        margin: 0;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 0;
+        color: $rdn-primary-color
+    }
+
+    .client_slider {
+        overflow: hidden;
+    }
+
+    .swiper-slide {
+        text-align: center;
+
+        img {
+            height: 80px;
+            filter: grayscale(100%);
+            transition: 0.3s;
+            transform: scale(1);
+
+            &:hover {
+                filter: grayscale(0);
+                transform: scale(0.95);
+            }
+        }
+    }
+
+    .client_slider2 {
+        img {
+            &:hover {
+                filter: grayscale(100%);
+            }
+        }
+
+    }
+}
+
+
+.abt_client{
+    img{
+        height: 80px;
+        filter: grayscale(100%);
+    }
+    .client_nav{
+        background-color: #fff;
+        height: 50px;
+        width: 50px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        color: $rdn-heading-color;
+        @include box-shadow-light;
+        transition: 0.3s;
+        &:hover{
+            @include box-shadow;
+            color: #fff;
+            background-color: $rdn-primary-color;
+        }
+      }
+}

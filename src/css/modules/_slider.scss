@@ -1,0 +1,122 @@
+/* Parallax Slider Styles */
+
+.para_slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%
+}
+
+.swiper-slide {
+    overflow: hidden;
+}
+
+.slide_inner {
+    background-color: #222;
+}
+
+.slide_bg {
+    z-index: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity .1s ease-in-out, transform 0s;
+    transition-delay: 300ms;
+}
+
+.slide_content {
+    padding-top: 16%;
+    padding-bottom: 10%;
+    position: relative;
+
+    h1 {
+        color: #fff;
+        font-size: 65px;
+        margin-bottom: 30px;
+        z-index: 4;
+        @include transition_slide();
+        transition-delay: 500ms;
+        line-height: 1;
+    }
+
+    p {
+        font-size: 20px;
+        color: #fff;
+        margin-bottom: 30px;
+        opacity: 0;
+        @include transition_slide();
+        transition-delay: 700ms;
+    }
+
+    span {
+        display: block;
+        @include transition_slide();
+        transition-delay: 900ms;
+    }
+}
+
+.swiper-slide-active {
+    .slide_bg {
+        opacity: 1;
+        transition: opacity 0.01s, transform 0s;
+        transition-delay: 0;
+    }
+
+    .slide_content {
+        z-index: 333;
+
+        h1,
+        p,
+        span {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+}
+
+.rdn_slider {
+    &:hover .swiper-nav-btn {
+        i {
+            transform: translateX(10px);
+            opacity: 1;
+        }
+
+        .next_swiper {
+            transform: translateX(-10px);
+        }
+    }
+
+    .swiper-nav-btn {
+
+        i {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            color: #fff;
+            z-index: 33;
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            line-height: 30px;
+            margin-top: -15px;
+            background: $rdn-primary-color;
+            border-radius: 5px;
+            font-size: 12px;
+            transform: translateX(0);
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+                color: $rdn-primary-color;
+                background: #fff;
+            }
+        }
+
+        .next_swiper {
+            left: auto;
+            right: 10px;
+        }
+    }
+}

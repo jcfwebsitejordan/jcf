@@ -2,7 +2,8 @@ import React from "react";
 import format from "date-fns/format";
 
 import Jumbotron from "./components/jumbotron";
-
+import {Helmet} from "react-helmet";
+import "scrollcue"
 export default class PostPreview extends React.Component {
   render() {
     const {entry, getAsset} = this.props;
@@ -14,6 +15,8 @@ export default class PostPreview extends React.Component {
     }
 
     return <div>
+
+
         <Jumbotron image={image} title={entry.getIn(["data", "title"])} subtitle={entry.getIn(["data", "subtitle"])}/>
 
         <div className="bg-grey-1 pv4">

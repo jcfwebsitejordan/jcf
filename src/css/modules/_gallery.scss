@@ -1,0 +1,36 @@
+/* GALLERY STYLE */
+.glightbox-clean {
+    .gslide-description {
+        background-color: transparent;
+
+        .gdesc-inner {
+            padding: 20px 0;
+            text-align: center;
+
+            .gslide-title {
+                font-family: $rdn-title-font;
+                color: #fff;
+                margin: 0;
+            }
+
+            .gslide-desc {
+                color: rgba($color: #fff, $alpha: 0.5);
+            }
+        }
+    }
+}
+
+.glightbox-mobile .glightbox-container .gslide-description {
+    padding: 20px 0;
+}
+
+.glightbox-clean .gslide-media {
+    box-shadow: none;
+}
+
+.gclose.disabled,
+.gnext.disabled,
+.gprev.disabled {
+    opacity: 0;
+    visibility: hidden;
+}

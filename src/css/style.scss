@@ -1,0 +1,98 @@
+/*
+Template Name: Encox - Responsive Cycling Club HTML Template
+Theme URI: http://themeforest.net/user/ridianur
+Author: ridianur
+Author URI:  http://themeforest.net/user/ridianur
+*/
+
+/* -----------------------------------------------------------
+TABLE OF CONTENTS:
+--------------------------------------------------------------
+GOOGLE FONTS IMPORT
+GLOBAL STYLE
+---ANIMATION
+---MARGIN & PADDING
+NAVIGATION STYLE
+HERO STYLE
+SLIDER STYLE
+GALLERY STYLE
+SECTION STYLE
+---SERVICES STYLE
+---ABOUT STYLE
+---TESTIMONIAL STYLE
+---EVENTS STYLE
+---CLIENTS STYLE
+---STATS STYLE
+---TEAM STYLE
+---STATS STYLE
+NEWS STYLE
+---SIDEBAR STYLE
+CONTACT STYLE
+BACKGROUND STYLE
+FOOTER STYLE
+MEDIA QUERIES
+-------------------------------------------------------------
+
+------------------------------------------------------------*/
+
+/* import google font */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Lexend:wght@500;700&display=swap');
+
+// Variable Settings
+$rdn-heading-color:#261C2C;
+$rdn-text-color:#666;
+$rdn-linkhover-color:#aaaaaa;
+$rdn-primary-color: #D45D79;
+$rdn-bold-text-color:#555;
+$rdn-fontsize-text:16px;
+$rdn-fontsize-title:45px;
+$rdn-blue-color:#293B5F;
+$rdn-gray-color:lighten($color: $rdn-blue-color, $amount: 70);
+$rdn-paragraph-font:'Archivo',
+sans-serif;
+$rdn-title-font:'Lexend',
+sans-serif;
+$rdn-text-regular:400;
+$rdn-text-bold:600;
+$rdn-title-bold:700;
+$rdn-title-regular:400;
+$rdn-title-spacing:-0.04em;
+
+
+@import 'modules/mixin';
+
+@import 'modules/global';
+
+@import 'modules/nav';
+
+@import 'modules/hero';
+
+@import 'modules/slider';
+
+@import 'modules/gallery';
+
+/* Sections style */
+@import 'modules/services';
+
+@import 'modules/about';
+
+@import 'modules/testimonial';
+
+@import 'modules/events';
+
+@import 'modules/clients';
+
+@import 'modules/stats';
+
+@import 'modules/team';
+
+@import 'modules/news';
+
+@import 'modules/contact';
+
+@import 'modules/background';
+
+@import 'modules/footer';
+
+/* MEDIA QUERIES */
+@import 'modules/mediaqueries';
