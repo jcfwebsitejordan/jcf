@@ -1,51 +1,180 @@
-<header class="header header_wide">
+<section id="events" class="content clearfix">
+    <div class="container">
 
-  <title>{{ .Title }} | {{ $.Site.Title }}</title>
+        <div class="top_content text-center align-content-center mb-100">
+            <p class=" rdn_subtext" data-cue="slideInUp">Our schedules.</p>
+            <h2 class="rdn_title mb-0" data-cue="slideInUp" data-delay="200">Become a member <br>and join our club event.</h2>
+        </div>
+        <!--top_content-->
 
-  {{ $stylesheet := .Site.Data.webpack.main }}
-  {{ with $stylesheet.css }}
-    <link href="{{ relURL . }}" rel="stylesheet">
-  {{ end }}
+        <!-- <ul class="event_filter">
+            <li><a class="is_active" href="#!" data-filter="*">All</a></li>
+            <li><a href="#!" data-filter=".special">Special</a></li>
+            <li><a href="#!" data-filter=".charity">Charity</a></li>
+            <li><a href="#!" data-filter=".mountainbike">Mountain Bike</a></li>
+        </ul>
+-->
 
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <base href="{{ $.Site.BaseURL }}">
+        <div class="row event_box">
 
-	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
- 	<!-- Favicons -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-	<link rel="icon" type="image/png" href="/img/favicon.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="/img/favicon.png" sizes="16x16">
-	<link rel="manifest" href="/manifest.json">
-	<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400">
-	<meta name="theme-color" content="#fff">
 
-	<!-- Open Graph -->
-	<meta property="og:type" content="business.business">
-	<meta property="og:title" content="Jordan Cycling Federation">
-	<meta property="og:url" content="/">
-	<meta property="og:image" content="/img/og-image.jpg">
-	<!-- <script src="js/script.js"></script> -->
-   
-  {{ if .IsHome }}
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  {{ end }}
- 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordan Cycling Club</title>
-    <link rel="shortcut icon" href="img/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.2/src/css/icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scrollcue@2.0.0/scrollCue.css">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
- 
+            <div class="col-lg-4 align-self-center mb-30 event_outer col-md-6 special">
+                <div class="events_item">
+                    <div class="event_top">
+                        <div class="top_icon">
+                            <a href="single-event.html">
+                                <i class="event_go_icon fas fa-plus"></i>
+                                <img src="img/events/event1.jpg" alt="images">
+                            </a>
+                            <p class="event_location"><span>Amman</span> <i class="fas fa-map-marked-alt"></i></p>
+                        </div>
+                        <!--top_icon-->
+                    </div>
+                    <!--event_top-->
 
+                    <div class="bottom_text">
+                        <p>Special Event</p>
+                        <h3>The Ultimate Tour</h3>
+                    </div>
+                    <!--bottom_text-->
+                </div>
+                <!-- /.events_item -->
+            </div>
+            <!-- col-lg-4 -->
+
+            <div class="col-lg-4 align-self-center mb-30 event_outer col-md-6 charity mountainbike">
+                <div class="events_item">
+                    <div class="event_top">
+                        <div class="top_icon">
+                            <a href="single-event.html">
+                                <i class="event_go_icon fas fa-plus"></i>
+                                <img src="img/events/event2.jpg" alt="images">
+                            </a>
+                            <p class="event_location"><span>Dead Sea</span> <i class="fas fa-map-marked-alt"></i></p>
+                        </div>
+                        <!--top_icon-->
+                    </div>
+                    <!--event_top-->
+
+                    <div class="bottom_text">
+                        <p>Charity</p>
+                        <h3>Road Challange</h3>
+                    </div>
+                    <!--bottom_text-->
+                </div>
+                <!-- /.events_item -->
+            </div>
+            <!-- col-lg-4 -->
+
+
+            <div class="col-lg-4 align-self-center mb-30 event_outer col-md-6 charity special">
+                <div class="events_item">
+                    <div class="event_top">
+                        <div class="top_icon">
+                            <a href="single-event.html">
+                                <i class="event_go_icon fas fa-plus"></i>
+                                <img src="img/events/event3.jpg" alt="images">
+                            </a>
+                            <p class="event_location"><span>Al Salt</span> <i class="fas fa-map-marked-alt"></i></p>
+                        </div>
+                        <!--top_icon-->
+                    </div>
+                    <!--event_top-->
+
+                    <div class="bottom_text">
+                        <p>Special Event</p>
+                        <h3>City Championship</h3>
+                    </div>
+                    <!--bottom_text-->
+                </div>
+                <!-- /.events_item -->
+            </div>
+            <!-- col-lg-4 -->
+
+            <div class="col-lg-4 align-self-center mb-30 event_outer col-md-6 mountainbike">
+                <div class="events_item">
+                    <div class="event_top">
+                        <div class="top_icon">
+                            <a href="single-event.html">
+                                <i class="event_go_icon fas fa-plus"></i>
+                                <img src="img/events/event4.jpg" alt="images">
+                            </a>
+                            <p class="event_location"><span>Irbid</span> <i class="fas fa-map-marked-alt"></i></p>
+                        </div>
+                        <!--top_icon-->
+                    </div>
+                    <!--event_top-->
+
+                    <div class="bottom_text">
+                        <p>Mountain Bike</p>
+                        <h3>Special Max Classic</h3>
+                    </div>
+                    <!--bottom_text-->
+                </div>
+                <!-- /.events_item -->
+            </div>
+            <!-- col-lg-4 -->
+
+            <div class="col-lg-4 align-self-center mb-30 event_outer col-md-6 special mountainbike">
+                <div class="events_item">
+                    <div class="event_top">
+                        <div class="top_icon">
+                            <a href="single-event.html">
+                                <i class="event_go_icon fas fa-plus"></i>
+                                <img src="img/events/event5.jpg" alt="images">
+                            </a>
+                            <p class="event_location"><span>Amman</span> <i class="fas fa-map-marked-alt"></i></p>
+                        </div>
+                        <!--top_icon-->
+                    </div>
+                    <!--event_top-->
+
+                    <div class="bottom_text">
+                        <p>Special Event</p>
+                        <h3>Senior Metro Road</h3>
+                    </div>
+                    <!--bottom_text-->
+                </div>
+                <!-- /.events_item -->
+            </div>
+            <!-- col-lg-4 -->
+
+
+            <div class="col-lg-4 align-self-center mb-30 event_outer col-md-6 charity">
+                <div class="events_item">
+                    <div class="event_top">
+                        <div class="top_icon">
+                            <a href="single-event.html">
+                                <i class="event_go_icon fas fa-plus"></i>
+                                <img src="img/events/event6.jpg" alt="images">
+                            </a>
+                            <p class="event_location"><span>Zarqa</span> <i class="fas fa-map-marked-alt"></i></p>
+                        </div>
+                        <!--top_icon-->
+                    </div>
+                    <!--event_top-->
+
+                    <div class="bottom_text">
+                        <p>Charity</p>
+                        <h3>United Championship</h3>
+                    </div>
+                    <!--bottom_text-->
+                </div>
+                <!-- /.events_item -->
+            </div>
+            <!-- col-lg-4 -->
+
+        </div>
+        <!-- /.row event_box -->
+
+        <div class="divider"></div>
+
+        
+        <!--client_box-->
+
+    </div>
+    <!---container-->
+</section>
     <!-- JAVASCRIPT -->
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper@8.4.4/swiper-bundle.min.js"></script>
@@ -68,11 +197,7 @@
 
     /* Cloned Navigation element */
     const navwhite = document.querySelector(".nav_white");
-    if (navwhite) {
-        const navElement = navwhite.cloneNode(true);
-        document.querySelector(".cloned_nav").appendChild(navElement);
-
-    }
+   
 
 
 
@@ -523,5 +648,3 @@
 
 })();
 </script>
- 
-</head>

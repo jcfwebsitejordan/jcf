@@ -1,7 +1,6 @@
 import React from "react";
 import CMS from "netlify-cms-app";
-import {Helmet} from "react-helmet";
-
+ 
 import { Button } from 'react-bootstrap';
 
 // Import main site styles as a string to inject into the CMS preview pane
@@ -16,6 +15,7 @@ import ContactPreview from "./cms-preview-templates/contact";
 
 CMS.registerPreviewStyle(styles, { raw: true });
 CMS.registerPreviewStyle("../css/style.scss", { raw: true });
+CMS.registerPreviewStyle("../css/nav/modules/_nav.scss", { raw: true });
 CMS.registerPreviewStyle("../css/bootstrap.scss", { raw: true });
 CMS.registerPreviewTemplate("home", HomePreview);
 CMS.registerPreviewTemplate("post", PostPreview);

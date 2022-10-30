@@ -1,51 +1,73 @@
-<footer class="bg-black ph3 pv4 white">
+ 	<section class="dark-bg footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 mb-30 mb-lg-0">
+                    <img class="footer_logo" src="img/logo.png" alt="">
+                    <p> With a mission to improve lives through bicycling we teach the joys of bicycling - advocate for safe places to ride.</p>
+                    <ul class="footer_address">
+                        <li><i class="fa fa-home"></i> Buah Batu Street 40288</li>
+                        <li><i class="fa fa-envelope"></i> email@example.com</li>
+                    </ul>
+                </div>
+                <!-- /.col-lg-3 -->
+                <div class="col-lg-3 footer_column mb-30 mb-lg-0">
+					{{ partial "events-list" . }}
+                    
+                </div>
+                <!-- /.col-lg-3 -->
+                <div class="col-lg-3 footer_column mb-30 mb-lg-0">
+                    <h3>Pages</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Our News</a></li>
+                        <li><a href="events.html">Events & Schedule</a></li>
+                        <li><a href="contact.html">Contact Today</a></li>
+                    </ul>
+                </div>
+                <!-- /.col-lg-3 -->
+                <div class="col-lg-3 footer_column mb-lg-0">
+                    <h3>Gallery</h3>
+                    <div class="rdn_gallery">
+                        <div class="gallery_inner">
+                            <a href="img/background/1.jpg" data-gallery="gallery" data-width="90%" data-title="Enjoy the ride."
+                                data-description="Riders from all over country have registered for the inaugural event.">
+                                <img src="img/background/1.jpg" class="gallery_popup" alt="gallery" />
+                            </a>
+                        </div>
+                        <div class="gallery_inner">
+                            <a href="img/background/2.jpg" data-gallery="gallery" data-width="90%">
+                                <img src="img/background/2.jpg" class="gallery_popup" alt="gallery" />
+                            </a>
+                        </div>
+                        <div class="gallery_inner">
+                            <a href="img/background/3.jpg" data-gallery="gallery" data-width="90%">
+                                <img src="img/background/3.jpg" class="gallery_popup" alt="gallery" />
+                            </a>
+                        </div>
+                        <div class="gallery_inner">
+                            <a href="img/background/4.jpg" data-gallery="gallery" data-width="90%">
+                                <img src="img/background/4.jpg" class="gallery_popup" alt="gallery" />
+                            </a>
+                        </div>
+                        <div class="gallery_inner">
+                            <a href="img/background/5.jpg" data-gallery="gallery" data-width="90%">
+                                <img src="img/background/5.jpg" class="gallery_popup" alt="gallery" />
+                            </a>
+                        </div>
+                        <div class="gallery_inner">
+                            <a href="img/background/6.jpg" data-gallery="gallery" data-width="90%">
+                                <img src="img/background/6.jpg" class="gallery_popup" alt="gallery" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-3 -->
+            </div>
+            <!-- /.row -->
+         </div>
+        <!-- /.container -->
+    </section>
+   
 
-	<div class="mw7 center pt3">
-
-		<div class="measure-narrow center mb4">
-
-			<img src="/img/logo.svg" alt="Kaldi logo" class="db w4 center mb4 br0">
-			<p class="f3 lh-title light-gray b tc mb2">Newsletter subscribe</p>
-			<p>Get awesome news from us in your inbox every two weeks. Be the first to learn about new products.</p>
-
-			{{ partial "newsletter-form" . }}
-
-		</div>
-
-		<div class="flex-ns justify-between">
-
-			<div>
-				<h3 class="f4 b lh-title mb1 primary">Kaldi</h3>
-				<ul class="mb3">
-					<li><a href="/" class="link">Home</a></li>
-					<li><a href="/products" class="link">Our products</a></li>
-					<li><a href="/values" class="link">About</a></li>
-					<li><a href="/post" class="link">Blog</a></li>
-					<li><a href="/contact" class="link">Contact</a></li>
-				</ul>
-			</div>
-
-			<div>
-				<h3 class="f4 b lh-title mb1 primary">Find out more</h3>
-				<ul class="mb3">
-					<li><a href="/post/jamaica-blue/" class="link">Latest offers</a></li>
-					<li><a href="/contact" class="link">Schedule and appointment</a></li>
-				</ul>
-			</div>
-
-			<div>
-				<h3 class="f4 b lh-title mb2 primary">Social media</h3>
-				<ul class="mhn2">
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-facebook") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-twitter") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-instagram") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-vimeo") }}
-				</ul>
-			</div>
-
-		</div>
-	</div>
-
-</footer>
-
+ 
 {{ partial "svg" . }}

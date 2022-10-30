@@ -1,50 +1,101 @@
-<header class="header header_wide">
+<section id="services" class="content-mb gray-bg clearfix">
+    <div class="container">
 
-  <title>{{ .Title }} | {{ $.Site.Title }}</title>
 
-  {{ $stylesheet := .Site.Data.webpack.main }}
-  {{ with $stylesheet.css }}
-    <link href="{{ relURL . }}" rel="stylesheet">
-  {{ end }}
+        <div class="row align-content-center mb-100">
+            <div class="col-lg-6 align-self-center mb-30 mb-lg-0">
+                <p class="rdn_subtext" data-cue="slideInUp">Believe in ourself.</p>
+                <h2 class="rdn_title mb-0" data-cue="slideInUp" data-delay="200">What can we give <br>to our member.</h2>
+            </div>
+            <!-- col-lg-6 -->
 
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <base href="{{ $.Site.BaseURL }}">
+            <div class="col-lg-6 align-self-end">
+                <p class="rdn_boldtext">Riders from all over country have registered for the inaugural event Many will be staying in our club
+                    over the weekend boosting tourism and bringing considerable economic benefits to the local region.</p>
+            </div>
+            <!-- col-lg-6 -->
 
-	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
- 	<!-- Favicons -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-	<link rel="icon" type="image/png" href="/img/favicon.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="/img/favicon.png" sizes="16x16">
-	<link rel="manifest" href="/manifest.json">
-	<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400">
-	<meta name="theme-color" content="#fff">
+        </div>
+        <!--row-->
 
-	<!-- Open Graph -->
-	<meta property="og:type" content="business.business">
-	<meta property="og:title" content="Jordan Cycling Federation">
-	<meta property="og:url" content="/">
-	<meta property="og:image" content="/img/og-image.jpg">
-	<!-- <script src="js/script.js"></script> -->
-   
-  {{ if .IsHome }}
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  {{ end }}
- 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordan Cycling Club</title>
-    <link rel="shortcut icon" href="img/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.2/src/css/icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scrollcue@2.0.0/scrollCue.css">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
- 
+
+        <div class="row" data-cues="slideInUp">
+
+            <div class="col-lg-4 align-self-center mb-30 event_outer col-md-6">
+
+                <div class="text_icon">
+                    <div class="top_icon">
+                        <img src="img/pexels-pixabay-248547.jpg" alt="images">
+                        <p>Professional</p>
+                    </div>
+                    <!--top_icon-->
+                    <div class="bottom_icon">
+
+                        <div class="content_icon">
+                            <p>Inventore.</p>
+                            <h2 class="rdn_subtitle align-self-start">Speed bike.</h2>
+                        </div>
+                        <i class="fa fa-rainbow icon_service"></i>
+                    </div>
+                    <!--bottom_icon-->
+
+                </div>
+                <!--text_icon-->
+            </div>
+            <!-- col-lg-4 -->
+
+            <div class="col-lg-4 align-self-center mb-30 event_outer col-md-6">
+
+                <div class="text_icon">
+                    <div class="top_icon">
+                        <img src="img/pexels-mike-1174103.jpg" alt="images">
+                        <p>Motivate</p>
+                    </div>
+                    <!--top_icon-->
+                    <div class="bottom_icon">
+
+
+                        <div class="content_icon">
+                            <p>Quisquam.</p>
+                            <h2 class="rdn_subtitle align-self-start">Risk free ride.</h2>
+                        </div>
+                        <i class="fa fa-lungs icon_service"></i>
+
+                    </div>
+                    <!--bottom_icon-->
+
+                </div>
+                <!--text_icon-->
+            </div>
+            <!-- col-lg-4 -->
+
+            <div class="col-lg-4 align-self-center mb-30 event_outer">
+
+                <div class="text_icon">
+                    <div class="top_icon">
+                        <img src="img/pexels-erik-mclean-9138665.jpg" alt="images">
+                        <p>Goals</p>
+                    </div>
+                    <!--top_icon-->
+                    <div class="bottom_icon">
+
+                        <div class="content_icon">
+                            <p>Lipsumer.</p>
+                            <h2 class="rdn_subtitle align-self-start">Variety of club.</h2>
+                        </div>
+                        <i class="fa fa-fingerprint icon_service"></i>
+                    </div>
+                    <!--bottom_icon-->
+
+                </div>
+                <!--text_icon-->
+            </div>
+            <!-- col-lg-4 -->
+
+        </div>
+        <!-- /.row -->
+    </div>
+</section>
 
     <!-- JAVASCRIPT -->
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
@@ -68,11 +119,7 @@
 
     /* Cloned Navigation element */
     const navwhite = document.querySelector(".nav_white");
-    if (navwhite) {
-        const navElement = navwhite.cloneNode(true);
-        document.querySelector(".cloned_nav").appendChild(navElement);
-
-    }
+   
 
 
 
@@ -523,5 +570,3 @@
 
 })();
 </script>
- 
-</head>

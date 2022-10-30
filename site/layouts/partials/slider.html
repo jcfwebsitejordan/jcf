@@ -1,50 +1,74 @@
-<header class="header header_wide">
+<section class="home-slider clearfix">
+    <div class="para_slider rdn_slider" data-scroll>
+        <div class="swiper-wrapper">
 
-  <title>{{ .Title }} | {{ $.Site.Title }}</title>
 
-  {{ $stylesheet := .Site.Data.webpack.main }}
-  {{ with $stylesheet.css }}
-    <link href="{{ relURL . }}" rel="stylesheet">
-  {{ end }}
+            <div class="swiper-slide">
+                <div class="slide_inner" data-swiper-parallax-x="90%">
+                    <div class="mask"></div>
+                    <img src="https://jcc-1.netlify.app/img/banner1.jpg" alt="" class="slide_bg">
+                    <div class="slide_content container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h1>Banner 1</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum in lorem at cursus. Nam consectetur nunc vel iaculis lacinia. Aenean euismod enim ipsum, accumsan venenatis diam sollicitudin eget. Donec et sollicitudin nibh. Suspendisse consectetur eget dui et volutpat. Nullam volutpat rhoncus molestie. Curabitur laoreet est eu est finibus, ut lobortis mauris vulputate.
 
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <base href="{{ $.Site.BaseURL }}">
+                                </p>
+                            </div>
+                        </div>
 
-	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
- 	<!-- Favicons -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-	<link rel="icon" type="image/png" href="/img/favicon.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="/img/favicon.png" sizes="16x16">
-	<link rel="manifest" href="/manifest.json">
-	<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400">
-	<meta name="theme-color" content="#fff">
+                    </div>
+                </div>
+            </div>
+            <!-- ./swiper-slide -->
 
-	<!-- Open Graph -->
-	<meta property="og:type" content="business.business">
-	<meta property="og:title" content="Jordan Cycling Federation">
-	<meta property="og:url" content="/">
-	<meta property="og:image" content="/img/og-image.jpg">
-	<!-- <script src="js/script.js"></script> -->
-   
-  {{ if .IsHome }}
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  {{ end }}
- 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordan Cycling Club</title>
-    <link rel="shortcut icon" href="img/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.2/src/css/icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scrollcue@2.0.0/scrollCue.css">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
- 
+            <div class="swiper-slide">
+                <div class="slide_inner" data-swiper-parallax-x="90%">
+                    <div class="mask"></div>
+                    <img src="https://jcc-1.netlify.app/img/banner2.jpg" alt="" class="slide_bg">
+                    <div class="slide_content container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h1>Banner 2</h1>
+                                <p>Phasellus maximus id purus nec tincidunt. Morbi et gravida libero, quis ullamcorper ligula. Vestibulum congue consectetur magna. Curabitur eu imperdiet nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed tempor urna metus, at blandit mi sollicitudin ultrices. Praesent eleifend, leo quis consequat varius, magna dui imperdiet arcu, vitae pulvinar massa ligula sit amet odio.
+
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- ./swiper-slide -->
+
+            <div class="swiper-slide">
+                <div class="slide_inner" data-swiper-parallax-x="90%">
+                    <div class="mask"></div>
+                    <img src="https://jcc-1.netlify.app/img/banner3.jpg" alt="" class="slide_bg">
+                    <div class="slide_content container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h1>Banner 3</h1>
+                                <p>Quisque ante nisl, ultricies vitae elementum ac, aliquet vitae erat. Nulla nisi enim, cursus molestie metus eget, vestibulum varius enim. Cras in enim lacinia, congue ligula eu, laoreet purus. Curabitur erat urna, condimentum id sem et, placerat vestibulum sapien. Phasellus elit est, iaculis scelerisque pretium eu, varius at erat. In ullamcorper quis ante ac interdum. Maecenas hendrerit dapibus ex, ut iaculis justo sodales et. Curabitur laoreet erat ligula, in consectetur dui suscipit sit amet. Sed sagittis at ante vel imperdiet. Nunc vel bibendum magna. Aliquam erat volutpat. Ut congue lorem non odio molestie, ut finibus ante aliquam. Praesent scelerisque nisi velit, quis vulputate libero auctor vel. Curabitur suscipit imperdiet risus quis porttitor. Duis cursus lacus quis aliquam tincidunt.
+
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- ./swiper-slide -->
+
+        </div>
+        <div class="swiper-nav-btn">
+            <i class="prev_swiper fas fa-chevron-left"></i>
+            <i class="next_swiper fas fa-chevron-right"></i>
+        </div>
+
+    </div>
+</section>
+
 
     <!-- JAVASCRIPT -->
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
@@ -68,11 +92,7 @@
 
     /* Cloned Navigation element */
     const navwhite = document.querySelector(".nav_white");
-    if (navwhite) {
-        const navElement = navwhite.cloneNode(true);
-        document.querySelector(".cloned_nav").appendChild(navElement);
-
-    }
+   
 
 
 
@@ -523,5 +543,3 @@
 
 })();
 </script>
- 
-</head>
