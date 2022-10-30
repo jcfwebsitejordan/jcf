@@ -1,64 +1,29 @@
 <section class="home-slider clearfix">
+
+
+    
     <div class="para_slider rdn_slider" data-scroll>
         <div class="swiper-wrapper">
 
 
+            {{ $itemCount := len .banners }}
+            {{ range $index, $item := .banners }}
             <div class="swiper-slide">
                 <div class="slide_inner" data-swiper-parallax-x="90%">
                     <div class="mask"></div>
-                    <img src="https://jcc-1.netlify.app/img/banner1.jpg" alt="" class="slide_bg">
+                    <img src="{{$item.image}}" alt="" class="slide_bg">
                     <div class="slide_content container">
                         <div class="row">
                             <div class="col-lg-6">
-                                <h1>Banner 1</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum in lorem at cursus. Nam consectetur nunc vel iaculis lacinia. Aenean euismod enim ipsum, accumsan venenatis diam sollicitudin eget. Donec et sollicitudin nibh. Suspendisse consectetur eget dui et volutpat. Nullam volutpat rhoncus molestie. Curabitur laoreet est eu est finibus, ut lobortis mauris vulputate.
-
-                                </p>
+                                <h1>{{$item.title}}</h1>
+                                <p>{{$item.data}}</p>
                             </div>
                         </div>
 
                     </div>
                 </div>
             </div>
-            <!-- ./swiper-slide -->
-
-            <div class="swiper-slide">
-                <div class="slide_inner" data-swiper-parallax-x="90%">
-                    <div class="mask"></div>
-                    <img src="https://jcc-1.netlify.app/img/banner2.jpg" alt="" class="slide_bg">
-                    <div class="slide_content container">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <h1>Banner 2</h1>
-                                <p>Phasellus maximus id purus nec tincidunt. Morbi et gravida libero, quis ullamcorper ligula. Vestibulum congue consectetur magna. Curabitur eu imperdiet nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed tempor urna metus, at blandit mi sollicitudin ultrices. Praesent eleifend, leo quis consequat varius, magna dui imperdiet arcu, vitae pulvinar massa ligula sit amet odio.
-
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!-- ./swiper-slide -->
-
-            <div class="swiper-slide">
-                <div class="slide_inner" data-swiper-parallax-x="90%">
-                    <div class="mask"></div>
-                    <img src="https://jcc-1.netlify.app/img/banner3.jpg" alt="" class="slide_bg">
-                    <div class="slide_content container">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <h1>Banner 3</h1>
-                                <p>Quisque ante nisl, ultricies vitae elementum ac, aliquet vitae erat. Nulla nisi enim, cursus molestie metus eget, vestibulum varius enim. Cras in enim lacinia, congue ligula eu, laoreet purus. Curabitur erat urna, condimentum id sem et, placerat vestibulum sapien. Phasellus elit est, iaculis scelerisque pretium eu, varius at erat. In ullamcorper quis ante ac interdum. Maecenas hendrerit dapibus ex, ut iaculis justo sodales et. Curabitur laoreet erat ligula, in consectetur dui suscipit sit amet. Sed sagittis at ante vel imperdiet. Nunc vel bibendum magna. Aliquam erat volutpat. Ut congue lorem non odio molestie, ut finibus ante aliquam. Praesent scelerisque nisi velit, quis vulputate libero auctor vel. Curabitur suscipit imperdiet risus quis porttitor. Duis cursus lacus quis aliquam tincidunt.
-
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!-- ./swiper-slide -->
+            {{ end }}
 
         </div>
         <div class="swiper-nav-btn">

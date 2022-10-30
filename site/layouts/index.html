@@ -1,9 +1,9 @@
 {{ define "main" }}
 
- {{ partial "slider" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
+ {{ partial "slider" .Params  }}
 
 
- {{ partial "services" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
+ {{ partial "services" .Params }}
 
 
  
