@@ -38,6 +38,17 @@ collections: # A list of collections the CMS should be able to edit
               {label: "Title", name: "title", widget: "text"},
               {label: "Data", name: "data", widget: "text"},
               {label: "Icon", name: "icon", widget: "image"}]}
+          - {label: "About", name: about, widget: object, fields: [
+              {label: "SmallTitle", name: "smalltitle", widget: string},
+              {label: "Heading", name: "heading", widget: string},
+              {label: "Text", name: "text", widget: "text"},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "ImageCaption", name: "imagecaption", widget: "text"},
+              {label: "ImageTitle", name: "imagetitle", widget: "text"},
+              {label: "icon", name: "icon", widget: "image"}]}
+          - {label: "Topics", name: topics, widget: list, fields: [
+              {label: "Title", name: "title", widget: "text"},
+              {label: "Text", name: "data", widget: "text"}]}
           
           # - {label: Image, name: image, widget: image}
           # - {label: "Intro", name: intro, widget: object, fields: [
