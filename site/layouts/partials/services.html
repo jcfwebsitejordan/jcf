@@ -16,23 +16,24 @@
 
         </div>
         <!--row-->
-
-
+       
         <div class="row" data-cues="slideInUp">
 
+            {{ $itemCount := len .services }}
+            {{ range $index, $item := .services }}
             <div class="col-lg-4 align-self-center mb-30 event_outer col-md-6">
 
                 <div class="text_icon">
                     <div class="top_icon">
-                        <img src="img/pexels-pixabay-248547.jpg" alt="images">
-                        <p>Professional</p>
+                        <img src="{{$item.image}}" alt="images">
+                        <p>{{$item.header}}</p>
                     </div>
                     <!--top_icon-->
                     <div class="bottom_icon">
 
                         <div class="content_icon">
-                            <p>Inventore.</p>
-                            <h2 class="rdn_subtitle align-self-start">Speed bike.</h2>
+                            <p>{{$item.title}}</p>
+                            <h2 class="rdn_subtitle align-self-start">{{$item.data}}</h2>
                         </div>
                         <i class="fa fa-rainbow icon_service"></i>
                     </div>
@@ -41,55 +42,10 @@
                 </div>
                 <!--text_icon-->
             </div>
-            <!-- col-lg-4 -->
-
-            <div class="col-lg-4 align-self-center mb-30 event_outer col-md-6">
-
-                <div class="text_icon">
-                    <div class="top_icon">
-                        <img src="img/pexels-mike-1174103.jpg" alt="images">
-                        <p>Motivate</p>
-                    </div>
-                    <!--top_icon-->
-                    <div class="bottom_icon">
+            {{end}}
 
 
-                        <div class="content_icon">
-                            <p>Quisquam.</p>
-                            <h2 class="rdn_subtitle align-self-start">Risk free ride.</h2>
-                        </div>
-                        <i class="fa fa-lungs icon_service"></i>
-
-                    </div>
-                    <!--bottom_icon-->
-
-                </div>
-                <!--text_icon-->
-            </div>
-            <!-- col-lg-4 -->
-
-            <div class="col-lg-4 align-self-center mb-30 event_outer">
-
-                <div class="text_icon">
-                    <div class="top_icon">
-                        <img src="img/pexels-erik-mclean-9138665.jpg" alt="images">
-                        <p>Goals</p>
-                    </div>
-                    <!--top_icon-->
-                    <div class="bottom_icon">
-
-                        <div class="content_icon">
-                            <p>Lipsumer.</p>
-                            <h2 class="rdn_subtitle align-self-start">Variety of club.</h2>
-                        </div>
-                        <i class="fa fa-fingerprint icon_service"></i>
-                    </div>
-                    <!--bottom_icon-->
-
-                </div>
-                <!--text_icon-->
-            </div>
-            <!-- col-lg-4 -->
+                 <!-- col-lg-4 -->
 
         </div>
         <!-- /.row -->
