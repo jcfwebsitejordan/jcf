@@ -1,21 +1,10 @@
 ---
-title: Jordan Cycling Federation
-subtitle: Support sustainable farming while enjoying a cup
-image: img/screenshot_20221029_111634.png
-blurb:
-  heading: What can we give to our member.
-  text: >+
-    Riders from all over country have registered for the inaugural event Many
-    will be staying in our club over the weekend boosting tourism and bringing
-    considerable economic benefits to the local region.
-
-  smallheading: Believe in ourself.
-intro:
-  heading: What we offer
-  text: Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone.
+values:
+  heading: Our values
+  text: Coffee is an amazing part of human culture but it has a dark side too –
+    one of colonialism and mindless abuse of natural resources and human lives.
+    We want to turn this around and return the coffee trade to the drink’s
+    exhilarating, empowering and unifying nature.
 products:
   - image: img/illustrations-coffee.svg
     text: We sell green and roasted coffee beans that are sourced directly from
@@ -28,12 +17,6 @@ products:
       tools for every taste and experience level. No matter if you roast your
       own beans or just bought your first french press, you’ll find a gadget to
       fall in love with in our shop.
-values:
-  heading: Our values
-  text: Coffee is an amazing part of human culture but it has a dark side too –
-    one of colonialism and mindless abuse of natural resources and human lives.
-    We want to turn this around and return the coffee trade to the drink’s
-    exhilarating, empowering and unifying nature.
 banners:
   - image: img/banner1.jpg
     title: Title 1
@@ -41,4 +24,37 @@ banners:
   - image: img/banner2.jpg
     title: Title 2
     data: Description 2
+intro:
+  heading: What we offer
+  text: Kaldi is the ultimate spot for coffee lovers who want to learn about their
+    java’s origin and support the farmers that grew it. We take coffee
+    production, roasting and brewing seriously and we’re glad to pass that
+    knowledge to anyone.
+subtitle: Support sustainable farming while enjoying a cup
+title: Jordan Cycling Federation
+blurb:
+  heading: What can we give to our member.
+  text: >+
+    Riders from all over country have registered for the inaugural event Many
+    will be staying in our club over the weekend boosting tourism and bringing
+    considerable economic benefits to the local region.
+
+  smallheading: Believe in ourself.
+image: img/screenshot_20221029_111634.png
+services:
+  - header: Professional
+    image: img/service-1.jpg
+    title: Inventore.
+    data: Speed bike.
+    icon: img/apple-touch-icon.png
+  - header: Service 2
+    title: Quisquam.
+    data: Risk free ride.
+    image: img/service-2.jpg
+    icon: img/apple-touch-icon.png
+  - header: Goals
+    image: img/service-3.jpg
+    title: Lipsumer.
+    data: Variety of club.
+    icon: img/apple-touch-icon.png
 ---
