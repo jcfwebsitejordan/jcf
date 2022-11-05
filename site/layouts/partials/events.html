@@ -7,162 +7,45 @@
         </div>
         <!--top_content-->
 
-        <!-- <ul class="event_filter">
+        <ul class="event_filter">
             <li><a class="is_active" href="#!" data-filter="*">All</a></li>
             <li><a href="#!" data-filter=".special">Special</a></li>
             <li><a href="#!" data-filter=".charity">Charity</a></li>
             <li><a href="#!" data-filter=".mountainbike">Mountain Bike</a></li>
         </ul>
--->
+
 
         <div class="row event_box">
 
-
-            <div class="col-lg-4 align-self-center mb-30 event_outer col-md-6 special">
+            {{ $itemCount := len .events }}
+            {{ range $index, $item := .events }}
+           
+            <div class="col-lg-4 align-self-center mb-30 event_outer col-md-6 {{$item.eventtype}}">
                 <div class="events_item">
                     <div class="event_top">
                         <div class="top_icon">
                             <a href="single-event.html">
                                 <i class="event_go_icon fas fa-plus"></i>
-                                <img src="img/events/event1.jpg" alt="images">
+                                <img src="{{$item.image}}" alt="images">
                             </a>
-                            <p class="event_location"><span>Amman</span> <i class="fas fa-map-marked-alt"></i></p>
+                            <p class="event_location"><span>{{$item.location}}</span> <i class="fas fa-map-marked-alt"></i></p>
                         </div>
                         <!--top_icon-->
                     </div>
                     <!--event_top-->
 
                     <div class="bottom_text">
-                        <p>Special Event</p>
-                        <h3>The Ultimate Tour</h3>
+                        <p>{{$item.title}}</p>
+                        <h3>{{$item.data}}</h3>
                     </div>
                     <!--bottom_text-->
                 </div>
                 <!-- /.events_item -->
             </div>
             <!-- col-lg-4 -->
-
-            <div class="col-lg-4 align-self-center mb-30 event_outer col-md-6 charity mountainbike">
-                <div class="events_item">
-                    <div class="event_top">
-                        <div class="top_icon">
-                            <a href="single-event.html">
-                                <i class="event_go_icon fas fa-plus"></i>
-                                <img src="img/events/event2.jpg" alt="images">
-                            </a>
-                            <p class="event_location"><span>Dead Sea</span> <i class="fas fa-map-marked-alt"></i></p>
-                        </div>
-                        <!--top_icon-->
-                    </div>
-                    <!--event_top-->
-
-                    <div class="bottom_text">
-                        <p>Charity</p>
-                        <h3>Road Challange</h3>
-                    </div>
-                    <!--bottom_text-->
-                </div>
-                <!-- /.events_item -->
-            </div>
-            <!-- col-lg-4 -->
+            {{end}}
 
 
-            <div class="col-lg-4 align-self-center mb-30 event_outer col-md-6 charity special">
-                <div class="events_item">
-                    <div class="event_top">
-                        <div class="top_icon">
-                            <a href="single-event.html">
-                                <i class="event_go_icon fas fa-plus"></i>
-                                <img src="img/events/event3.jpg" alt="images">
-                            </a>
-                            <p class="event_location"><span>Al Salt</span> <i class="fas fa-map-marked-alt"></i></p>
-                        </div>
-                        <!--top_icon-->
-                    </div>
-                    <!--event_top-->
-
-                    <div class="bottom_text">
-                        <p>Special Event</p>
-                        <h3>City Championship</h3>
-                    </div>
-                    <!--bottom_text-->
-                </div>
-                <!-- /.events_item -->
-            </div>
-            <!-- col-lg-4 -->
-
-            <div class="col-lg-4 align-self-center mb-30 event_outer col-md-6 mountainbike">
-                <div class="events_item">
-                    <div class="event_top">
-                        <div class="top_icon">
-                            <a href="single-event.html">
-                                <i class="event_go_icon fas fa-plus"></i>
-                                <img src="img/events/event4.jpg" alt="images">
-                            </a>
-                            <p class="event_location"><span>Irbid</span> <i class="fas fa-map-marked-alt"></i></p>
-                        </div>
-                        <!--top_icon-->
-                    </div>
-                    <!--event_top-->
-
-                    <div class="bottom_text">
-                        <p>Mountain Bike</p>
-                        <h3>Special Max Classic</h3>
-                    </div>
-                    <!--bottom_text-->
-                </div>
-                <!-- /.events_item -->
-            </div>
-            <!-- col-lg-4 -->
-
-            <div class="col-lg-4 align-self-center mb-30 event_outer col-md-6 special mountainbike">
-                <div class="events_item">
-                    <div class="event_top">
-                        <div class="top_icon">
-                            <a href="single-event.html">
-                                <i class="event_go_icon fas fa-plus"></i>
-                                <img src="img/events/event5.jpg" alt="images">
-                            </a>
-                            <p class="event_location"><span>Amman</span> <i class="fas fa-map-marked-alt"></i></p>
-                        </div>
-                        <!--top_icon-->
-                    </div>
-                    <!--event_top-->
-
-                    <div class="bottom_text">
-                        <p>Special Event</p>
-                        <h3>Senior Metro Road</h3>
-                    </div>
-                    <!--bottom_text-->
-                </div>
-                <!-- /.events_item -->
-            </div>
-            <!-- col-lg-4 -->
-
-
-            <div class="col-lg-4 align-self-center mb-30 event_outer col-md-6 charity">
-                <div class="events_item">
-                    <div class="event_top">
-                        <div class="top_icon">
-                            <a href="single-event.html">
-                                <i class="event_go_icon fas fa-plus"></i>
-                                <img src="img/events/event6.jpg" alt="images">
-                            </a>
-                            <p class="event_location"><span>Zarqa</span> <i class="fas fa-map-marked-alt"></i></p>
-                        </div>
-                        <!--top_icon-->
-                    </div>
-                    <!--event_top-->
-
-                    <div class="bottom_text">
-                        <p>Charity</p>
-                        <h3>United Championship</h3>
-                    </div>
-                    <!--bottom_text-->
-                </div>
-                <!-- /.events_item -->
-            </div>
-            <!-- col-lg-4 -->
 
         </div>
         <!-- /.row event_box -->
