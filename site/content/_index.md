@@ -5,6 +5,27 @@ values:
     one of colonialism and mindless abuse of natural resources and human lives.
     We want to turn this around and return the coffee trade to the drink’s
     exhilarating, empowering and unifying nature.
+topics:
+  - data: >+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id
+      imperdiet lectus, vel tempor nunc. Donec commodo id urna in pulvinar.
+      Vivamus justo dolor, rhoncus sed vehicula at, rutrum id est. Mauris vitae
+      nisl bibendum augue fringilla varius. Vestibulum mattis tortor augue, ac
+      condimentum tellus tristique nec. Mauris porta luctus neque, id suscipit
+      nibh tristique vel. Ut ac tincidunt odio. Maecenas ullamcorper iaculis
+      velit, nec viverra ante egestas vel. Quisque sed nisl commodo leo varius
+      blandit efficitur vel magna. Proin at nibh et turpis ultricies varius
+      aliquam eu sem. Donec eget lobortis sem, nec euismod massa. Nullam
+      tincidunt vel erat sed cursus. Phasellus fermentum orci nibh, ac volutpat
+      lacus molestie ut.
+
+    title: History of Cycling Jordan.
+  - title: The Goals of JCF
+    data: Goals Contents
+  - title: board of directors.
+    data: board of directors. contents
+  - title: Code of Practice and annual reports.
+    data: Code of Practice and annual reports. contents
 products:
   - image: img/illustrations-coffee.svg
     text: We sell green and roasted coffee beans that are sourced directly from
