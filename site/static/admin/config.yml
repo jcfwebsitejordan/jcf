@@ -49,6 +49,11 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Topics", name: topics, widget: list, fields: [
               {label: "Title", name: "title", widget: "text"},
               {label: "Text", name: "data", widget: "text"}]}
+          - {label: "Events", name: events, widget: list, fields: [
+              {label: "Title", name: "title", widget: "text"},
+              {label: "Text", name: "data", widget: "text"},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Location", name: "location", widget: "text"}]}
           
           # - {label: Image, name: image, widget: image}
           # - {label: "Intro", name: intro, widget: object, fields: [

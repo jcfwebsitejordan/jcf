@@ -3,12 +3,12 @@
         <div class="row">
             <div class="col-lg-6 align-self-center mb-60 mb-lg-0">
                 <div class="stat_counter">
-                    <img class="stat_img_main" src="img/about/ab2.jpg" alt="" data-cue="slideInUp">
+                    <img class="stat_img_main" src="{{$.about.Image}}" alt="" data-cue="slideInUp">
                     <div class="stat_box" data-cue="slideInUp" data-delay="200">
                         <i class="ph-flame"></i>
                         <div class="stat_content">
-                            <span>Founded in 1992</span>
-                            <h3>Motivate.</h3>
+                            <span>{{$.about.ImageCaption}}</span>
+                            <h3>{{$.about.ImageTitle}}</h3>
                         </div>
                     </div>
 
@@ -17,29 +17,52 @@
             <!--/.col-lg-5-->
 
             <div class="col-lg-5  offset-lg-1">
-                <p class="rdn_subtext" data-cue="slideInUp">About the club.</p>
-                <h2 class="rdn_title" data-cue="slideInUp" data-delay="200">Guidance and history.</h2>
-                <p class="rdn_boldtext">Everything riders need to know about the Course Classic from what’s included in your ride pack.</p>
+                <p class="rdn_subtext" data-cue="slideInUp">{{$.about.smalltitle}}</p>
+                <h2 class="rdn_title" data-cue="slideInUp" data-delay="200">{{$.about.heading}}</h2>
+                <p class="rdn_boldtext">{{$.about.Text}}</p>
 
                 <!--ACCORDIAN START-->
                 <div class="accordion rdn_accordian" id="about_accordian">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                aria-expanded="true" aria-controls="collapseOne">
-                                History of cycling in Jordan.
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                            data-bs-parent="#about_accordian">
-                            <div class="accordion-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id imperdiet lectus, vel tempor nunc. Donec commodo id urna in pulvinar. Vivamus justo dolor, rhoncus sed vehicula at, rutrum id est. Mauris vitae nisl bibendum augue fringilla varius. Vestibulum mattis tortor augue, ac condimentum tellus tristique nec. Mauris porta luctus neque, id suscipit nibh tristique vel. Ut ac tincidunt odio. Maecenas ullamcorper iaculis velit, nec viverra ante egestas vel. Quisque sed nisl commodo leo varius blandit efficitur vel magna. Proin at nibh et turpis ultricies varius aliquam eu sem. Donec eget lobortis sem, nec euismod massa. Nullam tincidunt vel erat sed cursus. Phasellus fermentum orci nibh, ac volutpat lacus molestie ut.
 
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+
+                    {{ $itemCount := len .Topics }}
+                    {{ range $index, $item := .Topics }}
                     <div class="accordion-item">
+                            {{ if $index }}  
+                            <h2 class="accordion-header" id="heading{{$index}}">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{$index}}"
+                                aria-expanded="false" aria-controls="collapse">
+                                {{$item.title}}
+                                </button>
+                            </h2>
+                                <div id="collapse{{$index}}" class="accordion-collapse collapse" aria-labelledby="heading{{$index}}"
+                                data-bs-parent="#about_accordian">
+                                <div class="accordion-body">
+                                <p> {{$item.data}}</p>
+                                </div>
+                                </div>
+                        {{else}}
+
+                        <h2 class="accordion-header" id="heading{{$index}}">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{$index}}"
+                                aria-expanded="true" aria-controls="collapse">
+                                {{$item.title}}
+                                </button>
+                                </h2>
+                                <div id="collapse{{$index}}" class="accordion-collapse collapse show" aria-labelledby="heading{{$index}}"
+                                data-bs-parent="#about_accordian">
+                                <div class="accordion-body">
+                                <p> {{$item.data}}</p>
+                                </div>
+                                </div>
+                        {{ end }}
+
+                            
+                           
+                        
+                    </div>
+                    {{end}}
+                    <!-- <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
                                 aria-expanded="false" aria-controls="collapseTwo">
@@ -53,8 +76,8 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion-item">
+                    </div> -->
+                    <!-- <div class="accordion-item">
                         <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
                                 aria-expanded="false" aria-controls="collapseThree">
@@ -97,7 +120,7 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <!--ACCORDIAN END-->
             </div>
