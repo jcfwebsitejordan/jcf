@@ -6,7 +6,8 @@ values:
     We want to turn this around and return the coffee trade to the drink’s
     exhilarating, empowering and unifying nature.
 topics:
-  - data: >+
+  - title: History of Cycling Jordan.
+    data: >+
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id
       imperdiet lectus, vel tempor nunc. Donec commodo id urna in pulvinar.
       Vivamus justo dolor, rhoncus sed vehicula at, rutrum id est. Mauris vitae
@@ -18,8 +19,6 @@ topics:
       aliquam eu sem. Donec eget lobortis sem, nec euismod massa. Nullam
       tincidunt vel erat sed cursus. Phasellus fermentum orci nibh, ac volutpat
       lacus molestie ut.
-
-    title: History of Cycling Jordan.
   - title: The Goals of JCF
     data: Goals Contents
   - title: board of directors.
