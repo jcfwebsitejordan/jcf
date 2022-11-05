@@ -3,7 +3,7 @@
 <ul>
       {{ range $index, $item := .Params.events }}
 
-      {{ if $item.showfooter}}
+       {{ if eq $item.showfooter "1"}}
      <li><a href="single-event.html">{{$item.title}}</a></li>
 
      {{end}} 
