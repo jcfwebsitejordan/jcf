@@ -6,13 +6,15 @@
             <h2 class="rdn_title mb-0" data-cue="slideInUp" data-delay="200">Become a member <br>and join our club event.</h2>
         </div>
         <!--top_content-->
-
+        {{ if $.showfilter }}  
+                            
         <ul class="event_filter">
             <li><a class="is_active" href="#!" data-filter="*">All</a></li>
             <li><a href="#!" data-filter=".special">Special</a></li>
             <li><a href="#!" data-filter=".charity">Charity</a></li>
             <li><a href="#!" data-filter=".mountainbike">Mountain Bike</a></li>
         </ul>
+        {{ end }}
 
 
         <div class="row event_box">
