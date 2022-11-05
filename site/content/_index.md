@@ -51,6 +51,22 @@ intro:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone.
+services:
+  - header: Professional
+    image: img/service-1.jpg
+    title: Inventore.
+    data: Speed bike.
+    icon: img/apple-touch-icon.png
+  - header: Service 2
+    title: Quisquam.
+    data: Risk free ride.
+    image: img/service-2.jpg
+    icon: img/apple-touch-icon.png
+  - header: Goals
+    image: img/service-3.jpg
+    title: Lipsumer.
+    data: Variety of club.
+    icon: img/apple-touch-icon.png
 about:
   smalltitle: About the club.
   heading: Guidance and history.
@@ -71,21 +87,25 @@ blurb:
     considerable economic benefits to the local region.
 
   smallheading: Believe in ourself.
+events:
+  - show: "1"
+    title: Special Event
+    data: The Ultimate Tour
+    image: img/1200_800.jpg
+    location: Amman
+  - show: "1"
+    title: Charity
+    data: |
+      Road Challange
+    image: img/1200_800.jpg
+    location: Dead Sea
+  - show: "1"
+    title: |+
+      Special Event
+
+    data: |
+      City Championship
+    image: img/1200_800.jpg
+    location: Al Salt
 image: img/screenshot_20221029_111634.png
-services:
-  - header: Professional
-    image: img/service-1.jpg
-    title: Inventore.
-    data: Speed bike.
-    icon: img/apple-touch-icon.png
-  - header: Service 2
-    title: Quisquam.
-    data: Risk free ride.
-    image: img/service-2.jpg
-    icon: img/apple-touch-icon.png
-  - header: Goals
-    image: img/service-3.jpg
-    title: Lipsumer.
-    data: Variety of club.
-    icon: img/apple-touch-icon.png
 ---
