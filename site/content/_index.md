@@ -195,11 +195,26 @@ footer:
   text: With a mission to improve lives through bicycling we teach the joys of
     bicycling - advocate for safe places to ride.
   address: Amman - Jordan
-  email: Jordan-Cycling.cycling
+  email: Jordan@Cycling.cycling
 gallery:
   - image: img/1.jpeg
     title: Tile 1
     data: Description 1
+  - image: img/2.jpeg
+    title: Tile 2
+    data: Description 2
+  - image: img/3.jpeg
+    title: Tile 3
+    data: Description 3
+  - image: img/5.jpeg
+    title: Tile 5
+    data: Description 5
+  - image: img/6.jpeg
+    title: Tile 6
+    data: Description 6
+  - image: img/7.jpeg
+    title: Tile 7
+    data: Description 7
 subtitle: Support sustainable farming while enjoying a cup
 image: img/screenshot_20221029_111634.png
 ---

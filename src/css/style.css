@@ -807,8 +807,7 @@ p:last-child {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-weight: 600;
-  color: #fff;
-}
+ }
 
 .mobile_menu a i {
   width: 15px;

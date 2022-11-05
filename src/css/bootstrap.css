@@ -130,8 +130,8 @@ p {
 
 abbr[title],
 abbr[data-bs-original-title] {
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  -webkit-text-decoration: none;
+          text-decoration: none;
   cursor: help;
   text-decoration-skip-ink: none;
 }
@@ -206,7 +206,7 @@ sup {
 
 a {
   color: #0d6efd;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:hover {
@@ -3793,7 +3793,7 @@ fieldset:disabled .btn {
 .btn-link {
   font-weight: 400;
   color: #0d6efd;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .btn-link:hover {
@@ -8337,7 +8337,7 @@ fieldset:disabled .btn {
 }
 
 .text-decoration-underline {
-  text-decoration: underline !important;
+  text-decoration: none !important;
 }
 
 .text-decoration-line-through {
