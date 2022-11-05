@@ -50,6 +50,7 @@ intro:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone.
+title: Jordan Cycling Federation
 blurb:
   heading: What can we give to our member.
   text: >+
@@ -85,8 +86,10 @@ about:
     Founded in 1992
   icon: img/android-chrome-192x192.png
 showfilter: "1"
-subtitle: Support sustainable farming while enjoying a cup
-title: Jordan Cycling Federation
+eventtypes:
+  - eventtype: Special
+  - eventtype: Charity
+  - eventtype: Mountain Bike
 events:
   - show: "1"
     title: Special Event
@@ -188,9 +191,15 @@ events:
     location: Al Salt
     eventtype: Special
     showfooter: "0"
+footer:
+  text: With a mission to improve lives through bicycling we teach the joys of
+    bicycling - advocate for safe places to ride.
+  address: Amman - Jordan
+  email: Jordan-Cycling.cycling
+gallery:
+  - image: img/1.jpeg
+    title: Tile 1
+    data: Description 1
+subtitle: Support sustainable farming while enjoying a cup
 image: img/screenshot_20221029_111634.png
-eventtypes:
-  - eventtype: Special
-  - eventtype: Charity
-  - eventtype: Mountain Bike
 ---
