@@ -30,6 +30,16 @@ intro:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone.
+about:
+  smalltitle: About the club.
+  heading: Guidance and history.
+  text: Everything riders need to know about the Course Classic from what’s
+    included in your ride pack.
+  image: img/banner3.jpg
+  imagetitle: Motivate.
+  imagecaption: |
+    Founded in 1992
+  icon: img/android-chrome-192x192.png
 subtitle: Support sustainable farming while enjoying a cup
 title: Jordan Cycling Federation
 blurb:
