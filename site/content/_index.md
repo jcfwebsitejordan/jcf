@@ -56,7 +56,7 @@ about:
   heading: Guidance and history.
   text: Everything riders need to know about the Course Classic from what’s
     included in your ride pack.
-  image: img/banner3.jpg
+  image: img/about.jpg
   imagetitle: Motivate.
   imagecaption: |
     Founded in 1992
