@@ -7,7 +7,7 @@ values:
     exhilarating, empowering and unifying nature.
 topics:
   - title: History of Cycling Jordan.
-    data: >+
+    data: >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id
       imperdiet lectus, vel tempor nunc. Donec commodo id urna in pulvinar.
       Vivamus justo dolor, rhoncus sed vehicula at, rutrum id est. Mauris vitae
@@ -50,6 +50,14 @@ intro:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone.
+blurb:
+  heading: What can we give to our member.
+  text: >+
+    Riders from all over country have registered for the inaugural event Many
+    will be staying in our club over the weekend boosting tourism and bringing
+    considerable economic benefits to the local region.
+
+  smallheading: Believe in ourself.
 services:
   - header: Professional
     image: img/service-1.jpg
@@ -76,28 +84,23 @@ about:
   imagecaption: |
     Founded in 1992
   icon: img/android-chrome-192x192.png
+showfilter: "1"
 subtitle: Support sustainable farming while enjoying a cup
 title: Jordan Cycling Federation
-blurb:
-  heading: What can we give to our member.
-  text: >+
-    Riders from all over country have registered for the inaugural event Many
-    will be staying in our club over the weekend boosting tourism and bringing
-    considerable economic benefits to the local region.
-
-  smallheading: Believe in ourself.
 events:
   - show: "1"
     title: Special Event
     data: The Ultimate Tour
     image: img/1200_800.jpg
     location: Amman
+    eventtype: Mountain Bike
   - show: "1"
     title: Charity
     data: |
       Road Challange
     image: img/1200_800.jpg
     location: Dead Sea
+    eventtype: Charity
   - show: "1"
     title: |+
       Special Event
@@ -106,5 +109,10 @@ events:
       City Championship
     image: img/1200_800.jpg
     location: Al Salt
+    eventtype: Special Event
 image: img/screenshot_20221029_111634.png
+eventtypes:
+  - eventtype: Special
+  - eventtype: Charity
+  - eventtype: Mountain Bike
 ---
