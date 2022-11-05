@@ -54,6 +54,7 @@ collections: # A list of collections the CMS should be able to edit
               {label: "Type", name: "eventtype", widget: "text"}]}          
           - {label: "Events", name: events, widget: list, fields: [
               {label: "Show on Home Page ?", name: "show",widget: "select", required: true, default: "1", options: [{label: "Yes", value: "1"},{label: "No", value: "0"}]},
+              {label: "Show on Footer ?", name: "showfooter",widget: "select", required: true, default: "1", options: [{label: "Yes", value: "1"},{label: "No", value: "0"}]},
               {label: "Event Type", name: "eventtype", widget: "text"},
               {label: "Title", name: "title", widget: "text"},
               {label: "Text", name: "data", widget: "text"},

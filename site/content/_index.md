@@ -109,7 +109,154 @@ events:
       City Championship
     image: img/1200_800.jpg
     location: Al Salt
-    eventtype: Special Event
+    eventtype: Special
+  - show: "1"
+    title: Special Event
+    data: The Ultimate Tour
+    image: img/1200_800.jpg
+    location: Amman
+    eventtype: Mountain Bike
+  - show: "1"
+    title: Charity
+    data: |
+      Road Challange
+    image: img/1200_800.jpg
+    location: Dead Sea
+    eventtype: Charity
+  - show: "1"
+    title: |+
+      Special Event
+
+    data: |
+      City Championship
+    image: img/1200_800.jpg
+    location: Al Salt
+    eventtype: Special
+  - show: "1"
+    title: Special Event
+    data: The Ultimate Tour
+    image: img/1200_800.jpg
+    location: Amman
+    eventtype: Mountain Bike
+  - show: "1"
+    title: Charity
+    data: |
+      Road Challange
+    image: img/1200_800.jpg
+    location: Dead Sea
+    eventtype: Charity
+  - show: "1"
+    title: |+
+      Special Event
+
+    data: |
+      City Championship
+    image: img/1200_800.jpg
+    location: Al Salt
+    eventtype: Special
+  - show: "1"
+    title: Special Event
+    data: The Ultimate Tour
+    image: img/1200_800.jpg
+    location: Amman
+    eventtype: Mountain Bike
+  - show: "1"
+    title: Charity
+    data: |
+      Road Challange
+    image: img/1200_800.jpg
+    location: Dead Sea
+    eventtype: Charity
+  - show: "1"
+    title: |+
+      Special Event
+
+    data: |
+      City Championship
+    image: img/1200_800.jpg
+    location: Al Salt
+    eventtype: Special
+  - show: "1"
+    title: |+
+      Special Event
+
+    data: |
+      City Championship
+    image: img/1200_800.jpg
+    location: Al Salt
+    eventtype: Special
+  - show: "1"
+    title: |+
+      Special Event
+
+    data: |
+      City Championship
+    image: img/1200_800.jpg
+    location: Al Salt
+    eventtype: Special
+  - show: "1"
+    title: |+
+      Special Event
+
+    data: |
+      City Championship
+    image: img/1200_800.jpg
+    location: Al Salt
+    eventtype: Special
+  - show: "1"
+    title: |+
+      Special Event
+
+    data: |
+      City Championship
+    image: img/1200_800.jpg
+    location: Al Salt
+    eventtype: Special
+  - show: "1"
+    title: |+
+      Special Event
+
+    data: |
+      City Championship
+    image: img/1200_800.jpg
+    location: Al Salt
+    eventtype: Special
+  - show: "1"
+    title: |+
+      Special Event
+
+    data: |
+      City Championship
+    image: img/1200_800.jpg
+    location: Al Salt
+    eventtype: Special
+  - show: "1"
+    title: |+
+      Special Event
+
+    data: |
+      City Championship
+    image: img/1200_800.jpg
+    location: Al Salt
+    eventtype: Special
+  - show: "1"
+    title: |+
+      Special Event
+
+    data: |
+      City Championship
+    image: img/1200_800.jpg
+    location: Al Salt
+    eventtype: Special
+  - show: "1"
+    title: |+
+      Special Event
+
+    data: |
+      City Championship
+    image: img/1200_800.jpg
+    location: Al Salt
+    eventtype: Special
 image: img/screenshot_20221029_111634.png
 eventtypes:
   - eventtype: Special

@@ -298,7 +298,7 @@
     background-color: $rdn-heading-color;
 
     .offcanvas-header {
-        justify-content: end;
+        justify-content: flex-end;
         padding: 20px;
 
         .close_mb {
