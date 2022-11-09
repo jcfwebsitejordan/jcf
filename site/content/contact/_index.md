@@ -9,6 +9,7 @@ eventcount: "2470"
 city: Amman, Jordan
 street: Amman Street
 hours: 06.00 AM - 06.00 PM
+email: info@info.com
 contact_entries:
   - heading: Location
     text: 3153 Lynn Avenue, South San Francisco, California 94080

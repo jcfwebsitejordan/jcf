@@ -5,10 +5,9 @@
 	<div class="container contact_inner">
 		<div class="row">
 			<div class="col-lg-6 offset-lg-3 text-center">
-				<p data-cue="slideInUp">Let's meet</p>
+				<p data-cue="slideInUp">{{.Params.smalltitle}}</p>
 				<h1 class="hero_title" data-cue="slideInUp" data-delay="400">
-					Contact Us.
-				</h1>
+					{{.Params.title}}				</h1>
 			</div>
 			<!-- /.col-lg-6 offset-3 -->
 		</div>
@@ -37,7 +36,7 @@
 					<div class="stat_top">
 						<i class="fab fa-accessible-icon"></i>
 
-						<span  class="counter" >1420</span>
+						<span  class="counter" >{{ .Params.memberscount }}</span>
 					</div>
 					<!-- /.stat_top -->
 					<p>Members</p>
@@ -45,7 +44,7 @@
 				<div class="col-lg-3 col-md-6  counter_content mb-30 m-lg-0">
 					<div class="stat_top">
 						<i class="fas fa-crown"></i>
-						<span  class="counter" >2324</span>
+						<span  class="counter" >{{ .Params.trackcount }}</span>
 					</div>
 	
 					<!-- /.stat_top -->
@@ -54,7 +53,7 @@
 				<div class="col-lg-3 col-md-6 counter_content mb-30 m-md-0">
 					<div class="stat_top">
 						<i class="fas fa-biking"></i>
-						<span  class="counter" >1380</span>
+						<span  class="counter" >{{ .Params.routcount }}</span>
 					</div>
 					<!-- /.stat_top -->
 					<p>Route</p>
@@ -62,7 +61,7 @@
 				<div class="col-lg-3 col-md-6 counter_content mb-30 m-md-0">
 					<div class="stat_top">
 						<i class="fas fa-cookie-bite"></i>
-						<span  class="counter" >2470</span>
+						<span  class="counter" >{{ .Params.eventcount }}</span>
 					</div>
 					<!-- /.stat_top -->
 					<p>Events</p>
@@ -81,10 +80,10 @@
 
 			<div class="col-lg-3 col-md-6">
 				<ul class="single_event_list gray-bg list-unstyled mb-lg-0 mb-30">
-					<li><i class="ph-buildings-bold"></i> Amman, Jordan</li>
-					<li><i class="ph-map-pin-bold"></i> Amman Street</li>
-					<li><i class="ph-clock-afternoon-bold"></i> 06.00 AM - 06.00 PM</li>
-					<li><i class="ph-envelope-bold"></i> email@example.com</li>
+					<li><i class="ph-buildings-bold"></i> {{ .Params.city }}</li>
+					<li><i class="ph-map-pin-bold"></i> {{ .Params.street }}</li>
+					<li><i class="ph-clock-afternoon-bold"></i> {{ .Params.hours }}</li>
+					<li><i class="ph-envelope-bold"></i> {{ .Params.email }}</li>
 				</ul>
 			</div>
 			<!-- col-lg-3 -->
@@ -119,7 +118,7 @@
 
 <section class="map_bottom">
 	<div class="google_map">
-		<iframe src="https://maps.google.com/maps?q=amman&t=&z=13&ie=UTF8&iwloc=&output=embed" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		<iframe src="{{ .Params.location }}" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 	</div>
 	<!-- google_map -->
 </section>
@@ -168,7 +167,7 @@
 </style>
 
 <!-----------------------------------TODO -->
-<div class="ph3 bg-off-white">
+<!-- <div class="ph3 bg-off-white">
 	<div class="center mw6 pv3">
 
 		<img src="{{ .Params.logo }}" alt="" class="db w4 center pv4">
@@ -187,7 +186,7 @@
 		{{ partial "contact-form" . }}
 
 	</div>
-</div>
+</div> -->
  <!-- JAVASCRIPT -->
  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
  <script src="https://unpkg.com/swiper@8.4.4/swiper-bundle.min.js"></script>
@@ -601,21 +600,7 @@
 	 draggable: false,
 	 skin: 'body_popupvideo'
  });
-
- /* counter init with waypoint */
- /* trigger waypoints on the element with class .stat_section */
- const counterSection = document.querySelector('.stat_section');
- if (counterSection) {
-	 const counter = new Waypoint({
-		 element: counterSection,
-		 handler: function (direction) {
-			 /* variable:class,duration time= default 5 (seconds) */
-			 rdn_counter(".counter_text", 15);
-		 },
-		 offset: '75%',
-	 })
-
- }
+ 
 
  /* change value for progress bar to style width*/
  if (document.querySelector('.progress_box')) {
