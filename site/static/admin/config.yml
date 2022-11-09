@@ -85,7 +85,7 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: SmallTitle, name: smalltitle, widget: string}
           - {label: Title, name: title, widget: string}
-          - {label: Logo, name: logo, widget: string}
+          - {label: Logo, name: logo, widget: image}
           - {label: Members Count, name: memberscount, widget: string}
           - {label: Track Count, name: trackcount, widget: string}
           - {label: Route Count, name: routcount, widget: string}
