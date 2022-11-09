@@ -95,6 +95,19 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Working Hours, name: hours, widget: string}
           - {label: Email, name: email, widget: string}
           - {label: Location (Copy Location Url from Google Maps), name: location, widget: string}
+      - file: "site/content/pages/_index.md"
+        label: "Pages"
+        name: "pages"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - label: Values
+            name: values
+            widget: list
+            fields:
+              - {label: Heading, name: heading, widget: string, required: false}
+              - {label: Text, name: text, widget: text, required: false}
+              - {label: Image, name: imageUrl, widget: image, required: false}
       # - file: "site/content/products/_index.md"
       #   label: "Products Page"
       #   name: "products"
@@ -112,12 +125,12 @@ collections: # A list of collections the CMS should be able to edit
       #   label: "Values Page"
       #   name: "values"
       #   fields:
-      #     - {label: Title, name: title, widget: string}
-      #     - {label: Image, name: image, widget: image}
-      #     - label: Values
-      #       name: values
-      #       widget: list
-      #       fields:
-      #         - {label: Heading, name: heading, widget: string}
-      #         - {label: Text, name: text, widget: text}
-      #         - {label: Image, name: imageUrl, widget: image}
+          # - {label: Title, name: title, widget: string}
+          # - {label: Image, name: image, widget: image}
+          # - label: Values
+          #   name: values
+          #   widget: list
+          #   fields:
+          #     - {label: Heading, name: heading, widget: string}
+          #     - {label: Text, name: text, widget: text}
+          #     - {label: Image, name: imageUrl, widget: image}
