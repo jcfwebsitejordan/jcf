@@ -95,19 +95,19 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Working Hours, name: hours, widget: string}
           - {label: Email, name: email, widget: string}
           - {label: Location (Copy Location Url from Google Maps), name: location, widget: string}
-      - file: "site/content/pages/_index.md"
-        label: "Pages"
-        name: "pages"
+      - file: "site/content/aboutus/_index.md"
+        label: "About Us"
+        name: "aboutus"
         fields:
-          - label: Contents
-            name: contents
+          - label: Sections
+            name: sections
             widget: list
             fields:
-              - {label: "Pages", name: "pages", widget: list, fields: [
-                {label: "Title", name: "title", widget: "string"},
-                {label: "Image", name: "image", widget: "image", required: false},
-                {label: "Left Content", name: "left", widget: "markdown", required: false},
-                {label: "Right Content", name: "right", widget: "markdown", required: false}]}
+              - {label: "Section Name ( this will be used for urls , it must contains Alphapets only without spaces )", name: "name", widget: "string"},
+              - {label: "Title", name: "title", widget: "string"},
+              - {label: "Image", name: "image", widget: "image", required: false},
+              - {label: "Left Content", name: "left", widget: "markdown", required: false},
+              - {label: "Right Content", name: "right", widget: "markdown", required: false}
       # - file: "site/content/products/_index.md"
       #   label: "Products Page"
       #   name: "products"
