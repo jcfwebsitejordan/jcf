@@ -100,7 +100,7 @@ collections: # A list of collections the CMS should be able to edit
         name: "aboutus"
         fields:
           - {label: "Sections", name: "sections", widget: list, fields: [
-              {label: "Section Name ( this will be used for urls , it must contains Alphapets only without spaces )", name: "name", widget: "string"},
+              {label: "Section Name ( this will be used for urls , it must contains Alphapets only without spaces )", name: "name", widget: "string", required: false},
               {label: "Title", name: "title", widget: "string"},
               {label: "Image", name: "image", widget: "image", required: false},
               {label: "Left Content", name: "left", widget: "markdown", required: false},
@@ -110,7 +110,7 @@ collections: # A list of collections the CMS should be able to edit
         name: "disciplines"
         fields:
           - {label: "Sections", name: "sections", widget: list, fields: [
-              {label: "Section Name ( this will be used for urls , it must contains Alphapets only without spaces )", name: "name", widget: "string"},
+              {label: "Section Name ( this will be used for urls , it must contains Alphapets only without spaces )", name: "name", widget: "string", required: false},
               {label: "Title", name: "title", widget: "string"},
               {label: "Image", name: "image", widget: "image", required: false},
               {label: "Left Content", name: "left", widget: "markdown", required: false},
@@ -120,7 +120,7 @@ collections: # A list of collections the CMS should be able to edit
         name: "clubsacademes"
         fields:
           - {label: "Sections", name: "sections", widget: list, fields: [
-              {label: "Section Name ( this will be used for urls , it must contains Alphapets only without spaces )", name: "name", widget: "string"},
+              {label: "Section Name ( this will be used for urls , it must contains Alphapets only without spaces )", name: "name", widget: "string", required: false},
               {label: "Title", name: "title", widget: "string"},
               {label: "Image", name: "image", widget: "image", required: false},
               {label: "Left Content", name: "left", widget: "markdown", required: false},
@@ -130,7 +130,7 @@ collections: # A list of collections the CMS should be able to edit
         name: "cyclingforall"
         fields:
           - {label: "Sections", name: "sections", widget: list, fields: [
-              {label: "Section Name ( this will be used for urls , it must contains Alphapets only without spaces )", name: "name", widget: "string"},
+              {label: "Section Name ( this will be used for urls , it must contains Alphapets only without spaces )", name: "name", widget: "string", required: false},
               {label: "Title", name: "title", widget: "string"},
               {label: "Image", name: "image", widget: "image", required: false},
               {label: "Left Content", name: "left", widget: "markdown", required: false},
