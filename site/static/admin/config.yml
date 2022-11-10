@@ -99,15 +99,42 @@ collections: # A list of collections the CMS should be able to edit
         label: "About Us"
         name: "aboutus"
         fields:
-          - label: Sections
-            name: sections
-            widget: list
-            fields:
-              - {label: "Section Name ( this will be used for urls , it must contains Alphapets only without spaces )", name: "name", widget: "string"},
-              - {label: "Title", name: "title", widget: "string"},
-              - {label: "Image", name: "image", widget: "image", required: false},
-              - {label: "Left Content", name: "left", widget: "markdown", required: false},
-              - {label: "Right Content", name: "right", widget: "markdown", required: false}
+          - {label: "Sections", name: "sections", widget: list, fields: [
+              {label: "Section Name ( this will be used for urls , it must contains Alphapets only without spaces )", name: "name", widget: "string"},
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Image", name: "image", widget: "image", required: false},
+              {label: "Left Content", name: "left", widget: "markdown", required: false},
+              {label: "Right Content", name: "right", widget: "markdown", required: false}]}
+      - file: "site/content/disciplines/_index.md"
+        label: "Disciplines"
+        name: "disciplines"
+        fields:
+          - {label: "Sections", name: "sections", widget: list, fields: [
+              {label: "Section Name ( this will be used for urls , it must contains Alphapets only without spaces )", name: "name", widget: "string"},
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Image", name: "image", widget: "image", required: false},
+              {label: "Left Content", name: "left", widget: "markdown", required: false},
+              {label: "Right Content", name: "right", widget: "markdown", required: false}]}
+      - file: "site/content/clubsacademes/_index.md"
+        label: "Clubs Academes"
+        name: "clubsacademes"
+        fields:
+          - {label: "Sections", name: "sections", widget: list, fields: [
+              {label: "Section Name ( this will be used for urls , it must contains Alphapets only without spaces )", name: "name", widget: "string"},
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Image", name: "image", widget: "image", required: false},
+              {label: "Left Content", name: "left", widget: "markdown", required: false},
+              {label: "Right Content", name: "right", widget: "markdown", required: false}]}
+      - file: "site/content/cyclingforall/_index.md"
+        label: "Cycling For All"
+        name: "cyclingforall"
+        fields:
+          - {label: "Sections", name: "sections", widget: list, fields: [
+              {label: "Section Name ( this will be used for urls , it must contains Alphapets only without spaces )", name: "name", widget: "string"},
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Image", name: "image", widget: "image", required: false},
+              {label: "Left Content", name: "left", widget: "markdown", required: false},
+              {label: "Right Content", name: "right", widget: "markdown", required: false}]}
       # - file: "site/content/products/_index.md"
       #   label: "Products Page"
       #   name: "products"
