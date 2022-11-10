@@ -7,12 +7,12 @@ sections:
       Vision Left Contents
 
 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit nisi non placerat iaculis. Phasellus commodo eros in euismod blandit. Nullam volutpat quam a diam blandit luctus. Aenean eleifend lectus risus, in commodo nulla porta in. Nunc quis justo ut sapien tristique cursus. In ut velit sed justo tristique viverra. Curabitur cursus eget lacus nec mollis. Vestibulum molestie odio id ex tincidunt dignissim. Nulla consequat dignissim cursus. Donec sagittis mauris odio, a pulvinar libero maximus vitae. Nam sodales risus vitae urna egestas, a ultricies ligula auctor.
+      Lorem ipsum dolor 
     right: >-
       Vision Right contents
 
 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit nisi non placerat iaculis. Phasellus commodo eros in euismod blandit. Nullam volutpat quam a diam blandit luctus. Aenean eleifend lectus risus, in commodo nulla porta in. Nunc quis justo ut sapien tristique cursus. In ut velit sed justo tristique viverra. Curabitur cursus eget lacus nec mollis. Vestibulum molestie odio id ex tincidunt dignissim. Nulla consequat dignissim cursus. Donec sagittis mauris odio, a pulvinar libero maximus vitae. Nam sodales risus vitae urna egestas, a ultricies ligula auctor.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit nisi non placerat iaculis.
   - name: mission
     title: Mission
     image: img/3.jpeg
@@ -20,12 +20,12 @@ sections:
       Mission Left Content
 
 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit nisi non placerat iaculis. Phasellus commodo eros in euismod blandit. Nullam volutpat quam a diam blandit luctus. Aenean eleifend lectus risus, in commodo nulla porta in. Nunc quis justo ut sapien tristique cursus. In ut velit sed justo tristique viverra. Curabitur cursus eget lacus nec mollis. Vestibulum molestie odio id ex tincidunt dignissim. Nulla consequat dignissim cursus. Donec sagittis mauris odio, a pulvinar libero maximus vitae. Nam sodales risus vitae urna egestas, a ultricies ligula auctor.
+      Lorem ipsum dolor sit amet
     right: >-
       M﻿ission Rigth Content
 
 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit nisi non placerat iaculis. Phasellus commodo eros in euismod blandit. Nullam volutpat quam a diam blandit luctus. Aenean eleifend lectus risus, in commodo nulla porta in. Nunc quis justo ut sapien tristique cursus. In ut velit sed justo tristique viverra. Curabitur cursus eget lacus nec mollis. Vestibulum molestie odio id ex tincidunt dignissim. Nulla consequat dignissim cursus. Donec sagittis mauris odio, a pulvinar libero maximus vitae. Nam sodales risus vitae urna egestas, a ultricies ligula auctor.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit nisi non placerat iaculis. Phasellus commodo eros in euismod blandit. Nullam volutpat quam a diam blandit luctus. Aenean eleifend .
   - name: who-we-are
     title: Who We Are
     image: img/contact.jpg
@@ -33,10 +33,10 @@ sections:
       W﻿ho We Are Left
 
 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit nisi non placerat iaculis. Phasellus commodo eros in euismod blandit. Nullam volutpat quam a diam blandit luctus. Aenean eleifend lectus risus, in commodo nulla porta in. Nunc quis justo ut sapien tristique cursus. In ut velit sed justo tristique viverra. Curabitur cursus eget lacus nec mollis. Vestibulum molestie odio id ex tincidunt dignissim. Nulla consequat dignissim cursus. Donec sagittis mauris odio, a pulvinar libero maximus vitae. Nam sodales risus vitae urna egestas, a ultricies ligula auctor.
+      consectetur adipiscing elit 
     right: >-
       W﻿ho We Are Right
 
 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit nisi non placerat iaculis. Phasellus commodo eros in euismod blandit. Nullam volutpat quam a diam blandit luctus. Aenean eleifend lectus risus, in commodo nulla porta in. Nunc quis justo ut sapien tristique cursus. In ut velit sed justo tristique viverra. Curabitur cursus eget lacus nec mollis. Vestibulum molestie odio id ex tincidunt dignissim. Nulla consequat dignissim cursus. Donec sagittis mauris odio, a pulvinar libero maximus vitae. Nam sodales risus vitae urna egestas, a ultricies ligula auctor.
+      Phasellus commodo eros in euismod blandit.
 ---
