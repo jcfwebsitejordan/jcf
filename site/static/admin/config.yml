@@ -16,8 +16,8 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Intro Blurb", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "pages"
-    label: "Pages"
+  - name: "contents"
+    label: "Content"
     files:
       - file: "site/content/_index.md"
         label: "Home Page"
@@ -100,9 +100,9 @@ collections: # A list of collections the CMS should be able to edit
         name: "pages"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - label: Values
-            name: values
+          - {label: Image, name: image, widget: image, required: false}
+          - label: Contents
+            name: contents
             widget: list
             fields:
               - {label: Heading, name: heading, widget: string, required: false}

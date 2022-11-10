@@ -740,7 +740,7 @@ p:last-child {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  height: 76px;
+  height: 128px;
 }
 
 /* cloned nav style */
