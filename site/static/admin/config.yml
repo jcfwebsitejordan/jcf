@@ -103,11 +103,11 @@ collections: # A list of collections the CMS should be able to edit
             name: contents
             widget: list
             fields:
-              - {label: "Pages", name: pages, widget: list, fields: [
+              - {label: "Pages", name: "pages", widget: list, fields: [
                 {label: "Title", name: "title", widget: "string"},
                 {label: "Image", name: "image", widget: "image", required: false},
                 {label: "Left Content", name: "left", widget: "markdown", required: false},
-                {label: "Right Content", name: "left", widget: "markdown"}, required: false]}
+                {label: "Right Content", name: "right", widget: "markdown"}, required: false]}
       # - file: "site/content/products/_index.md"
       #   label: "Products Page"
       #   name: "products"
