@@ -14,50 +14,56 @@
 
                 <div class="btn_col col-lg-8 align-content-center justify-content-end d-none  d-lg-flex">
 					<ul class="nav_menu">
-						<li class="nav-item dropdown">
-							<a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false">
-								About us
-							</a>
-							<!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="#">Vision</a> -->
-								<!-- <div class="dropdown-divider"></div> -->
-								<!-- <a class="dropdown-item" href="#">Mission</a>
- 								<a class="dropdown-item" href="#">Who are we</a>
- 								<a class="dropdown-item" href="#">Data</a>
- 								<a class="dropdown-item" href="#">News</a>
-							</div> -->
+
+
+						{{ with .Site.GetPage "aboutus" }}
+						<li class="has_child">
+							<a href="\aboutus">About us</a>
+							
+							<ul class="nav_menu_child">
+
+								{{ range $index, $item := .Params.sections }}
+
+								
+								<li><a href="\aboutus\#{{$item.name}}">{{$item.title}}</a></li>
+
+								{{end}}
+							</ul>
 						</li>
-                       
-						<li class="nav-item dropdown">
-							<a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false">
-								Disciplines
-							</a>
-							<!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="#">Road Bike</a>
- 								<a class="dropdown-item" href="#">Mountain Bike</a>
- 								<a class="dropdown-item" href="#">Track</a>
- 								<a class="dropdown-item" href="#">BMX free Style</a>
- 								<a class="dropdown-item" href="#">Trails</a>
- 								<a class="dropdown-item" href="#">Cycling Esport</a>
-							</div> -->
+						{{ end }}
+						 
+						{{ with .Site.GetPage "disciplines" }}
+						<li class="has_child">
+							<a href="\disciplines">Disciplines</a>
+							
+							<ul class="nav_menu_child">
+
+								{{ range $index, $item := .Params.sections }}
+
+								
+								<li><a href="\disciplines\#{{$item.name}}">{{$item.title}}</a></li>
+
+								{{end}}
+							</ul>
 						</li>
-                       
-						<li class="nav-item dropdown">
-							<a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false">
-								Clubs/Academes
-							</a>
-							<!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="#">Tareef cycling club</a>
- 								<a class="dropdown-item" href="#">Mountain Bike</a>
- 								<a class="dropdown-item" href="#">Track</a>
- 								<a class="dropdown-item" href="#">BMX free Style</a>
- 								<a class="dropdown-item" href="#">Trails</a>
- 								<a class="dropdown-item" href="#">Cycling Esport</a>
-							</div> -->
+						{{ end }}
+						
+						{{ with .Site.GetPage "clubsacademes" }}
+						<li class="has_child">
+							<a href="\clubsacademes">Clubs/Academes</a>
+							
+							<ul class="nav_menu_child">
+
+								{{ range $index, $item := .Params.sections }}
+
+								
+								<li><a href="\clubsacademes\#{{$item.name}}">{{$item.title}}</a></li>
+
+								{{end}}
+							</ul>
 						</li>
+						{{ end }}
+						 
 						<li class="nav-item dropdown">
 							<a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
 								aria-expanded="false">
