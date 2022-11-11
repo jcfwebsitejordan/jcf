@@ -144,29 +144,6 @@
 
 
 
-    /* client slider script in Home 1 & Home 3 */
-    const client_slider = new Swiper(".client_slider", {
-        slidesPerView: 2,
-        loop: true,
-        autoplay: {
-            delay: 7000,
-            disableOnInteraction: false
-        },
-        breakpoints: {
-            640: {
-                slidesPerView: 3,
-            },
-            768: {
-                slidesPerView: 4,
-            },
-            1024: {
-                slidesPerView: 5,
-            },
-            1279: {
-                slidesPerView: 6,
-            },
-        },
-    });
 
     /* client slider script in home 5 (about client slider)*/
     const abt_client_slider = new Swiper(".abt_client_slider", {
