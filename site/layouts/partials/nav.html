@@ -7,7 +7,13 @@
 
 			<div class="row nav_white nav_white_wide nav_white_wide">
 				{{else}}
+
+
+				{{ if eq .Page.Permalink "/contact/" }}
+				<div class="row nav_white nav_white_wide nav_white_wide">
+{{else}}
 				<div class="row nav_dark nav_dark_wide nav_dark_wide">
+					{{end}}
 					{{end}}
 
 
@@ -18,7 +24,13 @@
 							<img class="align-self-center logo-black" src="img/logo.png" alt="logo">
 
 							{{else}}
+							{{ if eq .Page.Permalink "/contact/" }}
+							<img class="align-self-center logo-white" src="img/logo.png" alt="logo">
 							<img class="align-self-center logo-black" src="img/logo.png" alt="logo">
+{{else}}
+
+							<img class="align-self-center logo-black" src="img/logo.png" alt="logo">
+							{{end}}
 							{{end}}
 						</a>
 					</div>
