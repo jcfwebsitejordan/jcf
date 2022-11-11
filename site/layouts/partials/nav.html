@@ -125,13 +125,71 @@
 
                             <ul class="mobile_menu">
                                
-                                <li><a href="index.html">Home</a></li>
-								<li><a href="\contact">About us</a></li>
-								<li><a href="\contact">Disciplines</a></li>
-								<li><a href="\contact">Clubs/Academes</a></li>
-								<li><a href="\contact">Cycling for all</a></li>
-								<li><a href="\contact">Registrtion</a></li>
+						{{ with .Site.GetPage "aboutus" }}
+						<li class="has_child">
+							<a href="\aboutus">About us</a>
+							
+							<ul class="nav_menu_child">
 
+								{{ range $index, $item := .Params.sections }}
+
+								
+								<li><a href="\aboutus\#{{$item.name}}">{{$item.title}}</a></li>
+
+								{{end}}
+							</ul>
+						</li>
+						{{ end }}
+						 
+						{{ with .Site.GetPage "disciplines" }}
+						<li class="has_child">
+							<a href="\disciplines">Disciplines</a>
+							
+							<ul class="nav_menu_child">
+
+								{{ range $index, $item := .Params.sections }}
+
+								
+								<li><a href="\disciplines\#{{$item.name}}">{{$item.title}}</a></li>
+
+								{{end}}
+							</ul>
+						</li>
+						{{ end }}
+						
+						{{ with .Site.GetPage "clubsacademes" }}
+						<li class="has_child">
+							<a href="\clubsacademes">Clubs/Academes</a>
+							
+							<ul class="nav_menu_child">
+
+								{{ range $index, $item := .Params.sections }}
+
+								
+								<li><a href="\clubsacademes\#{{$item.name}}">{{$item.title}}</a></li>
+
+								{{end}}
+							</ul>
+						</li>
+						{{ end }}
+						 
+
+						{{ with .Site.GetPage "cyclingforall" }}
+						<li class="has_child">
+							<a href="\cyclingforall">Cycling for all</a>
+							
+							<ul class="nav_menu_child">
+
+								{{ range $index, $item := .Params.sections }}
+
+								
+								<li><a href="\cyclingforall\#{{$item.name}}">{{$item.title}}</a></li>
+
+								{{end}}
+							</ul>
+						</li>
+						{{ end }}
+                                 
  
                                 
                             </ul>
