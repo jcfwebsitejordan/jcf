@@ -625,7 +625,21 @@ p:last-child {
   width: 100%;
   z-index: 2222;
 }
-
+.nav_menu_black {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 30px;
+}
 .nav_menu {
   list-style: none;
   margin: 0;

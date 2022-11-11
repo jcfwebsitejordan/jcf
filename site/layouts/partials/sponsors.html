@@ -1,235 +1,33 @@
+<section class="home-slider clearfix">
 
-  <header class="header header_wide">
-    <nav class="top_header top_header_wide mt-3 mt-lg-0">
-
-        <div class="container">
-			{{ if eq .Page.Permalink "/" }}
-
-
-            <div class="row nav_white nav_white_wide nav_white_wide">
-{{else}}
-				<div class="row nav_dark nav_dark_wide nav_dark_wide">
-{{end}}
-
-
-				<div class="col-lg-4 col-6  d-flex align-content-center">
-                    <a class="logo_box align-self-center" href="index.html">
-                        <img class="align-self-center logo-white" src="img/logo.png" alt="logo">  
-<img class="align-self-center logo-black" src="img/logo.png" alt="logo">
-                    </a>
-                </div>
-                <!-- /.col-lg-4 -->
-
-                <div class="btn_col col-lg-8 align-content-center justify-content-end d-none  d-lg-flex">
-					<ul class="nav_menu">
-
-						{{ with .Site.GetPage "aboutus" }}
-						<li class="has_child">
-							<a href="\aboutus">About us</a>
-							
-							<ul class="nav_menu_child">
-
-								{{ range $index, $item := .Params.sections }}
-
-								
-								<li><a href="\aboutus\#{{$item.name}}">{{$item.title}}</a></li>
-
-								{{end}}
-							</ul>
-						</li>
-						{{ end }}
-						 
-						{{ with .Site.GetPage "disciplines" }}
-						<li class="has_child">
-							<a href="\disciplines">Disciplines</a>
-							
-							<ul class="nav_menu_child">
-
-								{{ range $index, $item := .Params.sections }}
-
-								
-								<li><a href="\disciplines\#{{$item.name}}">{{$item.title}}</a></li>
-
-								{{end}}
-							</ul>
-						</li>
-						{{ end }}
-						
-						{{ with .Site.GetPage "clubsacademes" }}
-						<li class="has_child">
-							<a href="\clubsacademes">Clubs/Academes</a>
-							
-							<ul class="nav_menu_child">
-
-								{{ range $index, $item := .Params.sections }}
-
-								
-								<li><a href="\clubsacademes\#{{$item.name}}">{{$item.title}}</a></li>
-
-								{{end}}
-							</ul>
-						</li>
-						{{ end }}
-						 
-
-						{{ with .Site.GetPage "cyclingforall" }}
-						<li class="has_child">
-							<a href="\cyclingforall">Cycling for all</a>
-							
-							<ul class="nav_menu_child">
-
-								{{ range $index, $item := .Params.sections }}
-
-								
-								<li><a href="\cyclingforall\#{{$item.name}}">{{$item.title}}</a></li>
-
-								{{end}}
-							</ul>
-						</li>
-						{{ end }}
-						 
-					 
-						<li class="nav-item dropdown">
-							<a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false">
-								Registrtion
-							</a>
-						</li>
-						
-						
-                        
-                    </ul>
-                 
-                    <!-- <ul class="nav_menu">
-						
-                        <li >
-                            <a href="index-1.html">Home</a>
-                            
-                        </li>
-                        
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        
-                    </ul> -->
-                    <a href="/contact" class="head_btn align-self-center">Join us</a>
-                </div>
-                <!-- /.col-lg-8 -->
-
-                <div class="col-6 align-content-center align-self-center justify-content-end d-flex  d-lg-none">
-                    <a class="mobile_menu_btn dark_menu" data-bs-toggle="offcanvas" href="#mobilemenu" role="button" aria-controls="mobilemenu">
-                        <i class="fa fa-bars"></i>
-                    </a>
-
-
-                    <!--  offcanvas mobile menu -->
-                    <div class="mobile_menu_container offcanvas offcanvas-start" tabindex="-1" data-bs-scroll="true" id="mobilemenu">
-                        <div class="offcanvas-header">
-                            <button class="close_mb" data-bs-dismiss="offcanvas" aria-label="Close"><i class="ph-x"></i></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <a href="index.html" class="logo_mobile"><img src="img/logo.png" alt="image"></a>
-
-
-                            <ul class="mobile_menu">
-                               
-						{{ with .Site.GetPage "aboutus" }}
-						<li class="has_child">
-							<a href="\aboutus">About us</a>
-							
-							<ul class="nav_menu_child">
-
-								{{ range $index, $item := .Params.sections }}
-
-								
-								<li><a href="\aboutus\#{{$item.name}}">{{$item.title}}</a></li>
-
-								{{end}}
-							</ul>
-						</li>
-						{{ end }}
-						 
-						{{ with .Site.GetPage "disciplines" }}
-						<li class="has_child">
-							<a href="\disciplines">Disciplines</a>
-							
-							<ul class="nav_menu_child">
-
-								{{ range $index, $item := .Params.sections }}
-
-								
-								<li><a href="\disciplines\#{{$item.name}}">{{$item.title}}</a></li>
-
-								{{end}}
-							</ul>
-						</li>
-						{{ end }}
-						
-						{{ with .Site.GetPage "clubsacademes" }}
-						<li class="has_child">
-							<a href="\clubsacademes">Clubs/Academes</a>
-							
-							<ul class="nav_menu_child">
-
-								{{ range $index, $item := .Params.sections }}
-
-								
-								<li><a href="\clubsacademes\#{{$item.name}}">{{$item.title}}</a></li>
-
-								{{end}}
-							</ul>
-						</li>
-						{{ end }}
-						 
-
-						{{ with .Site.GetPage "cyclingforall" }}
-						<li class="has_child">
-							<a href="\cyclingforall">Cycling for all</a>
-							
-							<ul class="nav_menu_child">
-
-								{{ range $index, $item := .Params.sections }}
-
-								
-								<li><a href="\cyclingforall\#{{$item.name}}">{{$item.title}}</a></li>
-
-								{{end}}
-							</ul>
-						</li>
-						{{ end }}
-                                 
- 
-                                
-                            </ul>
-                             <!-- mobile_menu -->
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </nav>
-    <!-- /.top-header -->
-
-
-    <div class="cloned">
-        <div class="container cloned_nav"></div>
-    </div>
-</header>
-<style>a {
-	text-decoration: none;
-  }</style>
-    <!-- PARALLAX SLIDER -->
-   
-    <!-- /.home-slider clearfix -->
-    <!-- PARALLAX SLIDER END -->
 
     
+    <div class="para_slider rdn_slider" data-scroll>
+        <div class="swiper-wrapper">
 
-    <div class="scrollToTopBtn"><i class="fas fa-arrow-up"></i></div>
 
-    <!-- TESTIMONIAL END -->
+            {{ range $index, $item := .sponsers }}
+            <div class="swiper-slide">
+                <div class="slide_inner" data-swiper-parallax-x="90%">
+                    <div class="mask"></div>
+                 <a href="{{$item.website}}" >  <img src="{{$item.image}}" alt="" class="slide_bg" title="{{$item.title}}"></a>
+
+
+
+                  
+                </div>
+            </div>
+            {{ end }}
+
+        </div>
+        <div class="swiper-nav-btn">
+            <i class="prev_swiper fas fa-chevron-left"></i>
+            <i class="next_swiper fas fa-chevron-right"></i>
+        </div>
+
+    </div>
+    
+</section>
 
 
     <!-- JAVASCRIPT -->
@@ -243,7 +41,6 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.3/vanilla-tilt.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.19.0/core.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
  
 <script>(function () {
     "use strict";
@@ -254,23 +51,8 @@
 
 
     /* Cloned Navigation element */
-
-	
     const navwhite = document.querySelector(".nav_white");
-    if (navwhite) 
-	{
-        const navElement = navwhite.cloneNode(true);
-        document.querySelector(".cloned_nav").appendChild(navElement);
-
-    }
-
-	const navdark = document.querySelector(".nav_dark");
-    if (navdark) 
-	{
-         const navElement = navdark.cloneNode(true);
-        document.querySelector(".cloned_nav").appendChild(navElement);
-
-    }
+   
 
 
 
@@ -721,4 +503,3 @@
 
 })();
 </script>
- 
