@@ -1,13 +1,16 @@
 <h3>Upcoming Event</h3>
 
 <ul>
-      {{ range $index, $item := .Params.events }}
 
-       {{ if eq $item.showfooter "1"}}
-     <li><a href="single-event.html">{{$item.data}}</a></li>
+    {{ range where .Site.Pages "Type" "event" }}
+    {{ if eq .Params.showfooter "1"}}
 
-     {{end}} 
-     {{end}} 
+    {{ $item := .Params }}
 
-                        
-                    </ul>
+     <li><a href="{{.RelPermalink}}">{{$item.title}}</a></li>
+
+    {{end}}
+    {{end}}
+
+
+</ul>
