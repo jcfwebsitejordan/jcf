@@ -1,5 +1,6 @@
 ---
 title: Event 2
+eventtype: Charity
 show: "1"
 showfooter: "1"
 description: Event 2 Riders from all over country have registered for the
