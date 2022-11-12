@@ -22,8 +22,8 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Show on Home Page ?", name: "show",widget: "select", required: true, default: "1", options: [{label: "Yes", value: "1"},{label: "No", value: "0"}]},
-      - {label: "Show on Footer ?", name: "showfooter",widget: "select", required: true, default: "1", options: [{label: "Yes", value: "1"},{label: "No", value: "0"}]},
+      - {label: "Show on Home Page ?", name: "show",widget: "select", required: true, default: "1", options: [{label: "Yes", value: "1"},{label: "No", value: "0"}]}
+      - {label: "Show on Footer ?", name: "showfooter",widget: "select", required: true, default: "1", options: [{label: "Yes", value: "1"},{label: "No", value: "0"}]}
       - {label: "Intro", name: "description", widget: "text"}
       - {label: "Event Location", name: "location", widget: "string"}
       - {label: "Event Date", name: "date", widget: "string"}
