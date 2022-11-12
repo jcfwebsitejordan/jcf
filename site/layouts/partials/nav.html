@@ -1,4 +1,24 @@
 <header class="header header_wide">
+	<style>
+		.logo {
+			width: min(50vw, 200px);
+			height: min(50vh, 128px);
+
+		}
+
+		/* (A) APPLY ONLY ON SMALL SCREENS */
+		@media only screen and (max-width: 600px) {
+
+
+			/* (A2) SHOW LOGO */
+			.logo {
+				width: min(50vw, 75px);
+				height: min(50vh, 48px);
+				margin: 0 auto;
+			}
+
+		}
+	</style>
 	<nav class="top_header top_header_wide mt-3 mt-lg-0">
 
 		<div class="container">
@@ -20,13 +40,13 @@
 						<div class="col-lg-4 col-6  d-flex align-content-center">
 							<a class="logo_box align-self-center" href="index.html">
 								{{ if eq .Page.Permalink "/" }}
-								<img class="align-self-center logo-white" src="img/logo.png" alt="logo">
-								<img class="align-self-center logo-black" src="img/logo.png" alt="logo">
+								<img class="logo logo-white" src="img/logo.png" alt="logo">
+								<img class="logo logo-black" src="img/logo.png" alt="logo">
 
 								{{else}}
 								{{ if eq .Page.Permalink "/contact/" }}
-								<img class="align-self-center logo-white" src="img/logo.png" alt="logo">
-								<img class="align-self-center logo-black" src="img/logo.png" alt="logo">
+								<img class="logo align-self-center logo-white" src="img/logo.png" alt="logo">
+								<img class="logo align-self-center logo-black" src="img/logo.png" alt="logo">
 								{{else}}
 
 								<img class="align-self-center logo-black" src="img/logo.png" alt="logo">

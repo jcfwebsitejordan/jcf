@@ -793,7 +793,7 @@ nav_menu_alt {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  height: 128px;
+  /* height: 128px; */
 }
 
 /* cloned nav style */
