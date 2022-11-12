@@ -7,7 +7,7 @@ description: Riders from all over country have registered for the inaugural
   event Many will be staying in our club over the weekend boosting tourism and
   bringing considerable economic benefits to the local region.
 location: Amman - Jordan
-date: 14 September 2022
+eventdate: 14 September 2022
 time: 08.00 AM - 01.00 PM
 note: All Member Allowed
 images:

@@ -1,12 +1,12 @@
 ---
-title: Event 2
+title: Event 7
 eventtype: Charity
 show: "1"
-showfooter: "1"
-description: Event 2 Riders from all over country have registered for the
+showfooter: "0"
+description: Event 3 Riders from all over country have registered for the
   inaugural event Many will be staying in our club over the weekend boosting
   tourism and bringing considerable economic benefits to the local region.
-location: Al Salt, Jordan
+location: AJloun, Jordan
 eventdate: 26 September 2022
 time: 09.00 AM - 11.00 PM
 note: All Member Allowed
