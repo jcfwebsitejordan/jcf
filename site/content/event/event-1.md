@@ -1,5 +1,6 @@
 ---
 title: Event 1
+eventtype: Special
 show: "1"
 showfooter: "1"
 description: Riders from all over country have registered for the inaugural
