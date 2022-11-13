@@ -8,6 +8,8 @@ i18n:
   structure: multiple_files
   locales: [en, ar]
   default_locale: en
+permalinks:
+  news: /:year/:month/:title/
 
 collections: # A list of collections the CMS should be able to edit
   - name: "news" # Used in routes, ie.: /admin/collections/:slug/edit

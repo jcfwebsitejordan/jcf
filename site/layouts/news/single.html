@@ -146,7 +146,7 @@
                         {{end}}
                         {{end}}
 
-                         
+
                         <!-- col-md-4 rel_post -->
 
                     </div>
@@ -211,11 +211,35 @@
                     <div class="widget mb-30">
                         <h3 class="widget_title">Archives</h3>
                         <ul>
-                            {{$isnews := "no"}}
-                            {{ range (where site.Pages "Type" "in" "news").GroupByDate "January 2006"}}
-                            {{range .Pages.GroupByDate "January 2006"}}
+                            <div class="archive">
+                                {{ $pages := .Pages }}
+                                {{ if .IsHome }}
+                                {{ $pages = .Site.RegularPages }}
+                                {{ end }}
+                                {{ range (where $pages "type" "news").GroupByDate "2006" }}
+                                <h2 class="archive-title">{{ .Key }}</h2>
+                                {{ range .Pages }}
+                                <article class="archive-item">
+                                    <a href="{{ .RelPermalink }}" class="archive-item-link">{{ .Title }}</a>
+                                    <span class="archive-item-date">
+                                        {{ .Date.Format "2006-01-02" }}
+                                    </span>
+                                </article>
+                                {{ end }}
+                                {{ end }}
+                            </div>
 
-                            <li><a href="blog.html"> {{ .Key }}</a></li>
+                            {{ range (where site.Pages "Type" "in" "news").GroupByDate "January 2006"}}
+                            {{range $value := .Pages.GroupByDate "January 2006"}}
+                            {{$url :=""}}
+
+
+                            {{ range .Pages }}
+                            {{$url := .Date.Format "2006/01"}}
+                            <li><a href="{{$url}}"> {{.Date.Format "January 2006"}}</a></li>
+
+                            {{break}}
+                            {{end}}
 
 
                             {{end}}
