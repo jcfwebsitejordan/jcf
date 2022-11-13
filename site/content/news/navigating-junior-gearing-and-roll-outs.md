@@ -1,16 +1,19 @@
 ---
 title: Navigating junior gearing and roll outs.
 show: "1"
-publishdate: 2022-11-13T13:11:33.073Z
+publishdate: 2022-09-13T13:11:33.073Z
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
   vulputate lacus sit amet egestas euismod. Morbi mauris ipsum, maximus vel odio
   in, gravida dignissim leo
 image: img/new1.jpg
 categories:
   - category: BICYCLE
+  
 tags:
-  - tag: Tag 1
-  - tag: Tag 2
+  - tag: bicycle
+  - tag: training
+  - tag: race
+  - tag: events
 images:
   - image: img/new1.jpg
   - image: img/6.jpeg

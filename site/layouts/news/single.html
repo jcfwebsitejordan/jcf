@@ -1,1 +1,262 @@
-this is news !!
+{{ define "main" }}
+
+<section id="hero" class="blog-top single-blog-top" style="background-image: url('img/News-Background.jpg');">
+    <div class="container blog_inner">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3 text-center">
+                {{range .Params.categories}}
+                <p class="single_cat_top mb-2" data-cue="slideInUp">
+                    {{.category}}</p>
+                {{end}}
+
+                <h1 class="hero_title" data-cue="slideInUp" data-delay="400">
+                    {{ .Params.title}}
+                </h1>
+            </div>
+            <!-- /.col-lg-6 offset-3 -->
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+    <div class="mask mask_dark"></div>
+</section>
+<!-- /#hero.blog-top -->
+
+
+
+
+<section class="content  bg-blob-white ">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 single_blog">
+                <img class="single_blog_img" src="{{.Params.image}}" alt="">
+
+                <div class="blog_content">
+                    {{.Content}}
+
+                    <div class="rdn_blog_gallery row">
+
+                        {{range .Params.images}}
+                        <div class="col-md-4 gallery_inner">
+                            <a href="{{.image}}" data-gallery="bgallery" data-width="90%">
+                                <img src="{{.image}}" class="gallery_popup" alt="gallery" />
+                            </a>
+                        </div>
+                        {{end}}
+
+                    </div>
+                    <!-- rdn_blog_gallery -->
+
+
+                </div>
+                <!-- blog_content -->
+
+                <div class="single_blog_meta">
+                    <ul class="list-unstyled d-md-flex mb-0">
+                        <li class="d-flex align-items-center">
+                            <i class="ph-calendar-blank"></i> {{ .Params.Date.Format "Mon, Jan 2, 2006" }}
+                        </li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li>
+
+                            {{/* <div class="resp-sharing-button__link" data-href="{{.Permalink}}" data-layout="button"
+                                data-size="small"><a target="_blank"
+                                    href="https://www.facebook.com/sharer/sharer.php?u={{.Permalink}}"
+                                    class="fab fa-facebook"></a></div> */}}
+
+
+
+                            {{/* <a class="resp-sharing-button__link"
+                                href="https://facebook.com/sharer/sharer.php?u=https://jca-1.netlify.app/"
+                                target="_blank" rel="noopener" aria-label="Share on Facebook"><i
+                                    class="fab fa-facebook"></i></a> */}}
+                        </li>
+
+
+                        {{/* <li><a href="#"><i class="fab fa-telegram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li> */}}
+                        </li>
+                        {{/* <li class="d-flex align-items-center">
+                            <i class="ph-user-circle"></i> Marco Milano
+                        </li> */}}
+                    </ul>
+                </div>
+                <!-- single_blog_meta -->
+
+                <!-- Related Post Start -->
+                <div class="related_post text-center">
+                    <p class="rel_sub">You may also like</p>
+                    <h3>Related News</h3>
+                    <div class="row text-start">
+                        <div class="col-md-4 rel_post">
+                            <a href="single-blog.html">
+                                <img src="img/background/1.jpg" alt="">
+                                <div class="rel_bottom">
+                                    <h4>Directions & Travel Times From The West.</h4>
+                                    <span>racing</span>
+                                </div>
+                                <!-- rel_bottom -->
+                            </a>
+                        </div>
+                        <!-- col-md-4 rel_post -->
+
+                        <div class="col-md-4 rel_post">
+                            <a href="single-blog.html">
+                                <img src="img/background/2.jpg" alt="">
+                                <div class="rel_bottom">
+                                    <h4>Road riders selected for World Cycling Academies.</h4>
+                                    <span>training</span>
+                                </div>
+                                <!-- rel_bottom -->
+                            </a>
+                        </div>
+                        <!-- col-md-4 rel_post -->
+
+                        <div class="col-md-4 rel_post">
+                            <a href="single-blog.html">
+                                <img src="img/background/4.jpg" alt="">
+                                <div class="rel_bottom">
+                                    <h4>Major Uptake In Cycling As Crisis Continues.</h4>
+                                    <span>coaching</span>
+                                </div>
+                                <!-- rel_bottom -->
+                            </a>
+                        </div>
+                        <!-- col-md-4 rel_post -->
+
+                    </div>
+                    <!-- row -->
+                </div>
+                <!-- related_post end -->
+
+
+
+            </div>
+            <!-- col-lg-9 -->
+            <div class="col-lg-3 ">
+                <div class="sidebar">
+
+                    {{/* <div class="widget mb-30 about_widget">
+                        <img src="img/about/abw.jpg" alt="">
+                        <div class="ab_padding">
+                            <p>Riders from all over country have registered for the inaugural event </p>
+                            <p>We also aim to develop pathways for those pursuing an interest in racing particular
+                                emphasis.</p>
+                            <ul class="ab_list">
+                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fab fa-telegram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- ab_padding -->
+                    </div> */}}
+                    <!-- widget -->
+
+                    <div class="widget mb-30">
+                        <h3 class="widget_title">Latest News</h3>
+                        <ul class="vblog">
+
+                            {{ range where .Site.Pages.ByDate.Reverse "Type" "news" }}
+
+                            {{if .Params.title}}
+
+                            <li>
+                                <a class="vblog_img" href="{{ .Permalink }}"><img src="{{.Params.image}}"
+                                        alt="{{.Params.title}}"></a>
+                                <div class="vblog_list">
+
+                                    <a href="{{ .Permalink }}">{{.Params.title}}</a>
+                                    <span><i class="ph-calendar-blank"></i> {{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+                                </div>
+
+                            </li>
+                            {{end}}
+
+
+
+                            {{ end }}
+
+                        </ul>
+                    </div>
+                    <!-- widget -->
+
+
+                    <div class="widget mb-30">
+                        <h3 class="widget_title">Archives</h3>
+
+                        {{ $archYear := .Date.Format "Jan 2006" }}
+
+                        <h2>Archive for {{ $archYear }}</h2>
+                        <ul>
+                            {{ range where .Site.Pages "Type" "news" }}
+                            {{ if eq (.Date.Format "Jan 2006") $archYear }}
+                            <li> {{$archYear}}</li>
+                            {{ end }}
+                            {{ end }}
+                        </ul>
+                        <ul>
+                            <li><a href="blog.html">1January 2022</a></li>
+                            <li><a href="blog.html">February 2022</a></li>
+                            <li><a href="blog.html">March 2022</a></li>
+                            <li><a href="blog.html">April 2022</a></li>
+                            <li><a href="blog.html">May 2022</a></li>
+                        </ul>
+                    </div>
+                    <!-- widget -->
+
+                    <div class="widget mb-30">
+                        <h3 class="widget_title">Tag</h3>
+                        <ul class="tag_list">
+                            {{range .Params.tags}}
+
+                            <li><a href="#">{{.tag}}</a></li>
+
+                            {{end}}
+
+                        </ul>
+                    </div>
+                    <!-- widget -->
+
+                </div>
+                <!-- sidebar -->
+            </div>
+            <!-- col-lg-3 -->
+
+        </div>
+        <!-- row -->
+
+
+
+
+    </div>
+    <!-- container -->
+</section>
+<!-- content -->
+
+
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0"
+    nonce="TklzW02L"></script>
+
+
+{{end}}

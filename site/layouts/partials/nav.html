@@ -27,116 +27,120 @@
 
 			<div class="row nav_white nav_white_wide nav_white_wide">
 				{{else}}
-
-
-				{{ if eq .Page.Permalink "/contact/" }}
+				{{ if in .Page.Permalink "/news/" }}
 				<div class="row nav_white nav_white_wide nav_white_wide">
 					{{else}}
-					<div class="row nav_dark nav_dark_wide nav_dark_wide">
-						{{end}}
-						{{end}}
 
 
-						<div class="col-lg-4 col-6  d-flex align-content-center">
-							<a class="logo_box align-self-center" href="index.html">
-								{{ if eq .Page.Permalink "/" }}
-								<img class="logo logo-white" src="img/logo.png" alt="logo">
-								<img class="logo logo-black" src="img/logo.png" alt="logo">
-
-								{{else}}
-								{{ if eq .Page.Permalink "/contact/" }}
-								<img class="logo logo-white" src="img/logo.png" alt="logo">
-								<img class="logo logo-black" src="img/logo.png" alt="logo">
-								{{else}}
-
-								<img class="logo logo-black" src="img/logo.png" alt="logo">
-								{{end}}
-								{{end}}
-							</a>
-						</div>
-						<!-- /.col-lg-4 -->
-
-						<div class="btn_col col-lg-8 align-content-center justify-content-end d-none  d-lg-flex">
-							<ul class="nav_menu">
-
-								{{ with .Site.GetPage "aboutus" }}
-								<li class="has_child">
-									<a href="\aboutus">About us</a>
-
-									<ul class="nav_menu_child">
-
-										{{ range $index, $item := .Params.sections }}
+					{{ if eq .Page.Permalink "/contact/" }}
+					<div class="row nav_white nav_white_wide nav_white_wide">
+						{{else}}
+						<div class="row nav_dark nav_dark_wide nav_dark_wide">
+							{{end}}
+							{{end}}
+							{{end}}
 
 
-										<li><a href="\aboutus\#{{$item.name}}">{{$item.title}}</a></li>
+							<div class="col-lg-4 col-6  d-flex align-content-center">
+								<a class="logo_box align-self-center" href="index.html">
+									{{ if eq .Page.Permalink "/" }}
+									<img class="logo logo-white" src="img/logo.png" alt="logo">
+									<img class="logo logo-black" src="img/logo.png" alt="logo">
 
-										{{end}}
-									</ul>
-								</li>
-								{{ end }}
+									{{else}}
+									{{ if eq .Page.Permalink "/contact/" }}
+									<img class="logo logo-white" src="img/logo.png" alt="logo">
+									<img class="logo logo-black" src="img/logo.png" alt="logo">
+									{{else}}
 
-								{{ with .Site.GetPage "disciplines" }}
-								<li class="has_child">
-									<a href="\disciplines">Disciplines</a>
+									<img class="logo logo-black" src="img/logo.png" alt="logo">
+									{{end}}
+									{{end}}
+								</a>
+							</div>
+							<!-- /.col-lg-4 -->
 
-									<ul class="nav_menu_child">
+							<div class="btn_col col-lg-8 align-content-center justify-content-end d-none  d-lg-flex">
+								<ul class="nav_menu">
 
-										{{ range $index, $item := .Params.sections }}
+									{{ with .Site.GetPage "aboutus" }}
+									<li class="has_child">
+										<a href="\aboutus">About us</a>
 
+										<ul class="nav_menu_child">
 
-										<li><a href="\disciplines\#{{$item.name}}">{{$item.title}}</a></li>
-
-										{{end}}
-									</ul>
-								</li>
-								{{ end }}
-
-								{{ with .Site.GetPage "clubsacademes" }}
-								<li class="has_child">
-									<a href="\clubsacademes">Clubs/Academes</a>
-
-									<ul class="nav_menu_child">
-
-										{{ range $index, $item := .Params.sections }}
-
-
-										<li><a href="\clubsacademes\#{{$item.name}}">{{$item.title}}</a></li>
-
-										{{end}}
-									</ul>
-								</li>
-								{{ end }}
+											{{ range $index, $item := .Params.sections }}
 
 
-								{{ with .Site.GetPage "cyclingforall" }}
-								<li class="has_child">
-									<a href="\cyclingforall">Cycling for all</a>
+											<li><a href="\aboutus\#{{$item.name}}">{{$item.title}}</a></li>
 
-									<ul class="nav_menu_child">
+											{{end}}
+										</ul>
+									</li>
+									{{ end }}
 
-										{{ range $index, $item := .Params.sections }}
+									{{ with .Site.GetPage "disciplines" }}
+									<li class="has_child">
+										<a href="\disciplines">Disciplines</a>
 
+										<ul class="nav_menu_child">
 
-										<li><a href="\cyclingforall\#{{$item.name}}">{{$item.title}}</a></li>
-
-										{{end}}
-									</ul>
-								</li>
-								{{ end }}
-
-
-								<li class="nav-item dropdown">
-									<a class="nav-link " href="#" id="navbarDropdown" role="button"
-										data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										Registration
-									</a>
-								</li>
+											{{ range $index, $item := .Params.sections }}
 
 
+											<li><a href="\disciplines\#{{$item.name}}">{{$item.title}}</a></li>
 
-							</ul>
+											{{end}}
+										</ul>
+									</li>
+									{{ end }}
 
-							<!-- <ul class="nav_menu">
+									{{ with .Site.GetPage "clubsacademes" }}
+									<li class="has_child">
+										<a href="\clubsacademes">Clubs/Academes</a>
+
+										<ul class="nav_menu_child">
+
+											{{ range $index, $item := .Params.sections }}
+
+
+											<li><a href="\clubsacademes\#{{$item.name}}">{{$item.title}}</a></li>
+
+											{{end}}
+										</ul>
+									</li>
+									{{ end }}
+
+
+									{{ with .Site.GetPage "cyclingforall" }}
+									<li class="has_child">
+										<a href="\cyclingforall">Cycling for all</a>
+
+										<ul class="nav_menu_child">
+
+											{{ range $index, $item := .Params.sections }}
+
+
+											<li><a href="\cyclingforall\#{{$item.name}}">{{$item.title}}</a></li>
+
+											{{end}}
+										</ul>
+									</li>
+									{{ end }}
+
+
+									<li class="nav-item dropdown">
+										<a class="nav-link " href="#" id="navbarDropdown" role="button"
+											data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Registration
+										</a>
+									</li>
+
+
+
+								</ul>
+
+								<!-- <ul class="nav_menu">
 						
                         <li >
                             <a href="index-1.html">Home</a>
@@ -147,109 +151,113 @@
                         <li><a href="contact.html">Contact</a></li>
                         
                     </ul> -->
-							<a href="/contact" class="head_btn align-self-center">Join us</a>
-						</div>
-						<!-- /.col-lg-8 -->
+								<a href="/contact" class="head_btn align-self-center">Join us</a>
+							</div>
+							<!-- /.col-lg-8 -->
 
-						<div class="col-6 align-content-center align-self-center justify-content-end d-flex  d-lg-none">
-							<a class="mobile_menu_btn dark_menu" data-bs-toggle="offcanvas" href="#mobilemenu"
-								role="button" aria-controls="mobilemenu">
-								<i class="fa fa-bars"></i>
-							</a>
-
-
-							<!--  offcanvas mobile menu -->
-							<div class="mobile_menu_container offcanvas offcanvas-start" tabindex="-1"
-								data-bs-scroll="true" id="mobilemenu">
-								<div class="offcanvas-header">
-									<button class="close_mb" data-bs-dismiss="offcanvas" aria-label="Close"><i
-											class="ph-x"></i></button>
-								</div>
-								<div class="offcanvas-body">
-									<a href="index.html" class="logo_mobile"><img src="img/logo.png" alt="image"></a>
+							<div
+								class="col-6 align-content-center align-self-center justify-content-end d-flex  d-lg-none">
+								<a class="mobile_menu_btn dark_menu" data-bs-toggle="offcanvas" href="#mobilemenu"
+									role="button" aria-controls="mobilemenu">
+									<i class="fa fa-bars"></i>
+								</a>
 
 
-									<ul class="mobile_menu">
-
-										{{ with .Site.GetPage "aboutus" }}
-										<li class="has_child">
-											<a href="\aboutus">About us</a>
-
-											<ul class="nav_menu_child">
-
-												{{ range $index, $item := .Params.sections }}
-
-
-												<li><a href="\aboutus\#{{$item.name}}">{{$item.title}}</a></li>
-
-												{{end}}
-											</ul>
-										</li>
-										{{ end }}
-
-										{{ with .Site.GetPage "disciplines" }}
-										<li class="has_child">
-											<a href="\disciplines">Disciplines</a>
-
-											<ul class="nav_menu_child">
-
-												{{ range $index, $item := .Params.sections }}
+								<!--  offcanvas mobile menu -->
+								<div class="mobile_menu_container offcanvas offcanvas-start" tabindex="-1"
+									data-bs-scroll="true" id="mobilemenu">
+									<div class="offcanvas-header">
+										<button class="close_mb" data-bs-dismiss="offcanvas" aria-label="Close"><i
+												class="ph-x"></i></button>
+									</div>
+									<div class="offcanvas-body">
+										<a href="index.html" class="logo_mobile"><img src="img/logo.png"
+												alt="image"></a>
 
 
-												<li><a href="\disciplines\#{{$item.name}}">{{$item.title}}</a></li>
+										<ul class="mobile_menu">
 
-												{{end}}
-											</ul>
-										</li>
-										{{ end }}
+											{{ with .Site.GetPage "aboutus" }}
+											<li class="has_child">
+												<a href="\aboutus">About us</a>
 
-										{{ with .Site.GetPage "clubsacademes" }}
-										<li class="has_child">
-											<a href="\clubsacademes">Clubs/Academes</a>
+												<ul class="nav_menu_child">
 
-											<ul class="nav_menu_child">
-
-												{{ range $index, $item := .Params.sections }}
+													{{ range $index, $item := .Params.sections }}
 
 
-												<li><a href="\clubsacademes\#{{$item.name}}">{{$item.title}}</a></li>
+													<li><a href="\aboutus\#{{$item.name}}">{{$item.title}}</a></li>
 
-												{{end}}
-											</ul>
-										</li>
-										{{ end }}
+													{{end}}
+												</ul>
+											</li>
+											{{ end }}
 
+											{{ with .Site.GetPage "disciplines" }}
+											<li class="has_child">
+												<a href="\disciplines">Disciplines</a>
 
-										{{ with .Site.GetPage "cyclingforall" }}
-										<li class="has_child">
-											<a href="\cyclingforall">Cycling for all</a>
+												<ul class="nav_menu_child">
 
-											<ul class="nav_menu_child">
-
-												{{ range $index, $item := .Params.sections }}
-
-
-												<li><a href="\cyclingforall\#{{$item.name}}">{{$item.title}}</a></li>
-
-												{{end}}
-											</ul>
-										</li>
-										{{ end }}
-										<li>
-											<a href="/contact" class="head_btn align-self-center">Join us</a>
-										</li>
+													{{ range $index, $item := .Params.sections }}
 
 
-									</ul>
-									<!-- mobile_menu -->
+													<li><a href="\disciplines\#{{$item.name}}">{{$item.title}}</a></li>
+
+													{{end}}
+												</ul>
+											</li>
+											{{ end }}
+
+											{{ with .Site.GetPage "clubsacademes" }}
+											<li class="has_child">
+												<a href="\clubsacademes">Clubs/Academes</a>
+
+												<ul class="nav_menu_child">
+
+													{{ range $index, $item := .Params.sections }}
+
+
+													<li><a href="\clubsacademes\#{{$item.name}}">{{$item.title}}</a>
+													</li>
+
+													{{end}}
+												</ul>
+											</li>
+											{{ end }}
+
+
+											{{ with .Site.GetPage "cyclingforall" }}
+											<li class="has_child">
+												<a href="\cyclingforall">Cycling for all</a>
+
+												<ul class="nav_menu_child">
+
+													{{ range $index, $item := .Params.sections }}
+
+
+													<li><a href="\cyclingforall\#{{$item.name}}">{{$item.title}}</a>
+													</li>
+
+													{{end}}
+												</ul>
+											</li>
+											{{ end }}
+											<li>
+												<a href="/contact" class="head_btn align-self-center">Join us</a>
+											</li>
+
+
+										</ul>
+										<!-- mobile_menu -->
+									</div>
 								</div>
 							</div>
-						</div>
 
+						</div>
+						<!-- /.row -->
 					</div>
-					<!-- /.row -->
-				</div>
-				<!-- /.container -->
+					<!-- /.container -->
 	</nav>
 	<!-- /.top-header -->
 
