@@ -24,7 +24,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Intro", name: "description", widget: "text", i18n: true}
       - {label: "Banner Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown", i18n: true}
-      - {label: "Categories", name: "categories", widget: "list", required: false,, i18n: true, fields: [
+      - {label: "Categories", name: "categories", widget: "list", required: false, i18n: true, fields: [
               {label: "Category", name: "category", widget: "string"}]}
       - {label: "Tags", name: "tags", widget: "list", i18n: true}
       - {label: "Images", name: images, widget: list, fields: [
