@@ -4,6 +4,10 @@ backend:
 
 media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
+i18n:
+  structure: multiple_files
+  locales: [en, ar]
+  default_locale: en
 
 collections: # A list of collections the CMS should be able to edit
   - name: "news" # Used in routes, ie.: /admin/collections/:slug/edit
@@ -14,15 +18,15 @@ collections: # A list of collections the CMS should be able to edit
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     tag: tags
     fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Title", name: "title", widget: "string", i18n: true}
       - {label: "Show on Home Banner ?", name: "show",widget: "select", required: true, default: "1", options: [{label: "Yes", value: "1"},{label: "No", value: "0"}]}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro", name: "description", widget: "text"}
+      - {label: "Intro", name: "description", widget: "text", i18n: true}
       - {label: "Banner Image", name: "image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Categories", name: "categories", widget: "list", required: false, fields: [
+      - {label: "Body", name: "body", widget: "markdown", i18n: true}
+      - {label: "Categories", name: "categories", widget: "list", required: false,, i18n: true, fields: [
               {label: "Category", name: "category", widget: "string"}]}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Tags", name: "tags", widget: "list", i18n: true}
       - {label: "Images", name: images, widget: list, fields: [
               {label: "Image", name: "image", widget: "image"}]}
   - name: "event" # Used in routes, ie.: /admin/collections/:slug/edit
