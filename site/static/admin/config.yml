@@ -6,16 +6,23 @@ media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Post"
-    folder: "site/content/post" # The path to the folder where the documents are stored
+  - name: "news" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "News" # Used in the UI, ie.: "New Post"
+    folder: "site/content/news" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
+    category: categories
+    tag: tags
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro Blurb", name: "description", widget: "text"}
-      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Show on Home Banner ?", name: "show",widget: "select", required: true, default: "1", options: [{label: "Yes", value: "1"},{label: "No", value: "0"}]}
+      - {label: "Publish Date", name: "publishdate", widget: "datetime"}
+      - {label: "Intro", name: "description", widget: "text"}
+      - {label: "Banner Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Categories", name: "categories", widget: "list", required: false, fields: [
+              {label: "Category", name: "category", widget: "string"}]}
+      - {label: "Tags", name: "tags", widget: "list", required: false, fields: [
+              {label: "Tag", name: "tag", widget: "string"}]}
   - name: "event" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Events" # Used in the UI, ie.: "New Post"
     folder: "site/content/event" # The path to the folder where the documents are stored

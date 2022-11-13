@@ -30,7 +30,7 @@
 
          
         <div class="row event_box">
-            {{ range where .Site.Pages "Type" "event" }}
+            {{ range where .Site.Pages.ByDate "Type" "event" }}
             {{ if eq .Params.show "1"}}
     
             {{ $item := .Params }}
