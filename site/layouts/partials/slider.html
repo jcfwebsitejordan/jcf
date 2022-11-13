@@ -5,7 +5,8 @@
     <div class="para_slider rdn_slider" data-scroll>
         <div class="swiper-wrapper">
 
-            {{ range where .Site.Pages.ByDate "Type" "news" }}
+            {{ range where .Site.Pages.ByDate.Reverse "Type" "news" }}
+            
             {{ if eq .Params.show "1"}}
 
             {{ $item := .Params }}

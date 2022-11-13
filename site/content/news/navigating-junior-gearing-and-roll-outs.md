@@ -9,10 +9,10 @@ image: img/new1.jpg
 categories:
   - category: BICYCLE
 tags:
-  - tag: bicycle
-  - tag: training
-  - tag: race
-  - tag: events
+  - bicycle
+  - training
+  - race
+  - events
 images:
   - image: img/new1.jpg
   - image: img/6.jpeg
