@@ -65,6 +65,7 @@ collections: # A list of collections the CMS should be able to edit
     folder: "site/content/pages" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string"}
       - {label: "Sections", name: "sections", widget: list, fields: [
           {label: "Section Name", name: "name", widget: "string",hint: "this will be used for urls , it must not contains spaces", required: false},
           {label: "Title", name: "title", widget: "string"},
