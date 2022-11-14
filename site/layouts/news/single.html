@@ -4,10 +4,10 @@
     <div class="container blog_inner">
         <div class="row">
             <div class="col-lg-6 offset-lg-3 text-center">
-                {{/*  {{range .Params.categories}}
+                {{/* {{range .Params.categories}}
                 <p class="single_cat_top mb-2" data-cue="slideInUp">
                     {{.category}}</p>
-                {{end}}  */}}
+                {{end}} */}}
 
                 <h1 class="hero_title" data-cue="slideInUp" data-delay="400">
                     {{ .Params.title}}
@@ -76,7 +76,7 @@
                         <li></li>
                         <li>
 
-                            {{/* <div class="resp-sharing-button__link" data-href="{{.Permalink}}" data-layout="button"
+                            <div class="resp-sharing-button__link" data-href="{{.Permalink}}" data-layout="button"
                                 data-size="small"><a target="_blank"
                                     href="https://www.facebook.com/sharer/sharer.php?u={{.Permalink}}"
                                     class="fab fa-facebook"></a></div> */}}
@@ -86,7 +86,7 @@
                             {{/* <a class="resp-sharing-button__link"
                                 href="https://facebook.com/sharer/sharer.php?u=https://jca-1.netlify.app/"
                                 target="_blank" rel="noopener" aria-label="Share on Facebook"><i
-                                    class="fab fa-facebook"></i></a> */}}
+                                    class="fab fa-facebook"></i></a>
                         </li>
 
 
@@ -102,18 +102,22 @@
                 <!-- single_blog_meta -->
 
                 <!-- Related Post Start -->
+
+                {{if .Params.categories}}
                 <div class="related_post text-center">
                     <p class="rel_sub">You may also like</p>
                     <h3>Related News</h3>
                     <div class="row text-start">
-                        {{/*  {{$currenttitle := .Params.title}}
+
+
+                        {{$currenttitle := .Params.title}}
 
                         {{range $category :=.Params.categories}}
 
                         {{ range $index,$page :=(where site.Pages "Type" "in" "news")}}
                         {{range .Params.categories}}
 
-                        {{if eq .category $category.category }}
+                        {{if eq . $category }}
                         {{if ne $page.Params.title $currenttitle}}
 
 
@@ -124,9 +128,7 @@
                                     <h4>{{$page.Params.title}}</h4>
                                     {{range $page.Params.categories }}
                                     <span>
-
-                                        {{.category}}
-
+                                        {{.}}
                                     </span>
                                     {{end}}
 
@@ -144,7 +146,7 @@
 
                         {{end}}
                         {{end}}
-                        {{end}}  */}}
+                        {{end}}
 
 
                         <!-- col-md-4 rel_post -->
@@ -152,6 +154,7 @@
                     </div>
                     <!-- row -->
                 </div>
+                {{end}}
                 <!-- related_post end -->
 
 
@@ -179,11 +182,14 @@
                     <!-- widget -->
 
                     <div class="widget mb-30">
-                        <h3 class="widget_title">Latest News</h3>
+                        <a href="/news/">
+                            <h3 class="widget_title">Latest News</h3>
+                        </a>
                         <ul class="vblog">
                             {{$currenttitle := .Params.title}}
-                            {{ range where .Site.Pages.ByDate.Reverse "Type" "news" }}
-                            {{if .Params.title}}
+                            {{ range first 7 (where .Site.Pages.ByDate.Reverse "Type" "news") }}
+
+                             {{if .Params.title}}
                             {{if ne .Params.title $currenttitle}}
 
                             <li>
@@ -253,19 +259,21 @@
                     <!-- widget -->
 
                     <div class="widget mb-30">
-                        <h3 class="widget_title">Tag</h3>
+                        {{if .Params.tags}}
+                        <h3 class="widget_title">Tags</h3>
 
-                        <pre>{{ jsonify (dict "indent" "  ") .Data.Terms }}</pre>
-
-ss{{.Data.Terms}}
                         <ul class=" tag_list">
                             {{ range .Params.tags }}
 
-                            <li><a href="#">{{.}}</a></li>
+                            <li>
+                                <a href="/news/tags/{{.}}">{{.}}
+                                </a>
+                            </li>
 
                             {{end}}
 
                         </ul>
+                        {{end}}
                     </div>
                     <!-- widget -->
 

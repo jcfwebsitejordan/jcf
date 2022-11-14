@@ -3,8 +3,10 @@ languageCode = "en-us"
 languageLang = "en"
 title = "Homepage"
 [taxonomies]
-category = "news/categories"
-tag = "news/tags"
+[taxonomies.news-categories]
+path = "news/categories"
+title = "This is the news"
+weight = 30
 
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details: 

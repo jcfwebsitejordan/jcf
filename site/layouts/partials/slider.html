@@ -22,7 +22,9 @@
                                 <a href="{{.RelPermalink}}">
                                     <h1> {{$item.title}}</h1>
                                 </a>
-                                <p>{{$item.description}}</p>
+                                <a href="{{.RelPermalink}}">
+                                    <p>{{$item.description}}</p>
+                                </a>
                             </div>
                         </div>
 
@@ -32,14 +34,14 @@
             {{end}}
 
             {{if eq $hasnews "no"}}
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             {{end}}
 
 

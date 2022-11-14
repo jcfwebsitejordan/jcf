@@ -5,9 +5,7 @@ date: 2022-05-03T19:44:42.751Z
 description: Aliquam vestibulum condimentum ante non vulputate. Etiam ut aliquam
   ipsum. Suspendisse ipsum erat, pellentesque id felis id, rutrum aliquet odio.
   Nunc in leo cursus, placerat ligula eu, dignissim dolor. Morbi non tempor
-  ante, eu luctus velit. Pellentesque habitant morbi tristique senectus et netus
-  et malesuada fames ac turpis egestas. In id erat eu mauris faucibus auctor non
-  quis augue.
+  ante, eu luctus velit. Pellentesque habitant morbi tristique .
 image: img/JoinUs-Background.jpg
 categories:
   - sit

@@ -1,7 +1,229 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-  {{ end }}
-{{ end }}
+
+<section id="hero" class="blog-top single-blog-top" style="background-image: url('img/News-Background.jpg');">
+  <div class="container blog_inner">
+    <div class="row">
+      <div class="col-lg-6 offset-lg-3 text-center">
+        {{/* {{range .Params.categories}}
+        <p class="single_cat_top mb-2" data-cue="slideInUp">
+          {{.category}}</p>
+        {{end}} */}}
+
+        <h1 class="hero_title" data-cue="slideInUp" data-delay="400">
+          {{ .Params.title}}
+        </h1>
+      </div>
+      <!-- /.col-lg-6 offset-3 -->
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+  <div class="mask mask_dark"></div>
+</section>
+<!-- /#hero.blog-top -->
+
+
+
+
+<section class="content  bg-blob-white ">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="row zindex-2 position-relative">
+          {{ range (.Paginator 6).Pages }}
+
+          {{/* {{ range where .Site.Pages.ByDate.Reverse "Type" "news" }} */}}
+          {{if .Params.title}}
+
+          <div class="col-lg-6 align-self-center mb-30">
+            <div class="blog_listpost">
+              <div class="blog_img">
+                <a href="{{.Permalink}}">
+                  <img src="{{.Params.image}}" alt="">
+                </a>
+              </div>
+              <!-- blog_img -->
+
+              <div class="blog_desc">
+                <a class="title_link" href="{{.Permalink}}">
+                  <h3>{{.Params.Title}}</h3>
+                </a>
+                <p>
+                  {{.Params.description}}
+                </p>
+
+                <div class="blog_meta">
+                  <ul class="list-unstyled d-flex mb-0">
+                    <li class="d-flex align-items-center">
+                      <i class="ph-calendar-blank"></i> {{.Params.date.Format "2006/01/02"}}
+                    </li>
+                    {{$url :=.Permalink}}
+                    {{range .Params.categories }}
+                    <li class="d-flex align-items-center">
+
+
+                      <i class="ph-book-open"></i>
+                      <a href="{{$url}}">{{.}}</a>
+                    </li>
+                    {{end}}
+
+                  </ul>
+                </div>
+
+              </div>
+              <!-- blog_desc -->
+
+
+              <!-- /.blog_meta -->
+            </div>
+            <!-- /.blog_listpost -->
+          </div>
+          <!-- col-lg-6 -->
+          {{end}}
+          {{end}}
+
+          <!-- col-lg-6 -->
+
+        </div>
+        <!-- /.row -->
+        {{ if gt .Paginator.TotalPages 1 }}
+
+        <nav class="page_nav mb-100 mb-lg-0">
+          <ul class="page_nav_list list-unstyled">
+             <div class="pagination">
+              {{ if .Paginator.HasPrev }}
+
+              <li class="page_list_item"><a class="nav_page_link" href="{{ .Paginator.Prev.URL }}"><i
+                    class="ph-arrow-left"></i></a></li>
+
+              {{ end }}
+
+
+              {{ if .Paginator.HasNext }}
+
+            <li class="page_list_item disabled"><a class="nav_page_link" href="{{ .Paginator.Next.URL }}"><i
+                  class="ph-arrow-right"></i></a></li>
+
+            {{ end }}
+           
+            </div>
+        </nav>
+
+        {{ end }}
+        {{/*  <li class="page_list_item active"><a class="nav_page_link" href="#">1</a></li>
+        <li class="page_list_item"><a class="nav_page_link" href="#">2</a></li>
+        <li class="page_list_item"><a class="nav_page_link" href="#">3</a></li>  */}}
+        </ul>
+        </nav>
+
+      </div>
+      <!-- col-lg-9 -->
+      <div class="col-lg-3 ">
+        <div class="sidebar">
+
+          {{/* <div class="widget mb-30 about_widget">
+            <img src="img/about/abw.jpg" alt="">
+            <div class="ab_padding">
+              <p>Riders from all over country have registered for the inaugural event </p>
+              <p>We also aim to develop pathways for those pursuing an interest in racing particular
+                emphasis.</p>
+              <ul class="ab_list">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-telegram"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              </ul>
+            </div>
+            <!-- ab_padding -->
+          </div> */}}
+          <!-- widget -->
+
+        
+          <!-- widget -->
+
+
+          <div class="widget mb-30">
+            <h3 class="widget_title">Archives</h3>
+            <ul>
+              <div class="archive">
+                {{ $pages := .Pages }}
+                {{ if .IsHome }}
+                {{ $pages = .Site.RegularPages }}
+                {{ end }}
+                {{ range (where $pages "type" "news").GroupByDate "2006" }}
+                <h2 class="archive-title">{{ .Key }}</h2>
+                {{ range .Pages }}
+                <article class="archive-item">
+                  <a href="{{ .RelPermalink }}" class="archive-item-link">{{ .Title }}</a>
+                  <span class="archive-item-date">
+                    {{ .Date.Format "2006-01-02" }}
+                  </span>
+                </article>
+                {{ end }}
+                {{ end }}
+              </div>
+
+              {{ range (where site.Pages "Type" "in" "news").GroupByDate "January 2006"}}
+              {{range $value := .Pages.GroupByDate "January 2006"}}
+              {{$url :=""}}
+
+
+              {{ range .Pages }}
+              {{$url := .Date.Format "2006/01"}}
+              <li><a href="{{$url}}"> {{.Date.Format "January 2006"}}</a></li>
+
+              {{break}}
+              {{end}}
+
+
+              {{end}}
+
+              {{end}}
+
+            </ul>
+
+
+          </div>
+          <!-- widget -->
+
+          {{/* <div class="widget mb-30">
+            <h3 class="widget_title">Tag</h3>
+
+            {{.Slug}}
+            <ul class=" tag_list">
+              {{ range .Params.tags }}
+
+              <li><a href="/news/tags/{{.}}">{{.}}</a></li>
+
+              {{end}}
+
+            </ul>
+          </div> */}}
+          <!-- widget -->
+
+        </div>
+        <!-- sidebar -->
+      </div>
+      <!-- col-lg-3 -->
+
+    </div>
+    <!-- row -->
+
+
+
+
+  </div>
+  <!-- container -->
+</section>
+<!-- content -->
+
+
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0"
+  nonce="TklzW02L"></script>
+
+
+{{end}}

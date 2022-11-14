@@ -32,7 +32,7 @@
 					{{else}}
 
 
-					{{ if eq .Page.Permalink "/contact/" }}
+					{{ if eq .Page.Permalink "/join/" }}
 					<div class="row nav_white nav_white_wide nav_white_wide">
 						{{else}}
 						<div class="row nav_dark nav_dark_wide nav_dark_wide">
@@ -48,12 +48,17 @@
 									<img class="logo logo-black" src="img/logo.png" alt="logo">
 
 									{{else}}
-									{{ if eq .Page.Permalink "/contact/" }}
+									{{ if eq .Page.Permalink "/join/" }}
+									<img class="logo logo-white" src="img/logo.png" alt="logo">
+									<img class="logo logo-black" src="img/logo.png" alt="logo">
+									{{else}}
+									{{ if in .Page.Permalink "/news/" }}
 									<img class="logo logo-white" src="img/logo.png" alt="logo">
 									<img class="logo logo-black" src="img/logo.png" alt="logo">
 									{{else}}
 
 									<img class="logo logo-black" src="img/logo.png" alt="logo">
+									{{end}}
 									{{end}}
 									{{end}}
 								</a>
@@ -101,25 +106,21 @@
 							</div>
 							<!-- /.col-lg-8 -->
 
-							<div
-								class="col-6 align-content-center align-self-center justify-content-end d-flex  d-lg-none">
-								<a class="mobile_menu_btn dark_menu" data-bs-toggle="offcanvas" href="#mobilemenu"
-									role="button" aria-controls="mobilemenu">
+							<div class="col-6 align-content-center align-self-center justify-content-end d-flex  d-lg-none">
+								<a class="mobile_menu_btn" data-bs-toggle="offcanvas" href="#mobilemenu" role="button" aria-controls="mobilemenu">
 									<i class="fa fa-bars"></i>
 								</a>
-
-
+		
+		
 								<!--  offcanvas mobile menu -->
-								<div class="mobile_menu_container offcanvas offcanvas-start" tabindex="-1"
-									data-bs-scroll="true" id="mobilemenu">
+								<div class="mobile_menu_container offcanvas offcanvas-start" tabindex="-1" data-bs-scroll="true" id="mobilemenu">
 									<div class="offcanvas-header">
-										<button class="close_mb" data-bs-dismiss="offcanvas" aria-label="Close"><i
-												class="ph-x"></i></button>
+										<button class="close_mb" data-bs-dismiss="offcanvas" aria-label="Close"><i class="ph-x"></i></button>
 									</div>
 									<div class="offcanvas-body">
-										<a href="index.html" class="logo_mobile"><img src="img/logo.png"
-												alt="image"></a>
-
+										<a href="#" class="logo_mobile"><img src="img/logo.png" alt="image"></a>
+		
+		 
 
 										<ul class="mobile_menu">
 
