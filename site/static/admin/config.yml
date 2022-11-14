@@ -10,6 +10,9 @@ i18n:
   default_locale: en
 permalinks:
   news: /:year/:month/:title/
+taxonomies:
+  news/tag: news/tags
+  news/category: news/categories
 
 collections: # A list of collections the CMS should be able to edit
   - name: "news" # Used in routes, ie.: /admin/collections/:slug/edit

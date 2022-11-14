@@ -255,8 +255,9 @@
                     <div class="widget mb-30">
                         <h3 class="widget_title">Tag</h3>
 
+                        <pre>{{ jsonify (dict "indent" "  ") .Data.Terms }}</pre>
 
-
+ss{{.Data.Terms}}
                         <ul class=" tag_list">
                             {{ range .Params.tags }}
 
