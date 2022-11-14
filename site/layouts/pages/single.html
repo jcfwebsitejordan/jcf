@@ -8,7 +8,7 @@
 
         <div class="row align-content-center mb-100">
             <div class="col-lg-6 align-self-center mb-30 mb-lg-0">
-                <p class="rdn_subtext position-relative" data-cue="slideInUp">{{$item.title}}</p>
+                <p class="rdn_subtext" data-cue="slideInUp">{{$item.title}}</p>
                 <h1 class="hero_title mb-0 position-relative zindex-2" data-cue="slideInUp" data-delay="200">
                     {{$item.left}}</h1>
 
@@ -31,7 +31,7 @@
 
         <div class="position-relative ">
             <div class="bg_dotted_img d-none d-lg-block right_top_img"></div>
-     {{ if $item.image }}       <img class="mmb-200 ab_img_page" src="{{$item.image}}" alt=""> {{ end }}
+            {{if $item.image}}    <img class="mmb-200 ab_img_page" src="{{$item.image}}" alt="">{{end}}
         </div>
         <!-- position-relative  -->
     </div>

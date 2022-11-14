@@ -5,8 +5,10 @@
     <div class="para_slider rdn_slider" data-scroll>
         <div class="swiper-wrapper">
 
+            {{$hasnews := "no"}}
             {{ range where .Site.Pages.ByDate.Reverse "Type" "news" }}
-            
+            {{$hasnews := "yes"}}
+
             {{ if eq .Params.show "1"}}
 
             {{ $item := .Params }}
@@ -17,7 +19,9 @@
                     <div class="slide_content container">
                         <div class="row">
                             <div class="col-lg-6">
-                                <a href="{{.RelPermalink}}">  <h1> {{$item.title}}</h1></a>
+                                <a href="{{.RelPermalink}}">
+                                    <h1> {{$item.title}}</h1>
+                                </a>
                                 <p>{{$item.description}}</p>
                             </div>
                         </div>
@@ -25,6 +29,17 @@
                     </div>
                 </div>
             </div> {{end}}
+            {{end}}
+
+            {{if eq $hasnews "no"}}
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
             {{end}}
 
 

@@ -62,71 +62,23 @@
 
 							<div class="btn_col col-lg-8 align-content-center justify-content-end d-none  d-lg-flex">
 								<ul class="nav_menu">
+									{{range (where site.Pages "Type" "in" "pages")}}
 
-									{{ with .Site.GetPage "aboutus" }}
+									{{if gt .Params.Order 0}}
 									<li class="has_child">
-										<a href="\aboutus">About us</a>
 
+										{{$url := .RelPermalink}}
+										<a href="{{$url}}">{{.Params.title}}</a>
 										<ul class="nav_menu_child">
-
 											{{ range $index, $item := .Params.sections }}
-
-
-											<li><a href="\aboutus\#{{$item.name}}">{{$item.title}}</a></li>
-
+											<li><a href="{{$url}}#{{$item.name}}">{{$item.title}}</a></li>
 											{{end}}
 										</ul>
 									</li>
-									{{ end }}
+									{{end}}
 
-									{{ with .Site.GetPage "disciplines" }}
-									<li class="has_child">
-										<a href="\disciplines">Disciplines</a>
+									{{end}}
 
-										<ul class="nav_menu_child">
-
-											{{ range $index, $item := .Params.sections }}
-
-
-											<li><a href="\disciplines\#{{$item.name}}">{{$item.title}}</a></li>
-
-											{{end}}
-										</ul>
-									</li>
-									{{ end }}
-
-									{{ with .Site.GetPage "clubsacademes" }}
-									<li class="has_child">
-										<a href="\clubsacademes">Clubs/Academes</a>
-
-										<ul class="nav_menu_child">
-
-											{{ range $index, $item := .Params.sections }}
-
-
-											<li><a href="\clubsacademes\#{{$item.name}}">{{$item.title}}</a></li>
-
-											{{end}}
-										</ul>
-									</li>
-									{{ end }}
-
-
-									{{ with .Site.GetPage "cyclingforall" }}
-									<li class="has_child">
-										<a href="\cyclingforall">Cycling for all</a>
-
-										<ul class="nav_menu_child">
-
-											{{ range $index, $item := .Params.sections }}
-
-
-											<li><a href="\cyclingforall\#{{$item.name}}">{{$item.title}}</a></li>
-
-											{{end}}
-										</ul>
-									</li>
-									{{ end }}
 
 
 									<li class="nav-item dropdown">
