@@ -125,9 +125,9 @@ collections: # A list of collections the CMS should be able to edit
               {label: "Title", name: "title", widget: "string"},
               {label: "Description", name: "data", widget: "text"}]}
           
-      - file: "site/content/join-us/_index.md"
+      - file: "site/content/join/_index.md"
         label: "Contact Page"
-        name: "join-us"
+        name: "join"
         fields:
           - {label: SmallTitle, name: smalltitle, widget: string}
           - {label: Title, name: title, widget: string}
