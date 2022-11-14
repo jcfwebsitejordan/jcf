@@ -1,6 +1,6 @@
 ---
 smalltitle: Let's meet
-title: Contact Us.
+title: Join Us.
 logo: img/contact.jpg
 memberscount: "1420"
 trackcount: "2324"
@@ -9,7 +9,6 @@ eventcount: "2470"
 city: Amman, Jordan
 street: Amman Street
 hours: 06.00 AM - 06.00 PM
-email: info@info.com
 contact_entries:
   - heading: Location
     text: 3153 Lynn Avenue, South San Francisco, California 94080
@@ -19,10 +18,3 @@ location: https://maps.google.com/maps?q=amman&t=&z=13&ie=UTF8&iwloc=&output=emb
 ---
 112W22e’d love to get in touch with you and hear your ideas and
 questions. We strive to grow and improve constantly and your feedback
-is valuable for us.2312312312323123222
-
-<h3 class="f4 b lh-title mb2">How can I get…?</h3>
-
-You can also use the form below for any inquiries about coffee
-availability, monthly subscriptions and scheduling a 1-on-1 session
-with our baristas. Don’t be shy, drop us a line!

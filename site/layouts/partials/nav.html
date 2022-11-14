@@ -103,7 +103,12 @@
                         <li><a href="contact.html">Contact</a></li>
                         
                     </ul> -->
-								<a href="/contact" class="head_btn align-self-center">Join us</a>
+
+								{{ with .Site.GetPage "join" }}
+
+								<a href="{{.RelPermalink}}" class="head_btn align-self-center">Join us</a>
+								{{end}}
+
 							</div>
 							<!-- /.col-lg-8 -->
 
