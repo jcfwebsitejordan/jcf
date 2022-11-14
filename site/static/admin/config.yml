@@ -23,7 +23,15 @@ collections: # A list of collections the CMS should be able to edit
       category: categories
       tag: tags
     category: categories
-    slug: "{{year}}/{{month}}/{{slug}}"
+    slug: "{{year}}-{{month}}/{{slug}}"
+    path: "{{year}}-{{month}}/{{slug}}"
+    summary: "{{title}} ({{year}}-{{month}})"
+    label_singular: "News"
+    editor:
+      preview: false
+
+
+
     tag: tags
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string", i18n: true}
@@ -32,8 +40,8 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Intro", name: "description", widget: "text", i18n: true}
       - {label: "Banner Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown", i18n: true}
-      - {label: "Categories", name: "categories", widget: "list", i18n: true}
-      - {label: "Tags", name: "tags", widget: "list", i18n: true}
+      - {label: "Categories", name: "categories", widget: "list", i18n: true,hint: "Comma Seperated Tags"}
+      - {label: "Tags", name: "tags", widget: "list", i18n: true,hint: "Comma Seperated Tags"}
       - {label: "Images", name: images, widget: list, fields: [
               {label: "Image", name: "image", widget: "image"}]}
   - name: "event" # Used in routes, ie.: /admin/collections/:slug/edit
