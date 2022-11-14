@@ -24,9 +24,7 @@ collections: # A list of collections the CMS should be able to edit
       tag: tags
     category: categories
     slug: "{{year}}-{{month}}/{{slug}}"
-    path: "{{year}}-{{month}}/{{slug}}"
     summary: "{{title}} ({{year}}-{{month}})"
-    label_singular: "News"
     editor:
       preview: false
 
