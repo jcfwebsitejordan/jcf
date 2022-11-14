@@ -91,18 +91,7 @@
 
 
 								</ul>
-
-								<!-- <ul class="nav_menu">
-						
-                        <li >
-                            <a href="index-1.html">Home</a>
-                            
-                        </li>
-                        
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        
-                    </ul> -->
+ 
 
 								{{ with .Site.GetPage "join" }}
 
@@ -134,74 +123,35 @@
 
 										<ul class="mobile_menu">
 
-											{{ with .Site.GetPage "aboutus" }}
+
+											{{range (where site.Pages "Type" "in" "pages")}}
+
+											{{if gt .Params.Order 0}}
+											{{$url := .RelPermalink}}
+
+
 											<li class="has_child">
-												<a href="\aboutus">About us</a>
+												<a href="{{$url}}">{{.Params.title}}</a>
 
 												<ul class="nav_menu_child">
 
 													{{ range $index, $item := .Params.sections }}
 
 
-													<li><a href="\aboutus\#{{$item.name}}">{{$item.title}}</a></li>
+													<li><a href="{{$url}}#{{$item.name}}">{{$item.title}}</a></li>
 
 													{{end}}
 												</ul>
 											</li>
 											{{ end }}
-
-											{{ with .Site.GetPage "disciplines" }}
-											<li class="has_child">
-												<a href="\disciplines">Disciplines</a>
-
-												<ul class="nav_menu_child">
-
-													{{ range $index, $item := .Params.sections }}
-
-
-													<li><a href="\disciplines\#{{$item.name}}">{{$item.title}}</a></li>
-
-													{{end}}
-												</ul>
-											</li>
-											{{ end }}
-
-											{{ with .Site.GetPage "clubsacademes" }}
-											<li class="has_child">
-												<a href="\clubsacademes">Clubs/Academes</a>
-
-												<ul class="nav_menu_child">
-
-													{{ range $index, $item := .Params.sections }}
-
-
-													<li><a href="\clubsacademes\#{{$item.name}}">{{$item.title}}</a>
-													</li>
-
-													{{end}}
-												</ul>
-											</li>
-											{{ end }}
-
-
-											{{ with .Site.GetPage "cyclingforall" }}
-											<li class="has_child">
-												<a href="\cyclingforall">Cycling for all</a>
-
-												<ul class="nav_menu_child">
-
-													{{ range $index, $item := .Params.sections }}
-
-
-													<li><a href="\cyclingforall\#{{$item.name}}">{{$item.title}}</a>
-													</li>
-
-													{{end}}
-												</ul>
-											</li>
-											{{ end }}
+											{{end}}
 											<li>
-												<a href="/contact" class="head_btn align-self-center">Join us</a>
+												{{ with .Site.GetPage "join" }}
+
+												<a href="{{.RelPermalink}}" class="head_btn align-self-center">Join
+													us</a>
+
+												{{end}}
 											</li>
 
 
