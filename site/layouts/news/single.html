@@ -76,7 +76,7 @@
                         <li></li>
                         <li>
 
-                            <div class="resp-sharing-button__link" data-href="{{.Permalink}}" data-layout="button"
+                            {{/* <div class="resp-sharing-button__link" data-href="{{.Permalink}}" data-layout="button"
                                 data-size="small"><a target="_blank"
                                     href="https://www.facebook.com/sharer/sharer.php?u={{.Permalink}}"
                                     class="fab fa-facebook"></a></div> */}}
@@ -189,7 +189,7 @@
                             {{$currenttitle := .Params.title}}
                             {{ range first 7 (where .Site.Pages.ByDate.Reverse "Type" "news") }}
 
-                             {{if .Params.title}}
+                            {{if .Params.title}}
                             {{if ne .Params.title $currenttitle}}
 
                             <li>
