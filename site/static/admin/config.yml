@@ -15,6 +15,38 @@ taxonomies:
   news/category: news/categories
 
 collections: # A list of collections the CMS should be able to edit
+  - name: Language
+    label: language
+    delete: false
+    files:
+      - name: english
+        file: 'i18n/en.yaml'
+        label: English
+        fields:
+          - widget: object
+            name: home
+            label: Home
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: title
+            label: 'Site Title'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+      - name: french
+        file: 'i18n/fr.yaml'
+        label: French
+        fields:
+          - widget: object
+            name: home
+            label: Home
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: title
+            label: 'Site Title'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
   - name: "news" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "News" # Used in the UI, ie.: "New Post"
     folder: "site/content/news" # The path to the folder where the documents are stored
