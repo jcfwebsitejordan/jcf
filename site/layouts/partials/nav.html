@@ -64,63 +64,87 @@
 								</a>
 							</div>
 							<!-- /.col-lg-4 -->
+							<!-- <div class="btn_col col-lg-0 align-content-center justify-content-end d-none  d-lg-flex">
+								English</div> -->
 
 							<div class="btn_col col-lg-8 align-content-center justify-content-end d-none  d-lg-flex">
-								<ul class="nav_menu">
-									{{range (where site.Pages "Type" "in" "pages")}}
+ 									
 
-									{{if gt .Params.Order 0}}
-									<li class="has_child">
 
-										{{$url := .RelPermalink}}
-										<a href="{{$url}}">{{.Params.title}}</a>
-										<ul class="nav_menu_child">
-											{{ range $index, $item := .Params.sections }}
-											<li><a href="{{$url}}#{{$item.name}}">{{$item.title}}</a></li>
-											{{end}}
-										</ul>
-									</li>
+									<ul class="nav_menu">
+
+										
+										{{ if .IsTranslated }}
+								 
+										{{ range .Translations }}
+										<li class="nav-item dropdown">
+											<a class="nav-link " href="{{ .Permalink }}">{{ if eq .Lang "ar"}} العربية{{else}}English{{end}} </a>
+										</li>
+										{{ end }}
+								 
+									{{ end }}
+
+
+										 
+										{{range (where site.Pages "Type" "in" "pages")}}
+
+										{{if gt .Params.Order 0}}
+										<li class="has_child">
+
+											{{$url := .RelPermalink}}
+											<a href="{{$url}}">{{.Params.title}}</a>
+											<ul class="nav_menu_child">
+												{{ range $index, $item := .Params.sections }}
+												<li><a href="{{$url}}#{{$item.name}}">{{$item.title}}</a></li>
+												{{end}}
+											</ul>
+										</li>
+										{{end}}
+
+										{{end}}
+
+
+
+										<li class="nav-item dropdown">
+											<a class="nav-link " href="#" id="navbarDropdown" role="button"
+												data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												Registration
+											</a>
+										</li>
+
+
+
+
+									</ul>
+
+
+									{{ with .Site.GetPage "join" }}
+
+									<a href="{{.RelPermalink}}" class="head_btn align-self-center">Join us</a>
 									{{end}}
-
-									{{end}}
-
-
-
-									<li class="nav-item dropdown">
-										<a class="nav-link " href="#" id="navbarDropdown" role="button"
-											data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											Registration
-										</a>
-									</li>
-
-
-
-								</ul>
- 
-
-								{{ with .Site.GetPage "join" }}
-
-								<a href="{{.RelPermalink}}" class="head_btn align-self-center">Join us</a>
-								{{end}}
 
 							</div>
 							<!-- /.col-lg-8 -->
 
-							<div class="col-6 align-content-center align-self-center justify-content-end d-flex  d-lg-none">
-								<a class="mobile_menu_btn" data-bs-toggle="offcanvas" href="#mobilemenu" role="button" aria-controls="mobilemenu">
+							<div
+								class="col-6 align-content-center align-self-center justify-content-end d-flex  d-lg-none">
+								<a class="mobile_menu_btn" data-bs-toggle="offcanvas" href="#mobilemenu" role="button"
+									aria-controls="mobilemenu">
 									<i class="fa fa-bars"></i>
 								</a>
-		
-		
+
+
 								<!--  offcanvas mobile menu -->
-								<div class="mobile_menu_container offcanvas offcanvas-start" tabindex="-1" data-bs-scroll="true" id="mobilemenu">
+								<div class="mobile_menu_container offcanvas offcanvas-start" tabindex="-1"
+									data-bs-scroll="true" id="mobilemenu">
 									<div class="offcanvas-header">
-										<button class="close_mb" data-bs-dismiss="offcanvas" aria-label="Close"><i class="ph-x"></i></button>
+										<button class="close_mb" data-bs-dismiss="offcanvas" aria-label="Close"><i
+												class="ph-x"></i></button>
 									</div>
 									<div class="offcanvas-body">
 										<a href="#" class="logo_mobile"><img src="img/logo.png" alt="image"></a>
-		
-		 
+
+
 
 										<ul class="mobile_menu">
 

@@ -5,7 +5,7 @@ backend:
 media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
 i18n:
-  structure: multiple_files
+  structure: multiple_folders
   locales: [en, ar]
   default_locale: en
 permalinks:
