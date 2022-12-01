@@ -1,7 +1,26 @@
 <section class="home-slider clearfix">
+    <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
+{{.Site.Language.Lang}}
 
+<br/>
+<br/>
 
+{{ range where .Site.Pages.ByDate.Reverse "Type" "news" }}
+
+{{.Permalink}}
+<br/>
+<br/>
+
+{{end}}
     <div class="para_slider rdn_slider" data-scroll>
         <div class="swiper-wrapper">
 
