@@ -14,16 +14,164 @@ taxonomies:
   news/tag: news/tags
   news/category: news/categories
 
+collections: # A list of collections the CMS should be able to edit
+  - name: Language
+    i18n: true
+    label: language
+    delete: false
+    files:
+      - name: english
+        file: 'i18n/en.yaml'
+        label: English
+        fields:
+          - widget: object
+            name: home
+            label: Home
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: title
+            label: 'Site Title'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+      - name: french
+        file: 'i18n/fr.yaml'
+        label: French
+        fields:
+          - widget: object
+            name: home
+            label: Home
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: title
+            label: 'Site Title'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+  - name: "news" # Used in routes, ie.: /admin/collections/:slug/edit
+    i18n: true
+    label: "News" # Used in the UI, ie.: "New Post"
+    folder: "site/content/news" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    taxonomies:
+      category: categories
+      tag: tags
+    category: categories
+    slug: "{{year}}-{{month}}/{{slug}}"
+    summary: "{{title}} ({{year}}-{{month}})"
+    editor:
+      preview: false
 
-collections:
-  i18n: true
-  files:
-    - file: ["src/pages/about.en.md","src/pages/about.ar.md"]
-      label: "About Page"
-      name: "about"
-      i18n: true
-      fields:
-        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page", i18n: duplicate}
-        - {label: Title, name: title, widget: string, i18n: true}
-        - {label: Heading, name: heading, widget: string, i18n: true}
-        - {label: "Body", name: "body", widget: "markdown", i18n: true}
+
+
+    tag: tags
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string", i18n: true}
+      - {label: "Show on Home Banner ?", name: "show",widget: "select", required: true, default: "1", options: [{label: "Yes", value: "1"},{label: "No", value: "0"}]}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Intro", name: "description", widget: "text", i18n: true}
+      - {label: "Banner Image", name: "image", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown", i18n: true}
+      - {label: "Categories", name: "categories", widget: "list", i18n: true,hint: "Comma Seperated Tags"}
+      - {label: "Tags", name: "tags", widget: "list", i18n: true,hint: "Comma Seperated Tags"}
+      - {label: "Images", name: images, widget: list, fields: [
+              {label: "Image", name: "image", widget: "image"}]}
+  - name: "event" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Events" # Used in the UI, ie.: "New Post"
+    folder: "site/content/event" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Event Type", name: "eventtype", widget: "string"}
+      - {label: "Show on Home Page ?", name: "show",widget: "select", required: true, default: "1", options: [{label: "Yes", value: "1"},{label: "No", value: "0"}]}
+      - {label: "Show on Footer ?", name: "showfooter",widget: "select", required: true, default: "1", options: [{label: "Yes", value: "1"},{label: "No", value: "0"}]}
+      - {label: "Intro", name: "description", widget: "text"}
+      - {label: "Event Location", name: "location", widget: "string"}
+      - {label: "Event Date", name: "date", widget: "string"}
+      - {label: "Event Time", name: "time", widget: "string"}
+      - {label: "Event Note", name: "note", widget: "string"}
+      - {label: "Details", name: "body", widget: "markdown"}
+      - {label: "Images", name: images, widget: list, fields: [
+              {label: "Image", name: "image", widget: "image"}]}
+
+  - name: "pages" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Pages" # Used in the UI, ie.: "New Post"
+    folder: "site/content/pages" # The path to the folder where the documents are stored
+    create: false # Allow users to create new documents in this collection
+    delete: false # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Sections", name: "sections", widget: list, fields: [
+          {label: "Section Name", name: "name", widget: "string",hint: "this will be used for urls , it must not contains spaces", required: false},
+          {label: "Title", name: "title", widget: "string"},
+          {label: "Image", name: "image", widget: "image", required: false},
+          {label: "Left Content", name: "left", widget: "markdown", required: false},
+          {label: "Right Content", name: "right", widget: "markdown", required: false}]}
+      - {label: "Order", name: "order", widget: "hidden", default: "1"}
+
+          
+  - name: "Content"
+    label: "Contents"
+    files:
+      - file: "site/content/_index.md"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: "Banners", name: banners, widget: list, fields: [
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Title", name: "title", widget: "text"},
+              {label: "Data", name: "data", widget: "text"}]}
+          - {label: "Sponsors", name: sponsors, widget: list, fields: [
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Title", name: "title", widget: "text"},
+              {label: "Website", name: "website", widget: "text"}]}
+          - {label: "Blurb", name: blurb, widget: object, fields: [
+              {label: "SmallHeading", name: "smallheading", widget: string},
+              {label: "Heading", name: "heading", widget: string},
+              {label: "Text", name: "text", widget: "text"}]}
+          - {label: "Services", name: services, widget: list, fields: [
+              {label: "Header", name: "header", widget: "text"},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Title", name: "title", widget: "text"},
+              {label: "Data", name: "data", widget: "text"},
+              {label: "Icon", name: "icon", widget: "image"}]}
+          - {label: "About", name: about, widget: object, fields: [
+              {label: "SmallTitle", name: "smalltitle", widget: string},
+              {label: "Heading", name: "heading", widget: string},
+              {label: "Text", name: "text", widget: "text"},
+              {label: "Image", name: "image", widget: "image"},
+              {label: "ImageCaption", name: "imagecaption", widget: "text"},
+              {label: "ImageTitle", name: "imagetitle", widget: "text"},
+              {label: "icon", name: "icon", widget: "image"}]}
+          - {label: "Topics", name: topics, widget: list, fields: [
+              {label: "Title", name: "title", widget: "text"},
+              {label: "Text", name: "data", widget: "text"}]}
+          - {label: "Show Events Filter ?", name: "showfilter",widget: "select", required: true, default: "1", options: [{label: "Yes", value: "1"},{label: "No", value: "0"}]}
+          - {label: "Event Types", name: eventtypes, widget: list, fields: [
+              {label: "Type", name: "eventtype", widget: "text"}]}          
+          - {label: "Footer", name: footer, widget: object, fields: [
+              {label: "Text", name: "text", widget: text},
+              {label: "Address", name: "address", widget: string},
+              {label: "Email", name: "email", widget: "string"}]}
+          - {label: "Image Gallery", name: gallery, widget: list, fields: [
+              {label: "Image", name: "image", widget: "image"},
+              {label: "Title", name: "title", widget: "string"},
+              {label: "Description", name: "data", widget: "text"}]}
+          
+      - file: "site/content/join/_index.md"
+        label: "Contact Page"
+        name: "join"
+        fields:
+          - {label: SmallTitle, name: smalltitle, widget: string}
+          - {label: Title, name: title, widget: string}
+          - {label: Logo, name: logo, widget: image}
+          - {label: Members Count, name: memberscount, widget: string}
+          - {label: Track Count, name: trackcount, widget: string}
+          - {label: Route Count, name: routcount, widget: string}
+          - {label: Events Count, name: eventcount, widget: string}
+          - {label: City, name: city, widget: string}
+          - {label: Street, name: street, widget: string}
+          - {label: Working Hours, name: hours, widget: string}
+          - {label: Email, name: email, widget: string}
+          - {label: Location (Copy Location Url from Google Maps), name: location, widget: string}
