@@ -14,11 +14,11 @@ weight = 30
 disableKinds = ["RSS"]
 [languages]
   [languages.en]
-    contentDir = 'content/english'
+    contentDir = 'content/English'
     languageName = 'English'
     weight = 10
   [languages.ar]
     languagedirection = 'rtl'
-    contentDir = 'content/arabic'
+    contentDir = 'content/Arabic'
     languageName = 'Arabic'
     weight = 20
