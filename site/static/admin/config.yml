@@ -16,14 +16,14 @@ taxonomies:
 
 
 collections:
-   i18n: true
-    files:
-      - file: ["src/pages/about.en.md","src/pages/about.ar.md"]
-        label: "About Page"
-        name: "about"
-        i18n: true
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page", i18n: duplicate}
-          - {label: Title, name: title, widget: string, i18n: true}
-          - {label: Heading, name: heading, widget: string, i18n: true}
-          - {label: "Body", name: "body", widget: "markdown", i18n: true}
+  i18n: true
+  files:
+    - file: ["src/pages/about.en.md","src/pages/about.ar.md"]
+      label: "About Page"
+      name: "about"
+      i18n: true
+      fields:
+        - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page", i18n: duplicate}
+        - {label: Title, name: title, widget: string, i18n: true}
+        - {label: Heading, name: heading, widget: string, i18n: true}
+        - {label: "Body", name: "body", widget: "markdown", i18n: true}
