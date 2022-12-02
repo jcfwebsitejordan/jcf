@@ -1,4 +1,10 @@
 {{ define "main" }}
+{{$page := .Params.en}}
+{{if eq .Site.Language.Lang "ar" }}
+{{$page := .Params.ar
+}} 
+{{end}}
+
 
 <section id="hero" class="blog-top single-blog-top" style="background-image: url('img/News-Background.jpg');">
     <div class="container blog_inner">
@@ -31,9 +37,33 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-9 single_blog">
-                <img class="single_blog_img" src="{{.Params.image}}" alt="">
+                <img class="single_blog_img" src="{{.Params.en.image}}" alt="">
 
                 <div class="blog_content">
+
+                    {{ with .PrevInSection }}
+                    <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+                  {{ end }}
+
+<--------------->
+fffffffffffffff
+<ul>
+    {{ range .Translations }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Lang }}: {{ .Title }}{{ if .IsPage }} ({{ i18n "wordCount" . }}){{ end }}</a>
+    </li>
+    {{ end }}
+  </ul>
+  fffffffffffffff
+
+
+                  {{ with .NextInSection }}
+                    <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+                  {{ end }}
+                    {{ $page }}
+
+
+
                     {{.Content}}
 
                     <div class="rdn_blog_gallery row">

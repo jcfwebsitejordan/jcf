@@ -9,12 +9,55 @@
 <br/>
 <br/>
 
+{{ if .IsTranslated }}
+<select class="m-2 border-0" id="select-language" onchange="location = this.value;">
+  {{ $siteLanguages := site.Languages}}
+  {{ $pageLang := .Page.Lang}}
+  {{ range .Page.AllTranslations }}
+  {{ $translation := .}}
+  {{ range $siteLanguages }}
+  {{ if eq $translation.Lang .Lang }}
+  {{ $selected := false }}
+  {{ if eq $pageLang .Lang}}
+  <option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}" selected>{{ .LanguageName }}
+  </option>
+  {{ else }}
+  <option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}">{{ .LanguageName }}</option>
+  {{ end }}
+  {{ end }}
+  {{ end }}
+  {{ end }}
+</select>
+{{ end }}
+{{.Title}}
+cc
+{{.Params.ar.Content}}
+{{   .Content }}
+
+{{ with .Content }}
+{{ . }}
+{{ end }}
+
+cc
+llll
 {{.Site.Language.Lang}}
 
 <br/>
 <br/>
-
-{{ range where .Site.Pages.ByDate.Reverse "Type" "news" }}
+tt
+{{   .IsTranslated }}
+tt
+hhhh
+<h4>{{ i18n "home" }}</h4>
+hhh<ul>
+    {{ range .Translations }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Lang }}: {{ .Title }}{{ if .IsPage }} ({{ i18n "wordCount" . }}){{ end }}</a>
+    </li>
+    {{ end }}
+  </ul>
+  
+{{ range   .Site.Pages.Reverse   }}
 
 {{.Permalink}}
 <br/>

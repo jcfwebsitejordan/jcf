@@ -9,7 +9,7 @@ i18n:
   locales: [en, ar]
   default_locale: en
 permalinks:
-  news: /:year/:month/:title/
+  news: /:locale/:year/:month/:title/
 taxonomies:
   news/tag: news/tags
   news/category: news/categories
