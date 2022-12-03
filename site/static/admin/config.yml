@@ -44,11 +44,12 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Images", name: images, widget: list, fields: [
               {label: "Image", name: "image", widget: "image"}]}
   - name: "event" # Used in routes, ie.: /admin/collections/:slug/edit
+    i18n: true
     label: "Events" # Used in the UI, ie.: "New Post"
     folder: "site/content/event" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Title", name: "title", widget: "string", i18n: true}
       - {label: "Event Type", name: "eventtype", widget: "string"}
       - {label: "Show on Home Page ?", name: "show",widget: "select", required: true, default: "1", options: [{label: "Yes", value: "1"},{label: "No", value: "0"}]}
       - {label: "Show on Footer ?", name: "showfooter",widget: "select", required: true, default: "1", options: [{label: "Yes", value: "1"},{label: "No", value: "0"}]}
