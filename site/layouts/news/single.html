@@ -219,45 +219,7 @@
 
 
                     <div class="widget mb-30">
-                        <h3 class="widget_title">Archives</h3>
-                        <ul>
-                            <div class="archive">
-                                {{ $pages := .Pages }}
-                                {{ if .IsHome }}
-                                {{ $pages = .Site.RegularPages }}
-                                {{ end }}
-                                {{ range (where $pages "type" "Banner").GroupByDate "2006" }}
-                                <h2 class="archive-title">{{ .Key }}</h2>
-                                {{ range .Pages }}
-                                <article class="archive-item">
-                                    <a href="{{ .RelPermalink }}" class="archive-item-link">{{ .Title }}</a>
-                                    <span class="archive-item-date">
-                                        {{ .Date.Format "2006-01-02" }}
-                                    </span>
-                                </article>
-                                {{ end }}
-                                {{ end }}
-                            </div>
-
-                            {{ range (where site.Pages "Type" "in" "news").GroupByDate "January 2006"}}
-                            {{range $value := .Pages.GroupByDate "January 2006"}}
-                            {{$url :=""}}
-
-
-                            {{ range .Pages }}
-                            {{$url := .Date.Format "2006/01"}}
-                            <li><a href="{{$url}}"> {{.Date.Format "January 2006"}}</a></li>
-
-                            {{break}}
-                            {{end}}
-
-
-                            {{end}}
-
-                            {{end}}
-
-                        </ul>
-
+                        
 
                     </div>
                     <!-- widget -->
