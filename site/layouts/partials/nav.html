@@ -168,6 +168,17 @@
 
 										<ul class="mobile_menu">
 
+											{{ if .IsTranslated }}
+
+											{{ range .Translations }}
+											<li class="nav-item dropdown">
+												<a class="nav-link " href="{{ .Permalink }}">{{ if eq .Lang "ar"}}
+													العربية{{else}}English{{end}} </a>
+											</li>
+											{{ end }}
+		
+											{{ end }}
+
 
 											{{range (where site.Pages "Type" "in" "pages")}}
 
@@ -176,14 +187,14 @@
 
 
 											<li class="has_child">
-												<a href="{{$url}}">{{.Params.title}}</a>
+												<a class="nav-link " href="{{$url}}">{{.Params.title}}</a>
 
 												<ul class="nav_menu_child">
 
 													{{ range $index, $item := .Params.sections }}
 
 
-													<li><a href="{{$url}}#{{$item.name}}">{{$item.title}}</a></li>
+													<li><a class="nav-link "  href="{{$url}}#{{$item.name}}">{{$item.title}}</a></li>
 
 													{{end}}
 												</ul>
