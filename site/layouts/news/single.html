@@ -191,13 +191,15 @@
                         </a>
                         <ul class="vblog">
                             {{$currenttitle := .Params.title}}
-                            {{ range first 7 (where .Site.Pages.ByDate.Reverse "Type" "Banner") }}
-
+                            {{ range first 7 (where .Site.Pages.ByDate.Reverse "Type" "news") }}
+                            {{$en := index .AllTranslations 0}}
+                            {{$ar := index .AllTranslations 1}}
+                  
                             {{if .Params.title}}
                             {{if ne .Params.title $currenttitle}}
 
                             <li>
-                                <a class="vblog_img" href="{{ .Permalink }}"><img src="{{.Params.image}}"
+                                <a class="vblog_img" href="{{ .Permalink }}"><img src="{{$en.Params.image}}"
                                         alt="{{.Params.title}}"></a>
                                 <div class="vblog_list">
 
