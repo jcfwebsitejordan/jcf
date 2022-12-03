@@ -17,7 +17,7 @@ disableKinds = ["RSS"]
   [languages.en]
     title = "Jordan Cycling Federation"
 
-    contentDir = 'content/en'
+    contentDir = 'content'
     languageName = 'English'
     weight = 10
   [languages.ar]

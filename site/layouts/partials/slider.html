@@ -1,81 +1,39 @@
 <section class="home-slider clearfix">
-    <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 
-{{ if .IsTranslated }}
-<select class="m-2 border-0" id="select-language" onchange="location = this.value;">
-  {{ $siteLanguages := site.Languages}}
-  {{ $pageLang := .Page.Lang}}
-  {{ range .Page.AllTranslations }}
-  {{ $translation := .}}
-  {{ range $siteLanguages }}
-  {{ if eq $translation.Lang .Lang }}
-  {{ $selected := false }}
-  {{ if eq $pageLang .Lang}}
-  <option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}" selected>{{ .LanguageName }}
-  </option>
-  {{ else }}
-  <option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}">{{ .LanguageName }}</option>
-  {{ end }}
-  {{ end }}
-  {{ end }}
-  {{ end }}
-</select>
-{{ end }}
-{{.Title}}
-cc
-{{.Params.ar.Content}}
-{{   .Content }}
-
-{{ with .Content }}
-{{ . }}
-{{ end }}
-
-cc
-llll
-{{.Site.Language.Lang}}
-
-<br/>
-<br/>
-tt
-{{   .IsTranslated }}
-tt
-{{ i18n "home" }}
-
-hhhh
-<h4>{{ i18n "home" }}</h4>
-hhh<ul>
-    {{ range .Translations }}
-    <li>
-      <a href="{{ .Permalink }}">{{ .Lang }}: {{ .Title }}{{ if .IsPage }} ({{ i18n "wordCount" . }}){{ end }}</a>
-    </li>
-    {{ end }}
-  </ul>
-  
-{{ range   .Site.Pages.Reverse   }}
-
-{{.Permalink}}
-<br/>
-<br/>
-
-{{end}}
     <div class="para_slider rdn_slider" data-scroll>
         <div class="swiper-wrapper">
+            <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 
             {{$hasnews := "no"}}
             {{ range where .Site.Pages.ByDate.Reverse "Type" "news" }}
             {{$hasnews := "yes"}}
+            {{$news := . }}
 
-            {{ if eq .Params.show "1"}}
+            {{ if eq .Language.LanguageName "English" }}
+            {{$news := . }}
+            {{else}}
+            {{$news := index .Translations 0}}
+            {{end}}
 
-            {{ $item := .Params }}
+             {{ if eq $news.Params.show "1"}}
+
+            {{ $item := $news.Params }}
             <div class="swiper-slide">
                 <div class="slide_inner" data-swiper-parallax-x="90%">
                     <div class="mask"></div>
@@ -84,10 +42,10 @@ hhh<ul>
                         <div class="row">
                             <div class="col-lg-6">
                                 <a href="{{.RelPermalink}}">
-                                    <h1> {{$item.title}}</h1>
+                                    <h1> {{.Title}}</h1>
                                 </a>
                                 <a href="{{.RelPermalink}}">
-                                    <p>{{$item.description}}</p>
+                                    <p>{{.Params.description}}</p>
                                 </a>
                             </div>
                         </div>

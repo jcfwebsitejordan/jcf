@@ -1,22 +1,23 @@
 {{ define "main" }}
-{{$page := .Params.en}}
-{{if eq .Site.Language.Lang "ar" }}
-{{$page := .Params.ar
-}} 
-{{end}}
+{{$news := . }}
 
+{{ if eq .Language.LanguageName "English" }}
+{{$news := . }}
+{{else}}
+{{$news := index .Translations 0}}
+{{end}}
 
 <section id="hero" class="blog-top single-blog-top" style="background-image: url('img/News-Background.jpg');">
     <div class="container blog_inner">
         <div class="row">
             <div class="col-lg-6 offset-lg-3 text-center">
-                {{/* {{range .Params.categories}}
+                {{/* {{range $news.Params.categories}}
                 <p class="single_cat_top mb-2" data-cue="slideInUp">
                     {{.category}}</p>
                 {{end}} */}}
 
                 <h1 class="hero_title" data-cue="slideInUp" data-delay="400">
-                    {{ .Params.title}}
+                    {{ $news.Params.title}}
                 </h1>
             </div>
             <!-- /.col-lg-6 offset-3 -->
@@ -37,38 +38,14 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-9 single_blog">
-                <img class="single_blog_img" src="{{.Params.en.image}}" alt="">
+                <img class="single_blog_img" src="{{.Params.image}}" alt="">
 
                 <div class="blog_content">
-
-                    {{ with .PrevInSection }}
-                    <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
-                  {{ end }}
-
-<--------------->
-fffffffffffffff
-<ul>
-    {{ range .Translations }}
-    <li>
-      <a href="{{ .Permalink }}">{{ .Lang }}: {{ .Title }}{{ if .IsPage }} ({{ i18n "wordCount" . }}){{ end }}</a>
-    </li>
-    {{ end }}
-  </ul>
-  fffffffffffffff
-
-
-                  {{ with .NextInSection }}
-                    <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
-                  {{ end }}
-                    {{ $page }}
-
-
-
                     {{.Content}}
 
                     <div class="rdn_blog_gallery row">
 
-                        {{range .Params.images}}
+                        {{range $news.Params.images}}
                         <div class="col-md-4 gallery_inner">
                             <a href="{{.image}}" data-gallery="bgallery" data-width="90%">
                                 <img src="{{.image}}" class="gallery_popup" alt="gallery" />
@@ -86,7 +63,7 @@ fffffffffffffff
                 <div class="single_blog_meta">
                     <ul class="list-unstyled d-md-flex mb-0">
                         <li class="d-flex align-items-center">
-                            <i class="ph-calendar-blank"></i> {{ .Params.Date.Format "Mon, Jan 2, 2006" }}
+                            <i class="ph-calendar-blank"></i> {{ $news.Params.Date.Format "Mon, Jan 2, 2006" }}
                         </li>
                         <li></li>
                         <li></li>
@@ -140,9 +117,9 @@ fffffffffffffff
                     <div class="row text-start">
 
 
-                        {{$currenttitle := .Params.title}}
+                        {{$currenttitle := $news.Params.title}}
 
-                        {{range $category :=.Params.categories}}
+                        {{range $category :=$news.Params.categories}}
 
                         {{ range $index,$page :=(where site.Pages "Type" "in" "news")}}
                         {{range .Params.categories}}
