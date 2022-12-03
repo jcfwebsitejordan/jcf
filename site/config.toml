@@ -1,6 +1,6 @@
 baseurl = "/"
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
+defaultContentLanguageInSubdir = true
 languageLang = "en"
 title = "Homepage"
 [taxonomies]

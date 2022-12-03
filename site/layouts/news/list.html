@@ -33,6 +33,8 @@
       <div class="col-lg-9">
         <div class="row zindex-2 position-relative">
           {{ range (.Paginator 6).Pages }}
+          {{$en := index .AllTranslations 0}}
+          {{$ar := index .AllTranslations 1}}
 
           {{/* {{ range where .Site.Pages.ByDate.Reverse "Type" "news" }} */}}
           {{if .Params.title}}
@@ -41,7 +43,7 @@
             <div class="blog_listpost">
               <div class="blog_img">
                 <a href="{{.Permalink}}">
-                  <img src="{{.Params.image}}" alt="">
+                  <img src="{{$en.Params.image}}" alt="">
                 </a>
               </div>
               <!-- blog_img -->
