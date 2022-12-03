@@ -22,11 +22,16 @@
 	<nav class="top_header top_header_wide mt-3 mt-lg-0">
 
 		<div class="container">
-			{{ if eq .Page.Permalink "/" }}
+			{{ if in .Page.Permalink "/en/" }}
 
 
 			<div class="row nav_white nav_white_wide nav_white_wide">
 				{{else}}
+				{{ if in .Page.Permalink "/ar/" }}
+
+
+				<div class="row nav_white nav_white_wide nav_white_wide">
+					{{else}}
 				{{ if in .Page.Permalink "/news/" }}
 				<div class="row nav_white nav_white_wide nav_white_wide">
 					{{else}}
@@ -36,6 +41,7 @@
 					<div class="row nav_white nav_white_wide nav_white_wide">
 						{{else}}
 						<div class="row nav_dark nav_dark_wide nav_dark_wide">
+							{{end}}
 							{{end}}
 							{{end}}
 							{{end}}
@@ -50,8 +56,12 @@
 									<a class="logo_box align-self-center" href="index.html">
 										{{end}}
 	
+										{{ if in .Page.Permalink "/en/" }}
+									<img class="logo logo-white" src="img/logo.png" alt="logo">
+									<img class="logo logo-black" src="img/logo.png" alt="logo">
 
-									{{ if eq .Page.Permalink "/" }}
+									{{else}}
+									{{ if in .Page.Permalink "/ar/" }}
 									<img class="logo logo-white" src="img/logo.png" alt="logo">
 									<img class="logo logo-black" src="img/logo.png" alt="logo">
 
@@ -66,6 +76,7 @@
 									{{else}}
 
 									<img class="logo logo-black" src="img/logo.png" alt="logo">
+									{{end}}
 									{{end}}
 									{{end}}
 									{{end}}
