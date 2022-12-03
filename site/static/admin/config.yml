@@ -70,7 +70,7 @@ collections: # A list of collections the CMS should be able to edit
     i18n: true
     label: "Contents"
     files:
-      - file: "site/content/_index.md"
+      - file: ["site/content/_index.en.md","site/content/_index.ar.md"]
         label: "Home Page"
         name: "home"
         fields:
