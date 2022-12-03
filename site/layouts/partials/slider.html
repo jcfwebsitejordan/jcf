@@ -2,17 +2,15 @@
 
     <div class="para_slider rdn_slider" data-scroll>
         <div class="swiper-wrapper">
-           
-         
 
 
             {{$hasnews := "no"}}
             {{ range where .Site.Pages.ByDate.Reverse "Type" "news" }}
             {{$hasnews := "yes"}}
- 
+
 
             {{$en := index .AllTranslations 0}}
-            {{$ar := index .AllTranslations 0}}
+            {{$ar := index .AllTranslations 1}}
 
             {{ if eq $en.Params.show "1"}}
 
