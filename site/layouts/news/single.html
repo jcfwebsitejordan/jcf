@@ -191,7 +191,7 @@
                         </a>
                         <ul class="vblog">
                             {{$currenttitle := .Params.title}}
-                            {{ range first 7 (where .Site.Pages.ByDate.Reverse "Type" "news") }}
+                            {{ range first 7 (where .Site.Pages.ByDate.Reverse "Type" "Banner") }}
 
                             {{if .Params.title}}
                             {{if ne .Params.title $currenttitle}}
@@ -226,7 +226,7 @@
                                 {{ if .IsHome }}
                                 {{ $pages = .Site.RegularPages }}
                                 {{ end }}
-                                {{ range (where $pages "type" "news").GroupByDate "2006" }}
+                                {{ range (where $pages "type" "Banner").GroupByDate "2006" }}
                                 <h2 class="archive-title">{{ .Key }}</h2>
                                 {{ range .Pages }}
                                 <article class="archive-item">
