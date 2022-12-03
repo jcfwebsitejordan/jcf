@@ -17,13 +17,11 @@ disableKinds = ["RSS"]
   [languages.en]
     title = "Jordan Cycling Federation"
 
-    contentDir = 'content'
-    languageName = 'English'
+     languageName = 'English'
     weight = 10
   [languages.ar]
     title = "الاتحاد الاردني للدراجات"
 
     languagedirection = 'rtl'
-    contentDir = 'content/ar'
-    languageName = 'Arabic'
+     languageName = 'Arabic'
     weight = 20

@@ -2,38 +2,21 @@
 
     <div class="para_slider rdn_slider" data-scroll>
         <div class="swiper-wrapper">
-            <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+           
+         
 
 
             {{$hasnews := "no"}}
             {{ range where .Site.Pages.ByDate.Reverse "Type" "news" }}
             {{$hasnews := "yes"}}
-            {{$news := . }}
+ 
 
-            {{ if eq .Language.LanguageName "English" }}
-            {{$news := . }}
-            {{else}}
-            {{$news := index .Translations 0}}
-            {{end}}
+            {{$en := index .AllTranslations 0}}
+            {{$ar := index .AllTranslations 0}}
 
-             {{ if eq $news.Params.show "1"}}
+            {{ if eq $en.Params.show "1"}}
 
-            {{ $item := $news.Params }}
+            {{ $item := $en.Params }}
             <div class="swiper-slide">
                 <div class="slide_inner" data-swiper-parallax-x="90%">
                     <div class="mask"></div>
