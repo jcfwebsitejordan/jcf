@@ -218,6 +218,21 @@ collections: # A list of collections the CMS should be able to edit
             label: 'SendMessage'
             fields:
               - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: UpcomingEvents
+            label: 'UpcomingEvents'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Pages
+            label: 'Pages'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Gallery
+            label: 'Gallery'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
               
         
       - name: arabic
@@ -302,5 +317,20 @@ collections: # A list of collections the CMS should be able to edit
           - widget: object
             name: SendMessage
             label: 'SendMessage'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: UpcomingEvents
+            label: 'UpcomingEvents'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Pages
+            label: 'Pages'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Gallery
+            label: 'Gallery'
             fields:
               - {widget: string, name: other, label: Other, required: true}
