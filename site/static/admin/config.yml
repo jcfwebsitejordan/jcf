@@ -70,7 +70,7 @@ collections: # A list of collections the CMS should be able to edit
     i18n: true
     label: "Home Page"
     folder: "site/content/homepagecontent" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
+    create: false # Allow users to create new documents in this collection
     fields:
       - {label: Title, name: title, widget: string}
       - {label: "Banners", name: banners, widget: list, fields: [
@@ -108,7 +108,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Footer", name: footer, widget: object, fields: [
           {label: "Text", name: "text", widget: text, i18n: true},
           {label: "Address", name: "address", widget: string, i18n: true},
-          {label: "Email", name: "email", widget: "string, i18n: true"}]}
+          {label: "Email", name: "email", widget: "string", i18n: duplicate"}]}
       - {label: "Image Gallery", name: gallery, widget: list, fields: [
           {label: "Image", name: "image", widget: "image", i18n: duplicate},
           {label: "Title", name: "title", widget: "string", i18n: true},
