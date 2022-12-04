@@ -73,6 +73,7 @@ collections: # A list of collections the CMS should be able to edit
     delete: false # Allow users to create new documents in this collection
     fields:
       - {label: Title, name: title, widget: string}
+      - {label: Language, name: language, widget: hidden, default: "1",}
       - {label: "Sponsors", name: sponsors, widget: list, fields: [
           {label: "Image", name: "image", widget: "image"},
           {label: "Title", name: "title", widget: "text"},
