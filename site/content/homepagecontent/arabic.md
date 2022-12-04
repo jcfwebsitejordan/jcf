@@ -2,68 +2,106 @@
 title: الاتحاد الاردني للدراجات
 sponsors:
   - image: img/greater-amman-municipality.jpeg
-    title: Greater Amman Municipality
+    title: امانة عمان الكبرى
     website: https://ammancity.gov.jo/ar/main/index.aspx
   - image: img/gig.jpg
-    title: Gulf Insurance Group
+    title: مجموععة الخليج للتأمين
     website: https://www.gig.com.jo/
   - image: img/arabiaweather-logo.jpg
-    title: Arabia Weather
+    title: طقس العرب
     website: https://www.arabiaweather.com/
 blurb:
-  heading: What can we give to our member.
-  text: >+
-    Riders from all over country have registered for the inaugural event Many
-    will be staying in our club over the weekend boosting tourism and bringing
-    considerable economic benefits to the local region.
-
-  smallheading: Believe in ourself.
+  heading: ماذا يمكن أن نعطي لأعضائنا
+  text: >
+    قام الدراجون من جميع أنحاء البلاد بالتسجيل في الحدث الافتتاحي ، سيقيم العديد
+    منهم في نادينا خلال عطلة نهاية الأسبوع لتعزيز السياحة وجلب فوائد اقتصادية
+    كبيرة للمنطقة المحلية.
+  smallheading: عليك ان تؤمن  بنفسك
 services:
-  - header: Professional
+  - header: احترافي
     image: img/service-1.jpg
-    title: Inventore.
-    data: Speed bike.
+    title: المخترع
+    data: دراجة السرعة
     icon: img/apple-touch-icon.png
-  - header: Service 2
-    title: Quisquam.
-    data: Risk free ride.
+  - header: خدمة 2
+    title: لوريم إيبسوم
+    data: رحلة خالية من المخاطر
     image: img/service-2.jpg
     icon: img/apple-touch-icon.png
-  - header: Goals
+  - header: الاهداف
     image: img/service-3.jpg
-    title: Lipsumer.
-    data: Variety of club.
+    title: لوريم إبسوم
+    data: مجموعة متنوعة من الأندية
     icon: img/apple-touch-icon.png
 about:
-  smalltitle: About the club.
-  heading: Guidance and history.
-  text: Everything riders need to know about the Course Classic from what’s
-    included in your ride pack.
+  smalltitle: عن الاتحاد
+  heading: التوجيه والتاريخ
+  text: كل ما يحتاج الدراجون إلى معرفته حول Course Classic من خلال ما هو مدرج في
+    حزمة المشوار الخاصة بك.
   image: img/about.jpg
-  imagetitle: Motivate.
-  imagecaption: |
-    Founded in 1992
+  imagetitle: تحفيز
+  imagecaption: تأسست عام 1992
   icon: img/android-chrome-192x192.png
+topics:
+  - title: ما هو "لوريم إيبسوم" ؟
+    data: >+
+      لوريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس
+      المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال
+      المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص
+      مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو
+      مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى
+      صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير
+      في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت" (Letraset) البلاستيكية
+      تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر
+      الإلكتروني مثل "ألدوس بايج مايكر" (Aldus PageMaker) والتي حوت أيضاً على
+      نسخ من نص لوريم إيبسوم.
+
+  - title: ما فائدته ؟
+    data: >+
+      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ
+      عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي
+      يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ
+      -إلى حد ما- للأحرف عوضاً عن استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى
+      نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء. العديد من برامح النشر
+      المكتبي وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج
+      عن النص، وإذا قمت بإدخال "lorem ipsum" في أي محرك بحث ستظهر العديد من
+      المواقع الحديثة العهد في نتائج البحث. على مدى السنين ظهرت نسخ جديدة
+      ومختلفة من نص لوريم إيبسوم، أحياناً عن طريق الصدفة، وأحياناً عن عمد كإدخال
+      بعض العبارات الفكاهية إليها.
+
+  - title: أين أجده ؟
+    data: >+
+      هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم
+      تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن
+      كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي
+      كلمات أو عبارات محرجة أو غير لائقة مخبأة في هذا النص. بينما تعمل جميع
+      مولّدات نصوص لوريم إيبسوم على الإنترنت على إعادة تكرار مقاطع من نص لوريم
+      إيبسوم نفسه عدة مرات بما تتطلبه الحاجة، يقوم مولّدنا هذا باستخدام كلمات من
+      قاموس يحوي على أكثر من 200 كلمة لا تينية، مضاف إليها مجموعة من الجمل
+      النموذجية، لتكوين نص لوريم إيبسوم ذو شكل منطقي قريب إلى النص الحقيقي.
+      وبالتالي يكون النص الناتح خالي من التكرار، أو أي كلمات أو عبارات غير لائقة
+      أو ما شابه. وهذا ما يجعله أول مولّد نص لوريم إيبسوم حقيقي على الإنترنت.
+
 showfilter: "1"
 gallery:
   - image: img/1.jpeg
-    title: Tile 1
-    data: Description 1
+    title: عنوان 1
+    data: وصف 1
   - image: img/2.jpeg
-    title: Tile 2
-    data: Description 2
+    title: عنوان 2
+    data: وصف 2
   - image: img/3.jpeg
-    title: Tile 3
-    data: Description 3
+    title: عنوان 3
+    data: وصف 3
   - image: img/5.jpeg
-    title: Tile 5
-    data: Description 5
+    title: عنوان 5
+    data: وصف 5
   - image: img/6.jpeg
-    title: Tile 6
-    data: Description 6
+    title: عنوان 6
+    data: وصف 6
   - image: img/7.jpeg
-    title: Tile 7
-    data: Description 7
+    title: عنوان 7
+    data: وصف 7
 subtitle: Support sustainable farming while enjoying a cup
 events:
   - show: "1"
@@ -168,12 +206,12 @@ events:
     showfooter: "0"
 image: img/screenshot_20221029_111634.png
 eventtypes:
-  - eventtype: Special
-  - eventtype: Charity
-  - eventtype: Mountain Bike
+  - eventtype: خاص
+  - eventtype: صدقة
+  - eventtype: دراجة جبلية
 footer:
-  text: With a mission to improve lives through bicycling we teach the joys of
-    bicycling - advocate for safe places to ride.
-  address: Amman - Jordan
+  text: من خلال مهمة تحسين الحياة من خلال ركوب الدراجات ، نعلم متعة ركوب الدراجات
+    - ندعو إلى أماكن آمنة للركوب.
+  address: عمان، الأردن
   email: Jordan@Cycling.cycling
 ---
