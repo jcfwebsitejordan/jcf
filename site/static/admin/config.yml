@@ -129,3 +129,35 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Working Hours, name: hours, widget: string}
       - {label: Email, name: email, widget: string}
       - {label: Location (Copy Location Url from Google Maps), name: location, widget: string}
+  - name: Resources
+    label: Resources
+    delete: false
+    files:
+      - name: english
+        file: 'i18n/en.yaml'
+        label: English
+        fields:
+          - widget: object
+            name: home
+            label: Home
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: title
+            label: 'Site Title'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+      - name: arabic
+        file: 'i18n/ar.yaml'
+        label: Arabic
+        fields:
+          - widget: object
+            name: home
+            label: Home
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: title
+            label: 'Site Title'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
