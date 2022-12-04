@@ -14,4 +14,22 @@ Join_today:
   other: Join today
 Our_course_And_events:   
   other: Our course & events
+Members:
+  other: Members  
+Track:
+  other: Track  
+Route:
+  other: Route  
+Events:
+  other: Events
+YourName:
+  other: Your name...
+YourEmail: 
+  other: Your email...
+YourPhone:
+  other: Your phone...
+YourMessage:
+  other: Your message...
+SendMessage:
+  other: Send Message
 

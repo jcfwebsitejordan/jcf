@@ -114,8 +114,9 @@ collections: # A list of collections the CMS should be able to edit
   - name: "join"
     i18n: true
     label: "Join Us - Page"
-    folder: "site/content/joincontent" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
+    folder: "site/content/join" # The path to the folder where the documents are stored
+    create: false # Allow users to create new documents in this collection
+    delete: false # Allow users to create new documents in this collection
     fields:
       - {label: SmallTitle, name: smalltitle, widget: string, i18n: true}
       - {label: Title, name: title, widget: string, i18n: true}
@@ -138,26 +139,168 @@ collections: # A list of collections the CMS should be able to edit
         label: English
         fields:
           - widget: object
-            name: home
-            label: Home
+            name: all
+            label: all
             fields:
               - {widget: string, name: other, label: Other, required: true}
           - widget: object
-            name: title
-            label: 'Site Title'
+            name: Partners_And_Sponsors
+            label: 'Partners and Sponsors'
             fields:
               - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Our_schedules
+            label: 'Our schedules'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Become_a_member
+            label: 'Become a member'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: and_join_our_club_event
+            label: 'and join our club event'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Join_today
+            label: 'Join today'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Our_course_And_events
+            label: 'Our course And events'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Members
+            label: 'Members'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Track
+            label: 'Track'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Route
+            label: 'Route'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Events
+            label: 'Events'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: YourName
+            label: 'YourName'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: YourEmail
+            label: 'YourEmail'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: YourPhone
+            label: 'YourPhone'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: YourMessage
+            label: 'YourMessage'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: SendMessage
+            label: 'SendMessage'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+              
+        
       - name: arabic
         file: 'site/i18n/ar.yaml'
         label: Arabic
         fields:
           - widget: object
-            name: home
-            label: Home
+            name: all
+            label: all
             fields:
               - {widget: string, name: other, label: Other, required: true}
           - widget: object
-            name: title
-            label: 'Site Title'
+            name: Partners_And_Sponsors
+            label: 'Partners and Sponsors'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Our_schedules
+            label: 'Our schedules'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Become_a_member
+            label: 'Become a member'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: and_join_our_club_event
+            label: 'and join our club event'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Join_today
+            label: 'Join today'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Our_course_And_events
+            label: 'Our course And events'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Members
+            label: 'Members'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Track
+            label: 'Track'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Route
+            label: 'Route'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Events
+            label: 'Events'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: YourName
+            label: 'YourName'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: YourEmail
+            label: 'YourEmail'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: YourPhone
+            label: 'YourPhone'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: YourMessage
+            label: 'YourMessage'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: SendMessage
+            label: 'SendMessage'
             fields:
               - {widget: string, name: other, label: Other, required: true}
