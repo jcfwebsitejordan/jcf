@@ -12,3 +12,22 @@ Join_today:
   other: إنضم الان
 Our_course_And_events:   
   other: الاحداث و الدورات
+Members:
+  other: عدد الاعضاء  
+Track:
+  other: مسار  
+Route:
+  other: طريق  
+Events:
+  other: احداث
+
+YourName:
+  other: الاسم...
+YourEmail: 
+  other: البريد الالكترووني...
+YourPhone:
+  other: رقم الهاتف...
+YourMessage:
+  other: الرسالة...
+SendMessage:
+  other: إرسال  
