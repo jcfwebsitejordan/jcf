@@ -1,4 +1,8 @@
-<header class="header header_wide">
+<header class="header header_wide"
+{{ if eq .Lang "ar"}}
+dir="rtl"
+{{end}}
+>
 
   <title>{{ .Title }} | {{ $.Site.Title }}</title>
 
