@@ -1,5 +1,6 @@
 ---
 title: الاتحاد الاردني للدراجات
+language: Arabic
 sponsors:
   - image: img/greater-amman-municipality.jpeg
     title: امانة عمان الكبرى

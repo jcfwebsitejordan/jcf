@@ -1,5 +1,6 @@
 ---
 title: Jordan Cycling Federation
+language: English
 sponsors:
   - image: img/greater-amman-municipality.jpeg
     title: Greater Amman Municipality
