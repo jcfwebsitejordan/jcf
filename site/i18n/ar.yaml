@@ -8,26 +8,25 @@ Become_a_member:
   other: أصبح عضوا
 and_join_our_club_event:
   other: والانضمام إلى أحداث نادينا
-Join_today: 
-  other: إنضم الان
-Our_course_And_events:   
+Join_today:
+  other: إنضم الينا الان
+Our_course_And_events:
   other: الاحداث و الدورات
 Members:
-  other: عدد الاعضاء  
+  other: عدد الاعضاء
 Track:
-  other: مسار  
+  other: مسار
 Route:
-  other: طريق  
+  other: طريق
 Events:
   other: احداث
-
 YourName:
   other: الاسم...
-YourEmail: 
+YourEmail:
   other: البريد الالكترووني...
 YourPhone:
   other: رقم الهاتف...
 YourMessage:
   other: الرسالة...
 SendMessage:
-  other: إرسال  
+  other: إرسال
