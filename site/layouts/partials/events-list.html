@@ -1,13 +1,15 @@
-<h3>Upcoming Event</h3>
+<h3>{{i18n "UpcomingEvents"}}</h3>
 
 <ul>
 
-    {{ range where .Site.Pages "Type" "event" }}
-    {{ if eq .Params.showfooter "1"}}
+    {{ range where .Site.Pages.ByDate "Type" "event" }}
+    {{$en := index .AllTranslations 0}}
+    {{$ar := index .AllTranslations 1}}
 
-    {{ $item := .Params }}
+   {{ if eq $en.Params.showfooter "1"}}
 
-     <li><a href="{{.RelPermalink}}">{{$item.title}}</a></li>
+ 
+     <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
 
     {{end}}
     {{end}}

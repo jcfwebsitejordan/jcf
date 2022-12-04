@@ -32,4 +32,11 @@ YourMessage:
   other: Your message...
 SendMessage:
   other: Send Message
+UpcomingEvents:
+  other: Upcoming Events
+Pages:
+  other: Pages
+Gallery:
+  other: Gallery
+
 

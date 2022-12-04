@@ -9,7 +9,7 @@ Become_a_member:
 and_join_our_club_event:
   other: والانضمام إلى أحداث نادينا
 Join_today:
-  other: إنضم الينا الان
+  other: إنضم الان
 Our_course_And_events:
   other: الاحداث و الدورات
 Members:
@@ -30,3 +30,9 @@ YourMessage:
   other: الرسالة...
 SendMessage:
   other: إرسال
+UpcomingEvents:
+  other: الأحداث القادمة
+Pages:
+  other: الصفحات
+Gallery:
+  other: معرض الصور
