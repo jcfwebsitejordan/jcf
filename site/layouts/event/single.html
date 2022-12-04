@@ -1,5 +1,8 @@
 {{ define "main" }}
+{{$en := index .AllTranslations 0}}
+{{$ar := index .AllTranslations 0}}
 
+ 
 <!-- EVENTS SLIDER END -->
 <section id="events-slider" class="overflow-hidden pt-100">
     <div class="container">
@@ -7,7 +10,7 @@
 
         <div class="row align-content-center mb-100 mt-100">
             <div class="col-lg-6 align-self-center mb-30 mb-lg-0">
-                <p class="rdn_subtext" data-cue="slideInUp">Our course & events</p>
+                <p class="rdn_subtext" data-cue="slideInUp">{{i18n "Our_course_And_events"}}</p>
                 <h2 class="rdn_title mb-0" data-cue="slideInUp" data-delay="200">{{.Params.title}}</h2>
             </div>
             <!-- col-lg-6 -->
@@ -26,7 +29,7 @@
     <div class="container events_main_slider">
         <div class="swiper-wrapper">
 
-            {{range .Params.images}}
+            {{range $en.Params.images}}
             <div class="swiper-slide">
                 <img src="{{.image}}" alt="">
             </div>
@@ -50,8 +53,8 @@
             <div class="col-lg-3">
                 <ul class="single_event_list gray-bg list-unstyled">
                     <li><i class="ph-map-pin-bold"></i> {{.Params.location}}</li>
-                    <li><i class="ph-calendar-blank-bold"></i> {{.Params.eventdate}}</li>
-                    <li><i class="ph-clock-afternoon-bold"></i> {{.Params.time}}</li>
+                    <li><i class="ph-calendar-blank-bold"></i> {{$en.Params.eventdate}}</li>
+                    <li><i class="ph-clock-afternoon-bold"></i> {{$en.Params.time}}</li>
                     <li><i class="ph-user-circle-bold"></i> {{.Params.note}}</li>
                 </ul>
             </div>
@@ -62,7 +65,7 @@
 
                  
                 <span class="btn_outer d-block mt-30">
-                    <a href="\contact\" class="btn dark_hover_btn rdn_btn">Join today</a>
+                    <a href="\contact\" class="btn dark_hover_btn rdn_btn">{{i18n "Join_today"}}</a>
                 </span>
 
             </div>
@@ -73,7 +76,7 @@
         <div class="divider"></div>
         <div class="row align-content-center mb-100">
             <div class="col-lg-6 align-self-center mb-30 mb-lg-0">
-                <p class=" rdn_subtext" data-cue="slideInUp">Partner & sponsor </p>
+                <p class=" rdn_subtext" data-cue="slideInUp">{{i18n "Partners_And_Sponsors"}} </p>
             </div>
 
             <p></p>
@@ -81,16 +84,22 @@
                 <div class="client_box">
                     <div class="client_slider client_slider2 swiper-container">
                         <div class="swiper-wrapper">
-                            {{ with .Site.GetPage "/" }}
+                            {{range where .Site.Pages "Type" "homepagecontent" }}
+
+                            {{if eq .Params.language .Site.Language.LanguageName}}
+                            
+                            {{with .}}
 
                             {{ range $index, $item := .Params.sponsors }}
-
+ 
                             <div class="swiper-slide align-self-center">
 
                                 <a href="{{$item.website}}"> <img src="{{$item.image}}" alt=""
                                         title="{{$item.title}}" /></a>
 
                             </div>
+                            {{ end }}
+                            {{ end }}
                             {{ end }}
                             {{ end }}
                         </div>

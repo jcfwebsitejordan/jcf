@@ -5,7 +5,7 @@ show: "1"
 showfooter: "1"
 description: Event Intro
 location: Amman
-date: 25-07-2022
+eventdate: 25-07-2022
 time: 11:00 - 13:00
 note: All Member Allowed
 images:
