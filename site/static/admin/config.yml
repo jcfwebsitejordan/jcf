@@ -67,48 +67,47 @@ collections: # A list of collections the CMS should be able to edit
 
           
   - name: "homepage"
-    i18n: true
     label: "Home Page"
     folder: "site/content/homepagecontent" # The path to the folder where the documents are stored
     create: false # Allow users to create new documents in this collection
     fields:
-      - {label: Title, name: title, widget: string, i18n: true}
-      - {label: "Sponsors", name: sponsors, widget: list, i18n: true, fields: [
+      - {label: Title, name: title, widget: string}
+      - {label: "Sponsors", name: sponsors, widget: list, fields: [
           {label: "Image", name: "image", widget: "image"},
           {label: "Title", name: "title", widget: "text"},
           {label: "Website", name: "website", widget: "text"}]}
       - {label: "Blurb", name: blurb, widget: object, fields: [
-          {label: "SmallHeading", name: "smallheading", widget: string, i18n: true},
-          {label: "Heading", name: "heading", widget: string, i18n: true},
-          {label: "Text", name: "text", widget: "text", i18n: true}]}
+          {label: "SmallHeading", name: "smallheading", widget: string},
+          {label: "Heading", name: "heading", widget: string},
+          {label: "Text", name: "text", widget: "text"}]}
       - {label: "Services", name: services, widget: list, fields: [
-          {label: "Header", name: "header", widget: "text", i18n: true},
-          {label: "Image", name: "image", widget: "image", i18n: duplicate},
-          {label: "Title", name: "title", widget: "text", i18n: true},
-          {label: "Data", name: "data", widget: "text", i18n: true},
-          {label: "Icon", name: "icon", widget: "image", i18n: true, required: false}]}
+          {label: "Header", name: "header", widget: "text"},
+          {label: "Image", name: "image", widget: "image"},
+          {label: "Title", name: "title", widget: "text"},
+          {label: "Data", name: "data", widget: "text"},
+          {label: "Icon", name: "icon", widget: "image", required: false}]}
       - {label: "About", name: about, widget: object, fields: [
-          {label: "SmallTitle", name: "smalltitle", widget: string, i18n: true},
-          {label: "Heading", name: "heading", widget: string, i18n: true},
-          {label: "Text", name: "text", widget: "text", i18n: true},
-          {label: "Image", name: "image", widget: "image", i18n: duplicate},
-          {label: "ImageCaption", name: "imagecaption", widget: "text", i18n: true},
-          {label: "ImageTitle", name: "imagetitle", widget: "text", i18n: true},
-          {label: "icon", name: "icon", widget: "image", i18n: duplicate}]}
+          {label: "SmallTitle", name: "smalltitle", widget: string},
+          {label: "Heading", name: "heading", widget: string},
+          {label: "Text", name: "text", widget: "text"},
+          {label: "Image", name: "image", widget: "image"},
+          {label: "ImageCaption", name: "imagecaption", widget: "text"},
+          {label: "ImageTitle", name: "imagetitle", widget: "text"},
+          {label: "icon", name: "icon", widget: "image"}]}
       - {label: "Topics", name: topics, widget: list, fields: [
-          {label: "Title", name: "title", widget: "text", i18n: true},
-          {label: "Text", name: "data", widget: "text", i18n: true}]}
-      - {label: "Show Events Filter ?", name: "showfilter",widget: "select", i18n: duplicate, required: true, default: "1", options: [{label: "Yes", value: "1"},{label: "No", value: "0"}]}
+          {label: "Title", name: "title", widget: "text"},
+          {label: "Text", name: "data", widget: "text"}]}
+      - {label: "Show Events Filter ?", name: "showfilter",widget: "select", required: true, default: "1", options: [{label: "Yes", value: "1"},{label: "No", value: "0"}]}
       - {label: "Event Types", name: eventtypes, widget: list, fields: [
-          {label: "Type", name: "eventtype", widget: "text", i18n: true}]}          
+          {label: "Type", name: "eventtype", widget: "text"}]}          
       - {label: "Footer", name: footer, widget: object, fields: [
-          {label: "Text", name: "text", widget: text, i18n: true},
-          {label: "Address", name: "address", widget: string, i18n: true},
-          {label: "Email", name: "email", widget: "string", i18n: duplicate"}]}
+          {label: "Text", name: "text", widget: text},
+          {label: "Address", name: "address", widget: string},
+          {label: "Email", name: "email", widget: "string""}]}
       - {label: "Image Gallery", name: gallery, widget: list, fields: [
-          {label: "Image", name: "image", widget: "image", i18n: duplicate},
-          {label: "Title", name: "title", widget: "string", i18n: true},
-          {label: "Description", name: "data", widget: "text", i18n: true}]}
+          {label: "Image", name: "image", widget: "image"},
+          {label: "Title", name: "title", widget: "string"},
+          {label: "Description", name: "data", widget: "text"}]}
       
   - name: "join"
     i18n: true
