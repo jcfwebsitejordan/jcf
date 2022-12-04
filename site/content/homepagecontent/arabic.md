@@ -1,5 +1,5 @@
 ---
-title: Jordan Cycling Federation
+title: الاتحاد الاردني للدراجات
 sponsors:
   - image: img/greater-amman-municipality.jpeg
     title: Greater Amman Municipality
@@ -18,6 +18,22 @@ blurb:
     considerable economic benefits to the local region.
 
   smallheading: Believe in ourself.
+services:
+  - header: Professional
+    image: img/service-1.jpg
+    title: Inventore.
+    data: Speed bike.
+    icon: img/apple-touch-icon.png
+  - header: Service 2
+    title: Quisquam.
+    data: Risk free ride.
+    image: img/service-2.jpg
+    icon: img/apple-touch-icon.png
+  - header: Goals
+    image: img/service-3.jpg
+    title: Lipsumer.
+    data: Variety of club.
+    icon: img/apple-touch-icon.png
 about:
   smalltitle: About the club.
   heading: Guidance and history.
@@ -29,10 +45,6 @@ about:
     Founded in 1992
   icon: img/android-chrome-192x192.png
 showfilter: "1"
-eventtypes:
-  - eventtype: Special
-  - eventtype: Charity
-  - eventtype: Mountain Bike
 gallery:
   - image: img/1.jpeg
     title: Tile 1
@@ -155,22 +167,10 @@ events:
     eventtype: Special
     showfooter: "0"
 image: img/screenshot_20221029_111634.png
-services:
-  - header: Professional
-    image: img/service-1.jpg
-    title: Inventore.
-    data: Speed bike.
-    icon: img/apple-touch-icon.png
-  - header: Service 2
-    title: Quisquam.
-    data: Risk free ride.
-    image: img/service-2.jpg
-    icon: img/apple-touch-icon.png
-  - header: Goals
-    image: img/service-3.jpg
-    title: Lipsumer.
-    data: Variety of club.
-    icon: img/apple-touch-icon.png
+eventtypes:
+  - eventtype: Special
+  - eventtype: Charity
+  - eventtype: Mountain Bike
 footer:
   text: With a mission to improve lives through bicycling we teach the joys of
     bicycling - advocate for safe places to ride.
