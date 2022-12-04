@@ -117,16 +117,16 @@ collections: # A list of collections the CMS should be able to edit
     folder: "site/content/joincontent" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields:
-      - {label: SmallTitle, name: smalltitle, widget: string}
-      - {label: Title, name: title, widget: string}
+      - {label: SmallTitle, name: smalltitle, widget: string, i18n: true}
+      - {label: Title, name: title, widget: string, i18n: true}
       - {label: Logo, name: logo, widget: image}
       - {label: Members Count, name: memberscount, widget: string}
       - {label: Track Count, name: trackcount, widget: string}
       - {label: Route Count, name: routcount, widget: string}
       - {label: Events Count, name: eventcount, widget: string}
-      - {label: City, name: city, widget: string}
-      - {label: Street, name: street, widget: string}
-      - {label: Working Hours, name: hours, widget: string}
+      - {label: City, name: city, widget: string, i18n: true}
+      - {label: Street, name: street, widget: string, i18n: true}
+      - {label: Working Hours, name: hours, widget: string, i18n: true}
       - {label: Email, name: email, widget: string}
       - {label: Location (Copy Location Url from Google Maps), name: location, widget: string}
   - name: Resources
