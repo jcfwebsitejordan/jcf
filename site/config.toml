@@ -14,8 +14,7 @@ weight = 30
 # See configuration options for more details: 
 # https://gohugo.io/getting-started/configuration/#toml-configuration
  
-disableKinds = ["taxonomy", "term"]
-
+ 
 
 
 [languages]
@@ -25,13 +24,10 @@ disableKinds = ["taxonomy", "term"]
     title = "Jordan Cycling Federation"
     languageName = 'English'
     weight = 1
-[languages.en.params]
-      all = 'https://linkedin.com/whoever'
 
 
     
   [languages.ar]
-    all = "All"
     title = "الاتحاد الاردني للدراجات"
     languagedirection = 'rtl'
     languageName = 'Arabic'

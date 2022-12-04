@@ -7,24 +7,23 @@
     <div class="container">
 
         <div class="top_content text-center align-content-center mb-100">
-            <p class=" rdn_subtext" data-cue="slideInUp">Our schedules.</p>
-            <h2 class="rdn_title mb-0" data-cue="slideInUp" data-delay="200">Become a member <br>and join our club
-                event.</h2>
+            <p class=" rdn_subtext" data-cue="slideInUp">{{i18n "Our_schedules"}}</p>
+            <h2 class="rdn_title mb-0" data-cue="slideInUp" data-delay="200">{{i18n "Become_a_member"}} <br>{{i18n "and_join_our_club_event"}}</h2>
         </div>
         <!--top_content-->
 
  
         {{ if .Params.showfilter }}
 
+ 
+ 
         <ul class="event_filter">
-            <li><a class="is_active" href="#!" data-filter="*">{{i18n "all"}}</a></li>
+            <li><a class="is_active" href="#!" data-filter="*">{{ i18n "all"}}</a></li>
 
             {{ $itemCount := len .Params.eventtypes }}
             {{ range $index, $item := .Params.eventtypes }}
 
             <li><a href="#!" data-filter=".{{ replace $item.eventtype " " ""}}">{{ $item.eventtype }}</a></li>
-            ({{ i18n "wordCount"  }}
-{{warnf "tt"  (T "all")}}
             {{end}}
             <!-- 
             <li><a href="#!" data-filter=".charity">Charity</a></li>

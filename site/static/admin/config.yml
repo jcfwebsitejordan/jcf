@@ -134,7 +134,7 @@ collections: # A list of collections the CMS should be able to edit
     delete: false
     files:
       - name: english
-        file: 'i18n/en.yaml'
+        file: 'site/i18n/en.yaml'
         label: English
         fields:
           - widget: object
@@ -148,7 +148,7 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {widget: string, name: other, label: Other, required: true}
       - name: arabic
-        file: 'i18n/ar.yaml'
+        file: 'site/i18n/ar.yaml'
         label: Arabic
         fields:
           - widget: object
