@@ -1,13 +1,11 @@
 ---
 title: About us
-order: "1"
 sections:
   - name: vision
     title: Vision
     image: img/4.webp
-    left: >-
+    left: |-
       Vision Left Contents
-
 
       Lorem ipsum dolor 
     right: >-
@@ -18,9 +16,8 @@ sections:
   - name: mission
     title: Mission
     image: img/3.jpeg
-    left: >-
+    left: |-
       Mission Left Content
-
 
       Lorem ipsum dolor sit amet
     right: >-
@@ -31,14 +28,13 @@ sections:
   - name: who-we-are
     title: Who We Are
     image: img/contact.jpg
-    left: >-
+    left: |-
       W﻿ho We Are Left
 
-
       consectetur adipiscing elit 
-    right: >-
+    right: |-
       W﻿ho We Are Right
 
-
       Phasellus commodo eros in euismod blandit.
+order: "1"
 ---

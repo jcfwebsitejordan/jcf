@@ -1,26 +1,32 @@
 ---
-title: About us
-order: "1"
+title: عن الإتحاد
 sections:
-  - name: vision
-    title: Vision
+  - name: رؤية
+    title: رؤية
     image: img/4.webp
     left: >-
-      Vision Left Contents
+      <!--StartFragment-->
 
 
-      Lorem ipsum dolor 
+      طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا يوجد محتوى نصي
+
+
+      <!--EndFragment-->
     right: >-
-      Vision Right contents
+      <!--StartFragment-->
 
 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit nisi non placerat iaculis.
-  - name: mission
-    title: Mission
+      هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء. العديد من برامح النشر المكتبي وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج عن النص، وإذا قمت بإدخال "lorem ipsum" في أي محرك بحث ستظهر العديد من المواقع الحديثة العهد في نتائج البحث. على مدى السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن طريق الصدفة، وأحياناً عن عمد كإدخال بعض العبارات الفكاهية إليها.
+
+
+
+
+      <!--EndFragment-->
+  - name: المهمة
+    title: المهمة
     image: img/3.jpeg
-    left: >-
+    left: |-
       Mission Left Content
-
 
       Lorem ipsum dolor sit amet
     right: >-
@@ -28,17 +34,16 @@ sections:
 
 
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit nisi non placerat iaculis. Phasellus commodo eros in euismod blandit. Nullam volutpat quam a diam blandit luctus. Aenean eleifend .
-  - name: who-we-are
-    title: Who We Are
+  - name: من نحن
+    title: من نحن
     image: img/contact.jpg
-    left: >-
+    left: |-
       W﻿ho We Are Left
 
-
       consectetur adipiscing elit 
-    right: >-
+    right: |-
       W﻿ho We Are Right
 
-
       Phasellus commodo eros in euismod blandit.
+order: "1"
 ---
