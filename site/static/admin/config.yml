@@ -239,6 +239,11 @@ collections: # A list of collections the CMS should be able to edit
             label: 'Registration'
             fields:
               - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: JoinUs
+            label: 'Join Us'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
               
         
       - name: arabic
@@ -343,6 +348,11 @@ collections: # A list of collections the CMS should be able to edit
           - widget: object
             name: Registration
             label: 'Registration'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: JoinUs
+            label: 'Join Us'
             fields:
               - {widget: string, name: other, label: Other, required: true}
 
