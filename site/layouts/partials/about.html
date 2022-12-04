@@ -1,14 +1,20 @@
+
+{{range where .Site.Pages "Type" "homepagecontent" }}
+
+{{if eq .Params.language .Site.Language.LanguageName}}
+{{with .Params}}
+
 <section id="about" class="content">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 align-self-center mb-60 mb-lg-0">
                 <div class="stat_counter">
-                    <img class="stat_img_main" src="{{$.about.Image}}" alt="" data-cue="slideInUp">
+                    <img class="stat_img_main" src="{{.about.Image}}" alt="" data-cue="slideInUp">
                     <div class="stat_box" data-cue="slideInUp" data-delay="200">
                         <i class="ph-flame"></i>
                         <div class="stat_content">
-                            <span>{{$.about.ImageCaption}}</span>
-                            <h3>{{$.about.ImageTitle}}</h3>
+                            <span>{{.about.ImageCaption}}</span>
+                            <h3>{{.about.ImageTitle}}</h3>
                         </div>
                     </div>
 
@@ -17,9 +23,9 @@
             <!--/.col-lg-5-->
 
             <div class="col-lg-5  offset-lg-1">
-                <p class="rdn_subtext" data-cue="slideInUp">{{$.about.smalltitle}}</p>
-                <h2 class="rdn_title" data-cue="slideInUp" data-delay="200">{{$.about.heading}}</h2>
-                <p class="rdn_boldtext">{{$.about.Text}}</p>
+                <p class="rdn_subtext" data-cue="slideInUp">{{.about.smalltitle}}</p>
+                <h2 class="rdn_title" data-cue="slideInUp" data-delay="200">{{.about.heading}}</h2>
+                <p class="rdn_boldtext">{{.about.Text}}</p>
 
                 <!--ACCORDIAN START-->
                 <div class="accordion rdn_accordian" id="about_accordian">
@@ -579,4 +585,6 @@
     }
 
 })();
-</script>
+</script>{{end}}
+{{end}}
+{{end}}

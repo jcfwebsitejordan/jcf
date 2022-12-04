@@ -1,3 +1,8 @@
+{{range where .Site.Pages "Type" "homepagecontent" }}
+
+{{if eq .Params.language .Site.Language.LanguageName}}
+{{with .Params}}
+
 <section id="services" class="content-mb gray-bg clearfix">
     <div class="container">
 
@@ -500,3 +505,6 @@
 
 })();
 </script>
+{{end}}
+{{end}}
+{{end}}
