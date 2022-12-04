@@ -70,6 +70,7 @@ collections: # A list of collections the CMS should be able to edit
     label: "Home Page"
     folder: "site/content/homepagecontent" # The path to the folder where the documents are stored
     create: false # Allow users to create new documents in this collection
+    delete: false # Allow users to create new documents in this collection
     fields:
       - {label: Title, name: title, widget: string}
       - {label: "Sponsors", name: sponsors, widget: list, fields: [
