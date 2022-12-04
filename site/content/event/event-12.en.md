@@ -7,7 +7,11 @@ description: Event Intro
 location: Amman
 date: 25-07-2022
 time: 11:00 - 13:00
-note: event notes
+note: All Member Allowed
+images:
+  - image: img/1.jpeg
+  - image: img/2.jpeg
+  - image: img/7.jpeg
 ---
 <!--StartFragment-->
 

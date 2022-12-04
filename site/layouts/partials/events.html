@@ -1,3 +1,8 @@
+{{range where .Site.Pages "Type" "homepagecontent" }}
+
+{{if eq .Params.language .Site.Language.LanguageName}}
+{{with .}}
+
 <section id="events" class="content clearfix">
     <div class="container">
 
@@ -7,17 +12,19 @@
                 event.</h2>
         </div>
         <!--top_content-->
-        {{ if $.Params.showfilter }}
+
+ 
+        {{ if .Params.showfilter }}
 
         <ul class="event_filter">
-            <li><a class="is_active" href="#!" data-filter="*">All</a></li>
+            <li><a class="is_active" href="#!" data-filter="*">{{i18n "all"}}</a></li>
 
             {{ $itemCount := len .Params.eventtypes }}
             {{ range $index, $item := .Params.eventtypes }}
 
             <li><a href="#!" data-filter=".{{ replace $item.eventtype " " ""}}">{{ $item.eventtype }}</a></li>
-
-
+            ({{ i18n "wordCount"  }}
+{{warnf "tt"  (T "all")}}
             {{end}}
             <!-- 
             <li><a href="#!" data-filter=".charity">Charity</a></li>
@@ -31,23 +38,27 @@
          
         <div class="row event_box">
             {{ range where .Site.Pages.ByDate "Type" "event" }}
-            {{ if eq .Params.show "1"}}
-    
-            {{ $item := .Params }}
 
-            <div class="col-lg-4 align-self-center mb-30 event_outer col-md-6 {{ replace $item.eventtype " " ""}}">
+            {{$en := index .AllTranslations 0}}
+            {{$ar := index .AllTranslations 1}}
+
+ 
+            {{ if eq $en.Params.show "1"}}
+     
+ 
+            <div class="col-lg-4 align-self-center mb-30 event_outer col-md-6 {{ replace .Params.eventtype " " ""}}">
                 <div class="events_item">
                     <div class="event_top">
                         <div class="top_icon">
                             <a href="{{.RelPermalink}}">
                                 <i class="event_go_icon fas fa-plus"></i>
 
-                                {{$image := index ($item.images) 0 }}
+                                {{$image := index ($en.Params.images) 0 }}
  
 
                                 <img src="{{$image.image}}" alt="images">
                             </a>
-                            <p class="event_location"><span>{{$item.location}}</span> <i
+                            <p class="event_location"><span>{{.Params.location}}</span> <i
                                     class="fas fa-map-marked-alt"></i></p>
                         </div>
                         <!--top_icon-->
@@ -55,8 +66,8 @@
                     <!--event_top-->
 
                     <div class="bottom_text">
-                        <p>{{$item.title}}</p>
-                        <h3>{{$item.data}}</h3>
+                        <p>{{.Params.title}}</p>
+                        <h3>{{.Params.data}}</h3>
                     </div>
                     <!--bottom_text-->
                 </div>
@@ -530,3 +541,6 @@
 
     })();
 </script>
+{{end}}
+{{end}}
+{{end}}

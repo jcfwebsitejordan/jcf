@@ -1,6 +1,7 @@
 baseurl = "/"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
+EnableMissingTranslationPlaceholders=true
 languageLang = "en"
 title = "Homepage"
 [taxonomies]
@@ -12,16 +13,26 @@ weight = 30
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details: 
 # https://gohugo.io/getting-started/configuration/#toml-configuration
-disableKinds = ["RSS"]
+ 
+disableKinds = ["taxonomy", "term"]
+
+
+
 [languages]
   [languages.en]
+  
+    languagedirection = 'ltr'
     title = "Jordan Cycling Federation"
- 
-     languageName = 'English'
-    weight = 10
+    languageName = 'English'
+    weight = 1
+[languages.en.params]
+      all = 'https://linkedin.com/whoever'
+
+
+    
   [languages.ar]
+    all = "All"
     title = "الاتحاد الاردني للدراجات"
- 
     languagedirection = 'rtl'
-     languageName = 'Arabic'
-    weight = 20
+    languageName = 'Arabic'
+    weight = 2

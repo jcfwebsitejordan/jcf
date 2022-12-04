@@ -1,2 +1,2 @@
-[home]
-other = "السابق"
+[wordCount]
+other = "{{ .WordCount }} words"
