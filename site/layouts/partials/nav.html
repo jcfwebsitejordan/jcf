@@ -44,208 +44,209 @@
 	<nav class="top_header top_header_wide mt-3 mt-lg-0">
 
 		<div class="container">
-			{{ if in .Page.Permalink "/en/" }}
-
-
+			{{ if .IsHome }}
 			<div class="row nav_white nav_white_wide nav_white_wide">
+
+			{{else}}
+			{{ if in .Page.Permalink "/pages/" }}
+
+
+			<div class="row nav_dark nav_dark_wide nav_dark_wide">
 				{{else}}
-				{{ if in .Page.Permalink "/ar/" }}
 
-
+				{{ if in .Page.Permalink "/news/" }}
 				<div class="row nav_white nav_white_wide nav_white_wide">
 					{{else}}
-					{{ if in .Page.Permalink "/news/" }}
+
+
+					{{ if eq .Page.Permalink "/join/" }}
 					<div class="row nav_white nav_white_wide nav_white_wide">
 						{{else}}
+						<div class="row nav_dark nav_dark_wide nav_dark_wide">
+							{{end}}
+							{{end}}
+							{{end}}
+							{{end}}
 
 
-						{{ if eq .Page.Permalink "/join/" }}
-						<div class="row nav_white nav_white_wide nav_white_wide">
-							{{else}}
-							<div class="row nav_dark nav_dark_wide nav_dark_wide">
-								{{end}}
-								{{end}}
-								{{end}}
-								{{end}}
 
+							<div class="col-lg-2 col-6  d-flex align-content-center">
+								{{if eq .Site.Language.Lang "ar"}}
+								<a class="logo_box align-self-center" href="ar\index.html">
+									{{end}}
 
-								<div class="col-lg-2 col-6  d-flex align-content-center">
-									{{if eq .Site.Language.Lang "ar"}}
-									<a class="logo_box align-self-center" href="ar\index.html">
+									{{if eq .Site.Language.Lang "en"}}
+									<a class="logo_box align-self-center" href="index.html">
 										{{end}}
 
-										{{if eq .Site.Language.Lang "en"}}
-										<a class="logo_box align-self-center" href="index.html">
-											{{end}}
 
-											{{ if in .Page.Permalink "/en/" }}
-											<img class="logo logo-white" src="img/logo.png" alt="logo">
-											<img class="logo logo-black" src="img/logo.png" alt="logo">
+										{{ if .IsHome }}
+										<img class="logo logo-white" src="img/logo.png" alt="logo">
 
-											{{else}}
-											{{ if in .Page.Permalink "/ar/" }}
-											<img class="logo logo-white" src="img/logo.png" alt="logo">
-											<img class="logo logo-black" src="img/logo.png" alt="logo">
+										{{else}}
+										{{ if in .Page.Permalink "/pages/" }}
+										<img class="logo logo-black" src="img/logo.png" alt="logo">
 
-											{{else}}
-											{{ if eq .Page.Permalink "/join/" }}
-											<img class="logo logo-white" src="img/logo.png" alt="logo">
-											<img class="logo logo-black" src="img/logo.png" alt="logo">
-											{{else}}
-											{{ if in .Page.Permalink "/news/" }}
-											<img class="logo logo-white" src="img/logo.png" alt="logo">
-											<img class="logo logo-black" src="img/logo.png" alt="logo">
-											{{else}}
 
-											<img class="logo logo-black" src="img/logo.png" alt="logo">
-											{{end}}
-											{{end}}
-											{{end}}
-											{{end}}
-										</a>
-								</div>
-								<!-- /.col-lg-4 -->
-								<!-- <div class="btn_col col-lg-0 align-content-center justify-content-end d-none  d-lg-flex">
+										{{else}}
+										{{ if eq .Page.Permalink "/join/" }}
+										<img class="logo logo-white" src="img/logo.png" alt="logo">
+										<img class="logo logo-black" src="img/logo.png" alt="logo">
+										{{else}}
+										{{ if in .Page.Permalink "/news/" }}
+										<img class="logo logo-white" src="img/logo.png" alt="logo">
+										<img class="logo logo-black" src="img/logo.png" alt="logo">
+										{{else}}
+
+										<img class="logo logo-black" src="img/logo.png" alt="logo">
+										{{end}}
+										{{end}}
+										{{end}}
+										{{end}}
+									</a>
+							</div>
+							<!-- /.col-lg-4 -->
+							<!-- <div class="btn_col col-lg-0 align-content-center justify-content-end d-none  d-lg-flex">
 								English</div> -->
 
-								<div
-									class="btn_col col-lg-10 align-content-center justify-content-end d-none  d-lg-flex">
+							<div class="btn_col col-lg-10 align-content-center justify-content-end d-none  d-lg-flex">
 
 
 
-									<ul class="nav_menu">
+								<ul class="nav_menu">
 
 
-										{{ if .IsTranslated }}
+									{{ if .IsTranslated }}
 
-										{{ range .Translations }}
-										<li class="nav-item dropdown">
-											<a class="nav-link " href="{{ .Permalink }}">{{ if eq .Lang "ar"}}
-												العربية{{else}}English{{end}} </a>
-										</li>
-										{{ end }}
+									{{ range .Translations }}
+									<li class="nav-item dropdown">
+										<a class="nav-link " href="{{ .Permalink }}">{{ if eq .Lang "ar"}}
+											العربية{{else}}English{{end}} </a>
+									</li>
+									{{ end }}
 
-										{{ end }}
-
-
-
-										{{range (where site.Pages "Type" "in" "pages")}}
-
-										{{if gt .Params.Order 0}}
-										<li class="has_child">
-
-											{{$url := .RelPermalink}}
-											<a href="{{$url}}">{{.Params.title}}</a>
-											<ul class="nav_menu_child">
-												{{ range $index, $item := .Params.sections }}
-												<li><a href="{{$url}}#{{$item.name}}">{{$item.title}}</a></li>
-												{{end}}
-											</ul>
-										</li>
-										{{end}}
-
-										{{end}}
+									{{ end }}
 
 
 
-										<li class="nav-item">
-											<a class="nav-link " href="#" id="navbar" role="button"
-												data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												{{i18n "Registration"}}
-											</a>
-										</li>
+									{{range (where site.Pages "Type" "in" "pages")}}
 
+									{{if gt .Params.Order 0}}
+									<li class="has_child">
 
-										<li class="nav-item">
-											<a href="{{.Language}}\join\join-us"
-												class="head_btn align-self-center">{{i18n
-												"JoinUs"}}</a>
-										</li>
+										{{$url := .RelPermalink}}
+										<a href="{{$url}}">{{.Params.title}}</a>
+										<ul class="nav_menu_child">
+											{{ range $index, $item := .Params.sections }}
+											<li><a href="{{$url}}#{{$item.name}}">{{$item.title}}</a></li>
+											{{end}}
+										</ul>
+									</li>
+									{{end}}
 
-
-									</ul>
-
-
-
-								</div>
-								<!-- /.col-lg-8 -->
-
-								<div
-									class="col-6 align-content-center align-self-center justify-content-end d-flex  d-lg-none">
-									<a class="mobile_menu_btn" data-bs-toggle="offcanvas" href="#mobilemenu"
-										role="button" aria-controls="mobilemenu">
-										<i class="fa fa-bars"></i>
-									</a>
-
-
-									<!--  offcanvas mobile menu -->
-									<div class="mobile_menu_container offcanvas offcanvas-start" tabindex="-1"
-										data-bs-scroll="true" id="mobilemenu">
-										<div class="offcanvas-header">
-											<button class="close_mb" data-bs-dismiss="offcanvas" aria-label="Close"><i
-													class="ph-x"></i></button>
-										</div>
-										<div class="offcanvas-body">
-											<a href="#" class="logo_mobile"><img src="img/logo.png" alt="image"></a>
+									{{end}}
 
 
 
-											<ul class="mobile_menu">
-
-												{{ if .IsTranslated }}
-
-												{{ range .Translations }}
-												<li class="nav-item dropdown">
-													<a class="nav-link " href="{{ .Permalink }}">{{ if eq .Lang "ar"}}
-														العربية{{else}}English{{end}} </a>
-												</li>
-												{{ end }}
-
-												{{ end }}
+									<li class="nav-item">
+										<a class="nav-link " href="#" id="navbar" role="button" data-toggle="dropdown"
+											aria-haspopup="true" aria-expanded="false">
+											{{i18n "Registration"}}
+										</a>
+									</li>
 
 
-												{{range (where site.Pages "Type" "in" "pages")}}
-
-												{{if gt .Params.Order 0}}
-												{{$url := .RelPermalink}}
-
-
-												<li class="has_child">
-													<a class="nav-link " href="{{$url}}">{{.Params.title}}</a>
-
-													<ul class="nav_menu_child">
-
-														{{ range $index, $item := .Params.sections }}
+									<li class="nav-item">
+										<a href="{{.Language}}\join\join-us" style="color:white !important ;" class="head_btn align-self-center">{{i18n
+											"JoinUs"}}</a>
+									</li>
 
 
-														<li><a class="nav-link "
-																href="{{$url}}#{{$item.name}}">{{$item.title}}</a></li>
-
-														{{end}}
-													</ul>
-												</li>
-												{{ end }}
-												{{end}}
-												<li>
-													{{ with .Site.GetPage "join" }}
-
-													<a href="{{.RelPermalink}}" class="head_btn align-self-center">Join
-														us</a>
-
-													{{end}}
-												</li>
+								</ul>
 
 
-											</ul>
-											<!-- mobile_menu -->
-										</div>
-									</div>
-								</div>
 
 							</div>
-							<!-- /.row -->
+							<!-- /.col-lg-8 -->
+
+							<div
+								class="col-6 align-content-center align-self-center justify-content-end d-flex  d-lg-none">
+								<a class="mobile_menu_btn" data-bs-toggle="offcanvas" href="#mobilemenu" role="button"
+									aria-controls="mobilemenu">
+									<i class="fa fa-bars"></i>
+								</a>
+
+
+								<!--  offcanvas mobile menu -->
+								<div class="mobile_menu_container offcanvas offcanvas-start" tabindex="-1"
+									data-bs-scroll="true" id="mobilemenu">
+									<div class="offcanvas-header">
+										<button class="close_mb" data-bs-dismiss="offcanvas" aria-label="Close"><i
+												class="ph-x"></i></button>
+									</div>
+									<div class="offcanvas-body">
+										<a href="#" class="logo_mobile"><img src="img/logo.png" alt="image"></a>
+
+
+
+										<ul class="mobile_menu">
+
+											{{ if .IsTranslated }}
+
+											{{ range .Translations }}
+											<li class="nav-item dropdown">
+												<a class="nav-link " href="{{ .Permalink }}">{{ if eq .Lang
+													"ar"}}
+													العربية{{else}}English{{end}} </a>
+											</li>
+											{{ end }}
+
+											{{ end }}
+
+
+											{{range (where site.Pages "Type" "in" "pages")}}
+
+											{{if gt .Params.Order 0}}
+											{{$url := .RelPermalink}}
+
+
+											<li class="has_child">
+												<a class="nav-link " href="{{$url}}">{{.Params.title}}</a>
+
+												<ul class="nav_menu_child">
+
+													{{ range $index, $item := .Params.sections }}
+
+
+													<li><a class="nav-link "
+															href="{{$url}}#{{$item.name}}">{{$item.title}}</a>
+													</li>
+
+													{{end}}
+												</ul>
+											</li>
+											{{ end }}
+											{{end}}
+											<li>
+												{{ with .Site.GetPage "join" }}
+
+												<a href="{{.RelPermalink}}" class="head_btn align-self-center">Join
+													us</a>
+
+												{{end}}
+											</li>
+
+
+										</ul>
+										<!-- mobile_menu -->
+									</div>
+								</div>
+							</div>
+
 						</div>
-						<!-- /.container -->
+						<!-- /.row -->
+					</div>
+					<!-- /.container -->
 	</nav>
 	<!-- /.top-header -->
 
