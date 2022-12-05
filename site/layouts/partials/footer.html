@@ -28,8 +28,7 @@
 					{{range (where site.Pages "Type" "in" "pages")}}
 
 					{{if gt .Params.Order 0}}
-
-					<li><a href="{{.RelPermalink}}">{{.Params.title}}</a></li>
+					<li style="content: \f204 !important;"><a  href="{{.RelPermalink}}">{{.Params.title}}</a></li>
 
 					{{end}}
 					{{end}}
