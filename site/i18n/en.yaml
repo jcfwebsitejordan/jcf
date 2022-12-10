@@ -46,9 +46,35 @@ Registration_Small_Title:
   other: Register Now
 Registration_Title:
   other: Fill Your Informations
-Register:
+Rigister:
   other: Register
-
-
-
-
+FirstName:
+  other: First Name
+FamilyName:
+  other: Family Name
+BirthDate:
+  other: Birth Date
+Male:
+  other: Male
+Female:
+  other: Female
+NationalID_PassportNo:
+  other: NationalID/PassportNo
+Nationality:
+  other: Nationality
+ID_passport_Photo:
+  other: ID/passport Photo
+ImageUploadNote:
+  other: Uploaded photography must be hi-res for e.g. ID document size (JPG/PNG format)
+PersonalPhoto:
+  other: Personal Photo
+Email:
+  other: Email
+Cell_Phone:
+  other: Cell Phone
+Emergency_Contact:
+  other: Contacts in case of Emergency
+EmergencyContactName:
+  other: Emergency Contact Name
+EmergencyContactPhone:
+  other: Emergency Contact Phone

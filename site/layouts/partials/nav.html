@@ -59,11 +59,15 @@
 					{{else}}
 
 
-					{{ if eq .Page.Permalink "/join/" }}
+					{{ if in .Page.Permalink "/register/" }}
 					<div class="row nav_white nav_white_wide nav_white_wide">
 						{{else}}
-						<div class="row nav_dark nav_dark_wide nav_dark_wide">
-							{{end}}
+						{{ if in .Page.Permalink "/join/" }}
+						<div class="row nav_white nav_white_wide nav_white_wide">
+							{{else}}
+							<div class="row nav_dark nav_dark_wide nav_dark_wide">
+								{{end}}
+								{{end}}
 							{{end}}
 							{{end}}
 							{{end}}
@@ -149,8 +153,7 @@
 
 
 									<li class="nav-item">
-										<a class="nav-link " href="{{.Language}}\register" id="navbar" role="button" data-toggle="dropdown"
-											aria-haspopup="true" aria-expanded="false">
+										<a class="nav-link " href="{{.Language}}\register\form" id="register" >
 											{{i18n "Registration"}}
 										</a>
 									</li>

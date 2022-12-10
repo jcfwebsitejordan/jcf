@@ -1,7 +1,26 @@
 {{ define "main" }}
 {{$en := index .AllTranslations 0}}
 {{$ar := index .AllTranslations 0}}
+<script src='https://www.google.com/recaptcha/api.js'></script>
 
+<script>
+
+	function get_action(form) 
+	{
+		var v = grecaptcha.getResponse();
+		if(v.length == 0)
+		{
+			document.getElementById('captcha').innerHTML="You can't leave Captcha Code empty";
+			return false;
+		}
+		else
+		{
+			 document.getElementById('captcha').innerHTML="Captcha completed";
+			return true; 
+		}
+	}
+	
+	</script>
 
 <section id="hero" class="contact-top">
 	<div class="container contact_inner">
@@ -94,7 +113,7 @@
 
 			<div class="col-lg-6">
 <section id="register">
-				<form action="https://getform.io/f/17888f56-461c-4640-a478-e0dff07a2fcb" method="POST" 
+	<form action="https://public.herotofu.com/v1/8a1cc410-78b8-11ed-a126-b172cf164538" method="POST" 
 
 					class="contact-form">
 				  
@@ -106,12 +125,15 @@
 					  
 					<textarea class="form-control" rows="4" placeholder="{{i18n "YourMessage"}}" name="message"></textarea>
 					<input type="hidden" name="_gotcha" style="display:none !important">
+					<input type="hidden" name="FormType" value="Contact Us" style="display:none !important">
 
 					<div class="button-area">
+						<div  style="display: hidden !important;" id="rcaptcha"  data-sitekey="6LdIN20jAAAAAJP7BZl2142L5TCOsgHyO3dACJlU"></div>
+						<span id="captcha" style="color:red" /></span> <!-- this will show captcha errors -->
+						
 					  <button  class="btn rdn_btn rdn_btn_dark"  type="submit">{{i18n "SendMessage"}}</button>
 					  <span class="contact_out_text"></span>
 					</div>
-					<input type="hidden" name="FormType" value="Registration" style="display:none !important">
 
 				  </form>
 				</section>

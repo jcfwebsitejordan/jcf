@@ -244,7 +244,100 @@ collections: # A list of collections the CMS should be able to edit
             label: 'Join Us'
             fields:
               - {widget: string, name: other, label: Other, required: true}
-              
+          - widget: object
+            name: Registration_Small_Title
+            label: 'Registration_SubTitle'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Registration_Title
+            label: 'Registration Title'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Rigister
+            label: 'Rigister'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: FirstName
+            label: 'First Name'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: FamilyName
+            label: 'Family Name'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: BirthDate
+            label: 'Birth Date'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Male
+            label: 'Gender - Male'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Female
+            label: 'Gender - Female'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: NationalID_PassportNo
+            label: 'NationalID PassportNo'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Nationality
+            label: 'Nationality'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: ID_passport_Photo
+            label: 'ID/passport Photo'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: ImageUploadNote
+            label: 'Image Upload Note'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: PersonalPhoto
+            label: 'Personal Photo'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Email
+            label: 'Email'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Cell_Phone
+            label: 'Cell Phone'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Emergency_Contact
+            label: 'Emergency Contact'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: EmergencyContactName
+            label: 'Emergency Contact Name'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: EmergencyContactPhone
+            label: 'Emergency Contact Phone'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+
+
+
+
         
       - name: arabic
         file: 'site/i18n/ar.yaml'
@@ -353,6 +446,96 @@ collections: # A list of collections the CMS should be able to edit
           - widget: object
             name: JoinUs
             label: 'Join Us'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Registration_Small_Title
+            label: 'Registration_SubTitle'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Registration_Title
+            label: 'Registration Title'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Rigister
+            label: 'Rigister'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: FirstName
+            label: 'First Name'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: FamilyName
+            label: 'Family Name'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: BirthDate
+            label: 'Birth Date'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Male
+            label: 'Gender - Male'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Female
+            label: 'Gender - Female'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: NationalID_PassportNo
+            label: 'NationalID PassportNo'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Nationality
+            label: 'Nationality'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: ID_passport_Photo
+            label: 'ID/passport Photo'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: ImageUploadNote
+            label: 'Image Upload Note'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: PersonalPhoto
+            label: 'Personal Photo'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Email
+            label: 'Email'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Cell_Phone
+            label: 'Cell Phone'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: Emergency_Contact
+            label: 'Emergency Contact'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: EmergencyContactName
+            label: 'Emergency Contact Name'
+            fields:
+              - {widget: string, name: other, label: Other, required: true}
+          - widget: object
+            name: EmergencyContactPhone
+            label: 'Emergency Contact Phone'
             fields:
               - {widget: string, name: other, label: Other, required: true}
 

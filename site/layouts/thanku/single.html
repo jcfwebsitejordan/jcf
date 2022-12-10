@@ -1,15 +1,17 @@
 {{ define "main" }}
+{{$en := index .AllTranslations 0}}
+{{$ar := index .AllTranslations 0}}
 
 
-<section id="hero" class="contact-top" style="background-image: url('img/JoinUs-Background.jpg');">
+<section id="hero" class="contact-top">
 	<div class="container contact_inner">
 		<div class="row">
 			<div class="col-lg-6 offset-lg-3 text-center">
 
 
-				<p data-cue="slideInUp">{{.Params.smalltitle}}</p>
+				<p data-cue="slideInUp">{{i18n registration_small_title}}</p>
 				<h1 class="hero_title" data-cue="slideInUp" data-delay="400">
-					{{.Params.title}}				</h1>
+					{{i18n registration_title}}				</h1>
 			</div>
 			<!-- /.col-lg-6 offset-3 -->
 		</div>
@@ -25,88 +27,40 @@
 
 
 <section class="pb-100  bg-blob-white contact-with-form">
-	<div class="container contact_top_img left_img">
-		<img class="position-relative zindex-2" src="{{ .Params.logo }}" alt="" data-cue="slideInUp" data-delay="600">
+	<!-- <div class="container contact_top_img left_img">
+		<img class="position-relative zindex-2" src="{{ $en.Params.logo }}" alt="" data-cue="slideInUp" data-delay="600">
 		<div class="bg_dotted_img d-none d-lg-block"></div>
-	</div>
+	</div> -->
 	<!-- contact_top_img -->
 
-	<div class="contact_bottom"  data-cue="slideInUp" >
-		<div class="stat_section stat_type2 text-center">
-			<div class="row" data-cues="slideInUp">
-				<div class="col-lg-3 col-md-6 counter_content mb-30 m-lg-0">
-					<div class="stat_top">
-						<i class="fab fa-accessible-icon"></i>
-
-						<span  class="counter" >{{ .Params.memberscount }}</span>
-					</div>
-					<!-- /.stat_top -->
-					<p>Members</p>
-				</div>
-				<div class="col-lg-3 col-md-6  counter_content mb-30 m-lg-0">
-					<div class="stat_top">
-						<i class="fas fa-crown"></i>
-						<span  class="counter" >{{ .Params.trackcount }}</span>
-					</div>
 	
-					<!-- /.stat_top -->
-					<p>Track</p>
-				</div>
-				<div class="col-lg-3 col-md-6 counter_content mb-30 m-md-0">
-					<div class="stat_top">
-						<i class="fas fa-biking"></i>
-						<span  class="counter" >{{ .Params.routcount }}</span>
-					</div>
-					<!-- /.stat_top -->
-					<p>Route</p>
-				</div>
-				<div class="col-lg-3 col-md-6 counter_content mb-30 m-md-0">
-					<div class="stat_top">
-						<i class="fas fa-cookie-bite"></i>
-						<span  class="counter" >{{ .Params.eventcount }}</span>
-					</div>
-					<!-- /.stat_top -->
-					<p>Events</p>
-				</div>
-			</div>
-			<!-- /.col-md-4 -->
-		</div>
-		<!-- /.stat_content text-center -->
-	</div>
-	<!-- contact_bottom -->
-
 	<div class="container pt-100">
 		<div class="row">
 		   
 			<!-- col-lg-3 -->
 
 			<div class="col-lg-3 col-md-6">
-				<ul class="single_event_list gray-bg list-unstyled mb-lg-0 mb-30">
-					<li><i class="ph-buildings-bold"></i> {{ .Params.city }}</li>
-					<li><i class="ph-map-pin-bold"></i> {{ .Params.street }}</li>
-					<li><i class="ph-clock-afternoon-bold"></i> {{ .Params.hours }}</li>
-					<li><i class="ph-envelope-bold"></i> {{ .Params.email }}</li>
-				</ul>
+				 
 			</div>
 			<!-- col-lg-3 -->
 
 			<div class="col-lg-6">
 <section id="register">
-				<form action="https://public.herotofu.com/v1/8a1cc410-78b8-11ed-a126-b172cf164538" method="POST" 
+				<form action="https://getform.io/f/17888f56-461c-4640-a478-e0dff07a2fcb" method="POST" 
 
 					class="contact-form">
 				  
-					<input class="form-control" type="text" name="name" placeholder="Your name...">
+					<input class="form-control" type="text" name="name" placeholder="{{i18n "YourName"}}">
 				
-					<input class="form-control" type="email" name="email" placeholder="Your email...">
+					<input class="form-control" type="email" name="email" placeholder="{{i18n "YourEmail"}}">
 
-					<input class="form-control" type="tel" name="phone" placeholder="Your phone...">
+					<input class="form-control" type="tel" name="phone" placeholder="{{i18n "YourPhone"}}">
 					  
-					<textarea class="form-control" rows="4" placeholder="Your message..." name="message"></textarea>
+					<textarea class="form-control" rows="4" placeholder="{{i18n "YourMessage"}}" name="message"></textarea>
 					<input type="hidden" name="_gotcha" style="display:none !important">
 
 					<div class="button-area">
-					  <button  class="btn rdn_btn rdn_btn_dark"  type="submit">Send Message</button>
+					  <button  class="btn rdn_btn rdn_btn_dark"  type="submit">{{i18n "SendMessage"}}</button>
 					  <span class="contact_out_text"></span>
 					</div>
 				  </form>
@@ -124,7 +78,7 @@
 
 <section class="map_bottom">
 	<div class="google_map">
-		<iframe src="{{ .Params.location }}" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		<iframe src="{{ $en.Params.location }}" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 	</div>
 	<!-- google_map -->
 </section>

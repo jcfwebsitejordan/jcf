@@ -46,6 +46,36 @@ Registration_Title:
   other: تعبئة نوذج التسجيل
 Rigister:
   other: سجل
+FirstName:
+  other: الاسم الاول
+FamilyName:
+  other: العائلة
+BirthDate:
+  other: سنة الميلاد
+Male:
+  other: ذكر
+Female:
+  other: انثى
+NationalID_PassportNo:
+  other: الرقم الوطني \ جواز السفر
+Nationality:
+  other: الجنسية
+ID_passport_Photo:
+  other: صورة الهوية\الجواز
+ImageUploadNote:
+  other: يجب أن الصورة الذي تم تحميلها عالية الدقة على سبيل المثال حجم مستند الهوية (تنسيق JPG / PNG)
+PersonalPhoto:
+  other: الصورة الشخصية
+Email:
+  other: البريد الالكتروني
+Cell_Phone:
+  other: رقم الهاتف
+Emergency_Contact:
+  other: جهة الاتصال في حالة الطواريء
+EmergencyContactName:
+  other: الاسم
+EmergencyContactPhone:
+  other: رقم الهاتف
 
 
 
